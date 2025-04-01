@@ -1,0 +1,15 @@
+type: DuctBridge
+category: distribution
+research: duct01
+range: 6
+researchCost: [
+  item01/12
+  item02/8
+]
+speed: 6
+health: 60
+requirements: [
+  item01/10
+  item02/6
+]
+itemCapacity: 6

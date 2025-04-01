@@ -1,0 +1,6 @@
+effect: melting
+color: ffa166
+heatCapacity: 0.5
+viscosity: 0.5
+gasColor: ffa166
+research: liquid01

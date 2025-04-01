@@ -1,0 +1,13 @@
+type: Duct
+category: distribution
+research: core01
+bridgeReplacement: duct02
+researchCost: [
+  item01/5
+]
+speed: 7
+health: 80
+requirements: [
+  item01/1
+]
+itemCapacity: 1

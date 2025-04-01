@@ -1,0 +1,375 @@
+type: HeatCrafter
+size: 4
+health: 220
+squareSprite: false
+itemCapacity: 8
+outputLiquids: [
+   liquid02/0.45
+]
+consumes: {
+items: [
+    item00/2
+]
+}
+craftTime: 100
+heatRequirement: 10
+maxEfficiency: 2
+craftEffect: {
+    type: MultiEffect
+    effects: [
+    {
+    type: radialEffect
+    amonunt: 5
+    rotationSpacing: 72
+    lengthOffset: 3
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 90
+      lifetime: 420
+      sizeFrom: 1
+      sizeTo: 5
+      cone: 4
+      baseRotation: 73
+      useRotation:false
+      interp: pow3Out
+      colorFrom: 929292
+      colorTo: 92929200
+      layer:100.3
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 0
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: ffc575
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 1
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: fdc160
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 2
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: fab85e
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 3
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: f7b05e
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 4
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: f3a75d
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 5
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: ef9f5d
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 6
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: ef9f5d
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 7
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: eb975c
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 8
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: e68f5c
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 9
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: e1875c
+      colorTo: ab5238
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 10
+    rotationSpacing: 36
+    lengthOffset: 3
+    rotationOffset: 2
+    effect: {
+      type: ParticleEffect
+      particles: 1
+      length: 120
+      lifetime: 60
+      strokeFrom: 4
+      startDelay: 10
+      line: true
+      strokeTo: 0
+      lenFrom: 7
+      lenTo: 0
+      cone: 4
+      baseRotation: 90
+      useRotation: false
+      interp: pow3Out
+      colorFrom: db7f5a
+      colorTo: ab5238
+      }
+    }
+  ]
+}
+category: crafting
+research: {
+  parent: factory01
+}
+requirements: [
+  item01/120
+  item02/92
+  item03/80
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: liquid02
+      padding: 2
+    }
+    {
+      type: DrawCrucibleFlame
+      flameColor: cc6060
+      midColor: cc6060
+      particleColor: cc6060
+      particles: 120
+      particleRad: 16
+      rotateScl: 2
+      particleSize: 2.5
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawCrucibleFlame
+      flameColor: cc6060
+      midColor: cc6060
+      particleColor: cc6060
+      particles: 20
+      particleRad: 4
+      rotateScl: 2
+      particleSize: 2.5
+    }
+    {
+      type: DrawHeatInput
+      suffix: -heat
+    }
+    {
+      type: DrawGlowRegion
+      glowScale: 10
+      alpha: 5
+    }
+  ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.1
+researchCostMultiplier: 0.5

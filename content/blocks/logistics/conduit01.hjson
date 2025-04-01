@@ -1,0 +1,13 @@
+type: LiquidBridge
+size: 1
+health: 120
+range: 6
+requirements: [
+  item03/8
+]
+category: liquid
+liquidCapacity: 30
+research: duct01
+researchCost: [
+  item03/10
+]

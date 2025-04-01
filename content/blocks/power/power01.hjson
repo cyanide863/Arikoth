@@ -1,0 +1,14 @@
+type: beamNode
+size: 1
+laserWidth: 0.5
+health: 150
+squareSprite: false
+laserRange: 8
+maxNodes: 4
+requirements: [
+  item01/25
+  item03/20
+]
+category: power
+research: core01
+researchCostMultiplier: 0.5

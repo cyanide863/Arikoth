@@ -1,0 +1,9 @@
+type: SteamVent
+attributes: {
+  heat: 0.11111111
+}
+effect: ventSteam
+variants: 2
+effectColor: cc6060
+blendGroup: crimson-regolith
+parent: crimson-regolith

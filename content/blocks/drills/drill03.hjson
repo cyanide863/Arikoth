@@ -1,0 +1,148 @@
+squareSprite: false
+type: BurstDrill
+health: 780
+arrowColor: ffd269
+arrows: 1
+shake: 12
+drillEffect: [
+  {
+  type: ParticleEffect
+  spin: 0.3
+  particles: 12
+  length: 50
+  layer: 28
+  region: arikoth-square
+  colorFrom: ffd269
+  colorTo: 993939
+  lifetime: 90
+  sizeInterp: pow10In
+  interp: pow10Out
+  sizeFrom: 6
+  cone: 360
+  baseLength: 12
+  }
+  {
+  type: ParticleEffect
+  particles: 8
+  length: 90
+  cone: 20
+  layer: 28
+  region: particle
+  colorFrom: 909090
+  colorTo: 20202000
+  lightOpacity: 0
+  lifetime: 190
+  sizeInterp: pow10In
+  interp: pow10Out
+  sizeFrom: 7
+  cone: 360
+  baseLength: 20
+  baseRotation: 32
+  }
+  {
+  type: ParticleEffect
+  particles: 12
+  length: 90
+  cone: 20
+  layer: 28
+  colorFrom: 909090
+  colorTo: 20202000
+  lightOpacity: 0
+  lifetime: 190
+  sizeInterp: pow10In
+  interp: pow10Out
+  sizeFrom: 7
+  cone: 360
+  baseLength: 20
+  baseRotation: 32
+  }
+  {
+  type: ParticleEffect
+  spin: 0.3
+  particles: 16
+  length: 50
+  layer: 90
+  region: arikoth-star1
+  colorFrom: ffd269
+  colorTo: 993939
+  lifetime: 30
+  sizeFrom: 6
+  cone: 360
+  baseLength: 12
+  }
+  {
+  type: WaveEffect
+  colorFrom: ffd269
+  colorTo: 943c41
+  strokeFrom: 4
+  sizeTo: 40
+  lifetime: 30
+  layer: 28
+  }
+  {
+  type: WaveEffect
+  colorFrom: ffd269
+  colorTo: 943c41
+  startDelay: 15
+  strokeFrom: 4
+  sizeTo: 40
+  lifetime: 30
+  layer: 28
+  }
+  {
+  type: WaveEffect
+  colorFrom: ffd269
+  colorTo: 943c41
+  startDelay: 30
+  strokeFrom: 4
+  sizeTo: 40
+  lifetime: 30
+  layer: 28
+  }
+  {
+  type: ParticleEffect
+  spin: 1
+  particles: 1
+  length: 0
+  region: arikoth-star1-large
+  layer: 90
+  colorFrom: ffd269
+  colorTo: 943c41
+  lifetime: 80
+  interp: pow2
+  sizeInterp: pow3In
+  sizeFrom: 28
+  cone: 0
+  baseLength: 0
+  }
+]
+category: production
+size: 4
+drillTime: 250
+speedCurve: exp5In
+invertedTime: 150
+hardnessDrillMultiplier: 50
+itemCapacity: 48
+tier: 1
+blockedItem: item01
+consumes: {
+liquids: [
+  liquid03/0.6
+  liquid01/0.9
+  ]
+}
+requirements: [
+  item01/160
+  item02/220
+  item03/190
+  item04/280
+]
+research: {
+	parent: drill02
+	requirements: [
+	  item01/1600
+      item02/2200
+      item03/1900
+      item04/2800
+	]
+}

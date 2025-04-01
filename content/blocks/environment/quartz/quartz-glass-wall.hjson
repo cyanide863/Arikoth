@@ -1,0 +1,5 @@
+type: staticWall
+variants: 3
+attributes: {
+    quartz: 1
+}

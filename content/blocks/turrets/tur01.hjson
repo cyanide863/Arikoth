@@ -1,0 +1,55 @@
+type: ItemTurret
+size: 2
+recoil: 1.2
+category: turret
+research: {
+  parent: core01
+  requirements: [
+    item01/120
+  ]
+}
+shootSound: smallShoot
+requirements: [
+    item01/60
+]
+outlineColor: 42413e
+targetAir: true
+targetGround: true
+reload: 72
+range: 200
+inaccuracy: 2
+ammoTypes: {
+  item01: {
+    type: BasicBulletType
+    width: 12
+    height: 18
+    speed: 4
+    frontColor: ffffff
+    backColor: 8d9190
+    trailColor: 8d9190
+    hitColor: 8d9190
+    lightColor: 8d9190
+    trailInterval: 5
+    trailRotation: true
+    trailChance: 0.1
+    trailEffect: disperseTrail
+    trailWidth: 2.5
+    trailLength: 5
+    lifetime: 50
+    damage: 50
+    splashDamage: 40
+    splashDamageRadius: 12
+  }
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: heatproof-
+  parts: [
+    {
+      type: regionPart
+      suffix: -front
+      moveY: -1.5
+      progress: recoil
+    }
+  ]
+}

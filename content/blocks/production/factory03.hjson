@@ -1,0 +1,89 @@
+type: GenericCrafter
+size: 2
+health: 140
+squareSprite: false
+itemCapacity: 4
+outputItems: [
+  item04/1
+]
+consumes: {
+  liquids: [
+    liquid02/0.15
+  ]
+}
+craftTime: 100
+craftEffect: {
+    type: MultiEffect
+    effects: [
+    {
+    type: radialEffect
+    amonunt: 5
+    rotationSpacing: 72
+    lengthOffset: 3
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 90
+      lifetime: 420
+      sizeFrom: 1
+      sizeTo: 5
+      cone: 4
+      baseRotation: 73
+      useRotation:false
+      interp: pow3Out
+      colorFrom: 605050
+      colorTo: 60505000
+      layer:100.3
+      }
+    }
+    {
+      type: ParticleEffect
+      particles: 3
+      length: 90
+      lifetime: 420
+      sizeFrom: 1
+      sizeTo: 5
+      cone: 4
+      baseRotation: 73
+      useRotation:false
+      interp: pow3Out
+      colorFrom: 605050
+      colorTo: 60505000
+      layer:100.3
+      startDelay: 20
+    }
+  ]
+}
+category: crafting
+research: {
+  parent: factory01
+}
+requirements: [
+  item02/10
+  item03/20
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: liquid02
+      padding: 1
+    }
+    {
+      type: DrawCruibleFlame
+      flameColor: cc6060
+      particleColor: cc6060
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.1
+researchCostMultiplier: 0.5

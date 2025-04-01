@@ -1,0 +1,13 @@
+type: solarGenerator
+size: 3
+health: 220
+squareSprite: false
+powerProduction: 1.5
+requirements: [
+  item01/60
+  item02/95
+  item03/40
+]
+category: power
+research: power01
+researchCostMultiplier: 1.5

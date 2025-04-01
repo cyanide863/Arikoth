@@ -1,0 +1,10 @@
+type: floor
+variants: 0
+liquidDrop: slag
+drownTime: 190
+status: melting
+statusDuration: 120
+cacheLayer: slag
+emitLight: true
+lightColor: ffa166
+lightRadius: 40
