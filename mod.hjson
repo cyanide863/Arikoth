@@ -1,8 +1,8 @@
 name: "arikoth"
-displayName: "[brick[]]Arrikoth[white[]]"
+displayName: "[#dab487[]]Arrikoth[white[]]"
 author: "[#3f3b6b]Hyperium[]"
-description: "adds Arrikoth"
-version: "0.0.1"
+description: "Welcome to Arikoth, a massive desert planet. Arrikoth has a single massive ocean and 3 small continents is in its beta version"
+version: "0.0.15"
 minGameVersion: "146"
 hidden: false
-subtitle: Mars?
+subtitle: Work in progress
