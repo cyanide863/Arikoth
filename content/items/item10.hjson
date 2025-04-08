@@ -1,0 +1,8 @@
+cost: 1
+explosiveness: 1.2
+flammability: 0.6
+hardness: 0.6
+charge: 0
+color: ff795e
+research: item09
+hiddenOnPlanets: [serpulo, erekir]

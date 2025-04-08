@@ -1,0 +1,159 @@
+type: GenericCrafter
+size: 3
+health: 220
+squareSprite: false
+itemCapacity: 12
+outputItems: [
+  item10/4
+]
+consumes: {
+  power: 1.5
+  liquids: [
+    liquid04/0.3
+  ]
+  items: [
+    item09/4
+  ]
+}
+craftTime: 100
+craftEffect: {
+    type: MultiEffect
+    effects: [
+    {
+    type: radialEffect
+    amonunt: 5
+    rotationSpacing: 72
+    lengthOffset: 3
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 90
+      lifetime: 420
+      sizeFrom: 1
+      sizeTo: 5
+      cone: 4
+      baseRotation: 73
+      useRotation:false
+      interp: pow3Out
+      colorFrom: 605050
+      colorTo: 60505000
+      layer: 100.3
+      }
+    }
+    {
+      type: ParticleEffect
+      particles: 3
+      length: 20
+      lifetime: 32
+      sizeFrom: 4
+      sizeTo: 0
+      startDelay: 0
+      cone: 25
+      baseRotation: 32
+      useRotation: false
+      interp: fastSlow
+      colorFrom: ff795e
+      colorTo: ad3f3f
+      layer: 100.3
+    }
+    {
+      type: ParticleEffect
+      particles: 3
+      length: 25
+      lifetime: 32
+      sizeFrom: 4
+      sizeTo: 0
+      startDelay: 1
+      cone: 20
+      baseRotation: 32
+      useRotation: false
+      interp: fastSlow
+      colorFrom: ff795e
+      colorTo: ad3f3f
+      layer: 100.3
+    }
+    {
+      type: ParticleEffect
+      particles: 3
+      length: 30
+      lifetime: 32
+      sizeFrom: 4
+      sizeTo: 0
+      startDelay: 2
+      cone: 15
+      baseRotation: 32
+      useRotation: false
+      interp: fastSlow
+      colorFrom: ff795e
+      colorTo: ad3f3f
+      layer: 100.3
+    }
+    {
+      type: ParticleEffect
+      particles: 3
+      length: 35
+      lifetime: 32
+      sizeFrom: 4
+      sizeTo: 0
+      startDelay: 3
+      cone: 10
+      baseRotation: 32
+      useRotation: false
+      interp: fastSlow
+      colorFrom: ff795e
+      colorTo: ad3f3f
+      layer: 100.3
+    }
+  ]
+}
+category: crafting
+research: {
+  parent: factory01
+}
+requirements: [
+  item01/120
+  item04/320
+  item05/225
+  item06/260
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: liquid04
+      padding: 1.5
+    }
+{
+type: drawPistons
+sides: 4
+sinMag: 1.2
+sinScl: 2
+sideOffset: 10
+sinOffset: 2
+}
+{
+type: drawPistons
+suffix: -pistons
+sides: 4
+sinMag: 1.2
+sinScl: 2
+sideOffset: 5
+sinOffset: 4
+}
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawFlame
+      flameColor: ff795e
+    }
+  ]
+}
+ambientSound: hum
+ambientSoundVolume: 0.08
+researchCostMultiplier: 0.5

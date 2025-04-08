@@ -1,0 +1,7 @@
+type: floor
+variants: 3
+liquidDrop: liquid01
+liquidMultiplier: 1.2
+drownTime: 180
+speedMultiplier: 0.5
+cacheLayer: water

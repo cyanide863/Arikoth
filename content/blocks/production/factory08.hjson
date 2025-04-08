@@ -1,0 +1,129 @@
+type: HeatCrafter
+heatRequirement: 10
+maxEffeciency: 2
+size: 4
+health: 660
+squareSprite: false
+itemCapacity: 10
+liquidCapacity: 30
+hasLiquids: true
+outputLiquids: [
+  liquid06/0.3
+]
+consumes: {
+  power: 6
+  liquids: [
+    liquid01/0.9
+    liquid05/0.6
+  ]
+  items: [
+    item13/2
+  ]
+}
+craftTime: 60
+craftEffect: none
+category: crafting
+research: {
+  parent: factory04
+  requirements: [
+    item02/1500
+    item03/1250
+    item04/3200
+    item06/2250
+  ]
+}
+requirements: [
+  item02/150
+  item03/125
+  item04/320
+  item06/225
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: liquid01
+      suffix: -watah
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: liquid05
+      suffix: -meth
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: liquid06
+      suffix: -geen
+    }
+    {
+    type: DrawPistons
+    sides: 1
+    sinMag: 16
+    sinScl: 9
+    angleOffset: 90
+    horiOffset: -7
+    sinOffset: 0
+    lenOffset: -8
+    }
+    {
+    type: DrawPistons
+    sides: 1
+    sinMag: 16
+    sinScl: 9
+    angleOffset: 90
+    horiOffset: 0
+    sinOffset: 5
+    lenOffset: -8
+    }
+    {
+    type: DrawPistons
+    sides: 1
+    sinMag: 16
+    sinScl: 9
+    angleOffset: 90
+    horiOffset: 7
+    sinOffset: 10
+    lenOffset: -8
+    }
+    {
+    type: DrawPistons
+    sides: 1
+    sinMag: -16
+    sinScl: 9
+    angleOffset: 90
+    horiOffset: -7
+    sinOffset: 0
+    lenOffset: 8
+    }
+    {
+    type: DrawPistons
+    sides: 1
+    sinMag: -16
+    sinScl: 9
+    angleOffset: 90
+    horiOffset: 0
+    sinOffset: 5
+    lenOffset: 8
+    }
+    {
+    type: DrawPistons
+    sides: 1
+    sinMag: -16
+    sinScl: 9
+    angleOffset: 90
+    horiOffset: 7
+    sinOffset: 10
+    lenOffset: 8
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+ambientSound: flux
+ambientSoundVolume: 0.1

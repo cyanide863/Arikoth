@@ -1,0 +1,80 @@
+type: missile
+template: MissileUnitType
+flying: true
+speed: 6
+physics: false
+lifetime: 25
+rotateSpeed: 0.1
+hitSize: 5
+trailLength: 6
+useUnitCap: false
+health: 200
+autoFindTarget: false
+homingDelay: 0
+circleTarget: false
+faceTarget: true
+trailColor: cc6060
+engineColor: cc6060
+engineOffset: 3
+engineSize: 2
+aimDst: 4
+drawCell: false
+abilities: [
+  {
+    type: MoveEffectAbility
+    interval: 4
+    effect: {
+      type: ParticleEffect
+      particles: 8
+      length: 20
+      baseLength: 4
+      region: arikoth-square
+      spin: -0.2
+      layer: 100
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: cc6060
+      colorTo: 6b1e29
+    }
+    rotateEffect: true
+  }
+]
+deathSound: explosion
+deathEffect: [
+  {
+    type: WaveEffect
+    colorFrom: cc6060
+    colorTo: 6b1e29
+    sizeFrom: 0
+    sizeTo: 30
+    lifetime: 35
+    strokeFrom: 5
+    strokeTo: 0
+  }
+  {
+    type: ParticleEffect
+    colorFrom: cc6060
+    colorTo: 6b1e29
+    length: 45
+    lifetime: 35
+    sizeFrom: 4
+    sizeTo: 0
+  }
+]
+range: 4
+hidden: true  
+weapons: [
+  {
+    reload: 1
+    shootOnDeath: true
+    mirror: true
+    shootCone: 360
+    shootSound: none
+    shake: 1
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 40
+      splashDamageRadius: 16
+    }
+  } 
+]

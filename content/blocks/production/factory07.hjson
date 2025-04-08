@@ -1,0 +1,236 @@
+type: HeatCrafter
+heatRequirement: 40
+maxEffeciency: 4
+size: 5
+health: 660
+squareSprite: false
+itemCapacity: 24
+outputItems: [
+  item12/6
+]
+consumes: {
+  power: 6
+  liquids: [
+    liquid02/0.6
+  ]
+  items: [
+    item11/6
+    item02/4
+  ]
+}
+craftTime: 150
+craftEffect: {
+    type: MultiEffect
+    effects: [
+    {
+    type: radialEffect
+    amonunt: 4
+    rotationSpacing: 90
+    lengthOffset: 6.5
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 20
+      lifetime: 50
+      sizeFrom: 2.25
+      sizeTo: 1.2
+      cone: 4
+      region: arikoth-square
+      spin: -0.5
+      startDelay: 0
+      interp: pow3Out
+      colorFrom: 89769a
+      colorTo: 50477b00
+      lightOpacity: 0
+      layer: 100.3
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 4
+    rotationSpacing: 90
+    lengthOffset: 6.5
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 20
+      lifetime: 50
+      sizeFrom: 2.25
+      sizeTo: 1.2
+      cone: 4
+      region: arikoth-square
+      spin: -0.5
+      startDelay: 1
+      interp: pow3Out
+      colorFrom: 89769a
+      colorTo: 50477b00
+      lightOpacity: 0
+      layer: 100.3
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 4
+    rotationSpacing: 90
+    lengthOffset: 6.5
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 20
+      lifetime: 50
+      sizeFrom: 2.25
+      sizeTo: 1.2
+      cone: 4
+      region: arikoth-square
+      spin: -0.5
+      startDelay: 2
+      interp: pow3Out
+      colorFrom: 89769a
+      colorTo: 50477b00
+      lightOpacity: 0
+      layer: 100.3
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 4
+    rotationSpacing: 90
+    lengthOffset: 6.5
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 20
+      lifetime: 50
+      sizeFrom: 2.25
+      sizeTo: 1.2
+      cone: 4
+      region: arikoth-square
+      spin: -0.5
+      startDelay: 3
+      interp: pow3Out
+      colorFrom: 89769a
+      colorTo: 50477b00
+      lightOpacity: 0
+      layer: 100.3
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 4
+    rotationSpacing: 90
+    lengthOffset: 6.5
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 20
+      lifetime: 50
+      sizeFrom: 2.25
+      sizeTo: 1.2
+      cone: 4
+      region: arikoth-square
+      spin: -0.5
+      startDelay: 4
+      interp: pow3Out
+      colorFrom: 89769a
+      colorTo: 50477b00
+      lightOpacity: 0
+      layer: 100.3
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 4
+    rotationSpacing: 90
+    lengthOffset: 6.5
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 20
+      lifetime: 50
+      sizeFrom: 2.25
+      sizeTo: 1.2
+      cone: 4
+      region: arikoth-square
+      spin: -0.5
+      startDelay: 5
+      interp: pow3Out
+      colorFrom: 89769a
+      colorTo: 50477b00
+      lightOpacity: 0
+      layer: 100.3
+      }
+    }
+    {
+    type: radialEffect
+    amonunt: 4
+    rotationSpacing: 90
+    lengthOffset: 6.5
+    effect: {
+      type: ParticleEffect
+      particles: 3
+      length: 90
+      lifetime: 250
+      sizeFrom: 1
+      sizeTo: 5
+      cone: 20
+      startDelay: 0
+      useRotation: false
+      baseRotation: 75
+      interp: pow3Out
+      colorFrom: 606060
+      colorTo: 20202000
+      lightOpacity: 0
+      layer: 100.3
+      }
+    }
+  ]
+}
+category: crafting
+research: {
+  parent: factory03
+  requirements: [
+    item01/2650
+    item02/3100
+    item04/4450
+    item05/5600
+    item06/1250
+  ]
+}
+requirements: [
+  item01/265
+  item02/310
+  item04/445
+  item05/560
+  item06/125
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: liquid04
+      padding: 1.5
+    }
+    {
+      type: DrawCrucibleFlame
+      flameColor: c9a5c8
+      particleColor: c9a5c8
+      particles: 100
+      rotateScl: 6
+      particleRad: 13
+      particleSize: 2.5
+      flameRad: 2.5
+      flameRadiusMag: 0.75
+      flameRadiusScl: 15
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.1
