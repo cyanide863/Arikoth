@@ -4,5 +4,6 @@ author: "[#3f3b6b]Hyperium[]"
 description: "Welcome to Arikoth, a massive desert planet. Arrikoth has a single massive ocean and 3 small continents is in its beta version"
 version: "0.0.15"
 minGameVersion: "146"
+repo: "https://github.com/cyanide863/Arikoth"
 hidden: false
 subtitle: Work in progress
