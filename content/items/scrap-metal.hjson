@@ -1,0 +1,16 @@
+Type: Item
+name: Scrap Metal
+description: Metallic Scraps used in much of the infrasturcture on arikoth.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 1
+cost: 1.25
+color: ebead5
+research: {
+parent: tin
+objectives: [
+tin
+]
+}

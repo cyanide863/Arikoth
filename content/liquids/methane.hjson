@@ -1,0 +1,8 @@
+name: Methane
+description: A biogenic gas made of hydrogen and carbon, its used in power generation and synthesis.
+color: 7793c4
+viscosity: 0.2
+heatCapacity: 0.2
+temperature: 0.35
+explosiveness: 0
+gas: true

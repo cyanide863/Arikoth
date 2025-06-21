@@ -1,7 +1,9 @@
 Events.on(ContentInitEvent, e => {
-     Vars.content.block("arikoth-dissolved-shellstone-wall").attributes.set(Attribute.get("shell"), 1);
-     Vars.content.block("arikoth-dissolved-carapacyte-wall").attributes.set(Attribute.get("shells"), 1);
+     Vars.content.block("arikoth-metallic-scrap-wall").attributes.set(Attribute.get("scraps"), 1);
+     Vars.content.block("arikoth-metallic-scrap-wall-damaged").attributes.set(Attribute.get("scraps"), 1.2);
+     Vars.content.block("arikoth-silicarbide-wall").attributes.set(Attribute.get("silica"), 1);
+     Vars.content.block("arikoth-red-slate-wall").attributes.set(Attribute.get("silica"), 1.2);
 
-     Vars.content.block("arikoth-drill06").attribute = Attribute.get("shell");
-     Vars.content.block("arikoth-drill07").attribute = Attribute.get("shells");
+     Vars.content.block("arikoth-scrap-crusher").attribute = Attribute.get("scraps");
+     Vars.content.block("arikoth-silica-crusher").attribute = Attribute.get("silica");
 });

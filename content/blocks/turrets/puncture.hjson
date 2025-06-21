@@ -1,0 +1,287 @@
+name: Puncture
+description: Fires weaving projectiles at enemies.
+targetAir: true
+type: ItemTurret
+size: 2
+health: 2300
+range: 210
+rotateSpeed: 14
+reload: 80
+recoil: 1.2
+shootSound: blaster
+shake: 0
+outlineColor: 1d2124
+shootY: 5
+shoot: {
+    type: ShootAlternate
+    shots: 4
+    shotDelay: 10
+    barrels: 2
+    spread: 7
+}
+ammoTypes: {
+    tin: {
+      type: BasicBulletType
+      sprite: missile-large
+      backColor: dbd28c
+      frontColor: ffffff
+      trailColor: dbd28c
+      lightColor: dbd28c
+      damage: 20
+      speed: 4
+      lifetime: 70
+      recoil: 0.0
+      width: 8
+      height: 10
+      weaveScale: 3
+      weaveMag: 3
+      weaveRandom: false
+      trailLength: 10
+      trailWidth: 2.5
+      trailRotation: true
+      trailInterval: 1.5
+      lightRadius: 55
+      homingPower: 0.03
+      trailEffect: [
+      {
+      type: ParticleEffect
+      particles: 3
+      length: 8
+      lifetime: 15
+      region: arikoth-square
+      lightColor: dbd28c
+      colorFrom: ffffff
+      colorTo: dbd28c
+      spin: 0.1
+      sizeFrom: 2
+      lightScl: 3.5
+      sizeTo: 0
+      }
+      disperseTrail
+      ]
+      smokeEffect: shootSmallSmoke
+      despawnHit: true
+      despawnEffect: none
+      hitEffect: {
+      type: ParticleEffect
+      particles: 8
+      length: 12
+      lifetime: 15
+      region: arikoth-square
+      lightColor: dbd28c
+      colorFrom: ffffff
+      colorTo: dbd28c
+      spin: 0.1
+      sizeFrom: 3
+      sizeTo: 0
+    }
+  }
+    magnetite: {
+      type: BasicBulletType
+      sprite: missile-large
+      backColor: 5c4c93
+      frontColor: ffffff
+      trailColor: 5c4c93
+      lightColor: 5c4c93
+      damage: 30
+      speed: 4
+      lifetime: 70
+      recoil: 0.0
+      width: 8
+      height: 10
+      weaveScale: 3
+      weaveMag: 3
+      weaveRandom: false
+      trailLength: 10
+      trailWidth: 2.5
+      trailRotation: true
+      trailInterval: 1.5
+      lightRadius: 55
+      homingPower: 0.03
+      trailEffect: [
+      {
+      type: ParticleEffect
+      particles: 3
+      length: 8
+      lifetime: 15
+      region: arikoth-square
+      lightColor: 5c4c93
+      colorFrom: ffffff
+      colorTo: 5c4c93
+      spin: 0.1
+      sizeFrom: 2
+      lightScl: 3.5
+      sizeTo: 0
+      }
+      disperseTrail
+      ]
+      smokeEffect: shootSmallSmoke
+      despawnHit: true
+      despawnEffect: none
+      hitEffect: [
+      {
+      type: ParticleEffect
+      particles: 8
+      length: 12
+      lifetime: 15
+      region: arikoth-square
+      lightColor: 5c4c93
+      colorFrom: ffffff
+      colorTo: 5c4c93
+      spin: 0.1
+      sizeFrom: 3
+      sizeTo: 0
+      }
+      {
+      type: ParticleEffect
+      particles: 7
+      length: 20
+      lifetime: 35
+      line: true
+      lightColor: 5c4c93
+      colorFrom: ffffff
+      colorTo: 5c4c93
+      lenFrom: 7
+      strokeFrom: 4
+      lightScl: 2
+      interp: circleOut
+      }
+    ]
+  }   
+    phosphorus: {
+      type: BasicBulletType
+      sprite: missile-large
+      backColor: ffb855
+      frontColor: ffffff
+      trailColor: db661c
+      lightColor: ffb855
+      damage: 30
+      splashDamage: 50
+      splashDamageRadius: 16
+      speed: 3
+      status: melting
+      statusDuration: 180
+      lifetime: 70
+      recoil: 0.0
+      width: 8
+      height: 10
+      weaveRandom: false
+      trailLength: 0
+      trailWidth: 0
+      trailRotation: true
+      trailInterval: 1.5
+      lightRadius: 55
+      homingPower: 0.03
+      trailEffect: [
+      {
+      type: ParticleEffect
+      particles: 6
+      length: 10
+      interp: circleOut
+      lifetime: 15
+      lightColor: ffb855
+      colorFrom: ffffff
+      colorTo: ffb855
+      sizeFrom: 2.5
+      sizeTo: 0
+      }
+      {
+      type: ParticleEffect
+      particles: 6
+      length: 10
+      interp: circleOut
+      lifetime: 15
+      lightColor: ffb855
+      colorFrom: ffb855
+      colorTo: db661c
+      sizeFrom: 2.5
+      sizeTo: 0
+      }
+      {
+      type: ParticleEffect
+      particles: 8
+      length: 10
+      interp: circleOut
+      lifetime: 15
+      line: true
+      lightColor: ffb855
+      colorFrom: ffffff
+      colorTo: ffb855
+      lenFrom: 7
+      lenTo: 0
+      strokeFrom: 4
+      strokeTo: 0
+      cone: 20
+      }
+      {
+      type: ParticleEffect
+      particles: 1
+      length: 0
+      interp: circleOut
+      lifetime: 15
+      line: true
+      lightColor: ffb855
+      colorFrom: ffffff
+      colorTo: ffb855
+      lenFrom: 12
+      lenTo: 0
+      strokeFrom: 5
+      strokeTo: 0
+      cone: 0
+      }
+      ]
+      smokeEffect: shootSmallSmoke
+      despawnHit: true
+      despawnEffect: none
+      hitEffect: {
+      type: ParticleEffect
+      particles: 8
+      length: 30
+      interp: circleOut
+      lifetime: 15
+      line: true
+      lightColor: ffb855
+      colorFrom: ffffff
+      colorTo: ffb855
+      lenFrom: 7
+      lenTo: 0
+      strokeFrom: 4
+      strokeTo: 0
+    }
+  }
+}
+recoils: 2
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -barrel-r
+      progress: recoil
+      recoilIndex: 1
+      under: true
+      moveY: -1.5
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-l
+      progress: recoil
+      recoilIndex: 0
+      under: true
+      moveY: -1.5
+    }
+  ]
+}
+category: turret
+
+requirements: [
+  tin/35
+]
+
+research: {
+parent: core-satellite
+requirements: [
+  tin/35
+]
+}

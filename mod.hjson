@@ -3,6 +3,97 @@ displayName: "[#dab487[]]Arrikoth[white[]]"
 author: "[#3f3b6b]Hyperium[]"
 description: "Welcome to Arikoth, a massive desert planet. Arrikoth has a single massive ocean and 3 small continents is in its beta version"
 version: "0.0.15"
-minGameVersion: "146"
+minGameVersion: "149"
+repo: "https://github.com/cyanide863/Arikoth"
 hidden: false
 subtitle: Work in progress
+contentOrder: [
+//planets
+1-0-Ultramarina,
+everneon,
+arikoth,
+kelthir,
+iero,
+xeniris,
+1-2-asteroid,
+1-3-asteroid,
+1-4-asteroid,
+1-5-asteroid,
+1-6-asteroid,
+1-7-asteroid,
+1-8-asteroid,
+1-9-asteroid,
+2-0-asteroid,
+//env
+azure-stone-dark,
+azure-stone,
+azure-weed,
+azure-weed-light,
+azure-wall,
+azure-wall-dark,
+azure-tree,
+azure-tree-large,
+greystone,
+greystone-wall,
+greystone-meld,
+greystone-meld-large,
+silicarbide-stone,
+silicarbide-stone-dark,
+silicarbide-slate,
+silicarbide-slate-dark,
+silicarbide-wall,
+virdium,
+virdium-sparse,
+virdim-ridges,
+virdim-wall,
+metallic-scrap,
+studded-scrap,
+metallic-scrap-wall,
+metallic-scrap-wall-damaged,
+derelict-spire-small,
+derelict-spire,
+metallic-scrap-corezone,
+eroded-sand,
+eroded-sand-meld,
+eroded-sand-wall,
+aerna-sand,
+aerna-sand-meld,
+aerna-sand-wall,
+drysalt,
+drysalt-wall,
+drysalt-spikes,
+//ores
+tin-ore,
+ferrum-ore,
+lignite-ore,
+//items
+tin,
+ferrum,
+scrap-metal,
+lignite,
+graphite-rod,
+magnetite,
+//liquids
+icher,
+detril,
+oxygen,
+//logistics
+vaccum-shaft,
+vaccum-shaft-router,
+vaccum-shaft-accelerator,
+liquid-channel,
+liquid-channel-router,
+liquid-channel-crossing,
+//drills
+icher-condenser,
+jolt-drill,
+collision-drill,
+scrap-crusher,
+//factory
+graphite-kiln,
+flux-charger,
+degassing-chamber,
+]
+dependencies: [
+    "font-icon-lib"
+]

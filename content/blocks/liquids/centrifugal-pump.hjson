@@ -1,0 +1,54 @@
+type: Pump
+name: Centrifugal pump
+description: Slowly pumps liquid from liquid tiles.
+size: 2
+category: liquid
+squareSprite: false
+research: core-satellite
+requirements: [
+  tin/30
+  graphite-rod/25
+]
+pumpAmount: 0.3
+researchCostMultiplier: 0.5
+drawer: {
+  type: DrawMulti
+  drawers: [
+  	{
+      type: DrawRegion
+      suffix: -lower
+    }
+	{
+      type: DrawRegion
+      suffix: -spinner
+      rotateSpeed: 6
+      spinSprite: true
+    }
+	{
+      type: DrawRegion
+      suffix: -spinner
+      rotateSpeed: 6
+      spinSprite: true
+      rotation: 45
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: stained-water
+      padLeft: 1.5
+      padBottom: 1.5
+      padTop: 1.5
+      padRight: 1.5
+    }
+	{
+      type: DrawLiquidTile
+      drawLiquid: water
+      padLeft: 1.5
+      padBottom: 1.5
+      padTop: 1.5
+      padRight: 1.5
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}

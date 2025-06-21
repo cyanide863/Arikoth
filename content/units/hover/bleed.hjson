@@ -1,0 +1,196 @@
+type: hover
+hovering: true
+omniMovement: true
+faceTarget: true
+outlineColor: 1d2124
+speed: 2.5
+rotateSpeed: 3
+drag: 0.05
+accel: 0.02
+health: 1280
+useEngineElevation: false
+engineOffset: 6
+engineSize: 4
+engineColor: ff6e70
+trailColor: ff6e70
+armor: 8
+itemCapacity: 0
+hitSize: 18
+canDrown: false
+parts: [
+  {
+    type: HoverPart
+    color: ff6e70
+    radius: 15
+    sides: 6
+    layerOffset: -0.0001
+    y: 0
+    phase: 60
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: 0
+    name: bleed-weapon
+    reload: 200
+    mirror: false
+    heatColor: ff6e70
+    shootSound: plasma-shot
+    shake: 5
+    bullet: {
+    type: BasicBulletType
+    recoil: 3
+    sprite: arikoth-saw
+    spin: 20
+    damage: 20
+    lifetime: 60
+    sticky: true
+    stickyExtraLifetime: 120
+    splashDamage: 30
+    splashDamageRadius: 8
+    backColor: ff6e70
+    frontColor: ffffff
+    trailColor: ff6e70
+    hitColor: ff6e70
+    trailWidth: 2
+    trailLength: 12
+    height: 18
+    width: 18
+    speed: 2
+    shrinkY: 0
+    lightColor: ff6e70
+    hitEffect: {
+      type: ParticleEffect
+      particles: 8
+      length: 10
+      lifetime: 35
+      interp: circleOut
+      sizeFrom: 6
+      sizeTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154      
+    }
+    shootEffect: [
+      {
+      type: ParticleEffect
+      particles: 8
+      length: 60
+      cone: 10
+      lifetime: 35
+      interp: circleOut
+      sizeFrom: 5
+      sizeTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154
+      }
+      {
+      type: ParticleEffect
+      line: true
+      particles: 8
+      length: 60
+      cone: 10
+      lifetime: 35
+      interp: circleOut
+      strokeFrom: 8
+      strokeTo: 0
+      lenFrom: 12
+      lenTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154
+      }
+      ]
+      bulletInterval: 5
+      intervalRandomSpread: 0
+      intervalBullets: 1
+      intervalBullet: {
+        type: SapBulletType
+        color: ff6e70
+        sapStrength: 1
+        damage: 20
+        length: 10
+      }
+    }
+  }
+  {
+    x: 0
+    y: -4
+    name: bleed-needle
+    reload: 60
+    layerOffset: 0.001
+    mirror: false
+    heatColor: ff6e70
+    shootSound: laser
+    bullet: {
+    type: BasicBulletType
+    sprite: arikoth-needle
+    damage: 60
+    pierceCap: 2
+    lifetime: 20
+    sticky: true
+    stickyExtraLifetime: 120
+    backColor: ff6e70
+    frontColor: ffffff
+    trailColor: ff6e70
+    hitColor: ff6e70
+    trailWidth: 2
+    trailLength: 12
+    height: 25
+    width: 8
+    speed: 8
+    shrinkY: 0
+    lightColor: ff6e70
+    hitEffect: {
+      type: ParticleEffect
+      particles: 8
+      length: 10
+      lifetime: 35
+      interp: circleOut
+      sizeFrom: 6
+      sizeTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154      
+    }
+    shootEffect: [
+      {
+      type: ParticleEffect
+      particles: 8
+      length: 60
+      cone: 10
+      lifetime: 35
+      interp: circleOut
+      sizeFrom: 5
+      sizeTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154
+      }
+      {
+      type: ParticleEffect
+      line: true
+      particles: 8
+      length: 60
+      cone: 10
+      lifetime: 35
+      interp: circleOut
+      strokeFrom: 8
+      strokeTo: 0
+      lenFrom: 12
+      lenTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154
+      }
+      ]
+      fragBullets: 6
+      fragBullet: {
+        type: SapBulletType
+        color: ff6e70
+        sapStrength: 1
+        damage: 20
+        length: 10
+        knockback: -4
+      }
+    }
+  }
+]
+research: 10j-01-tank-mounting-bay
+researchCostMultiplier: 1.5

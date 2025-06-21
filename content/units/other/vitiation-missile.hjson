@@ -1,0 +1,74 @@
+type: missile
+controller: MissileAI
+flying: true
+speed: 5.5
+rotateSpeed: 1.5
+maxRange: 5
+lifetime: 90
+hidden: true
+envEnabled: 17
+envDisabled: 0
+outlineColor: 1d2124
+engineColor: ffefba
+trailColor: ffefba
+engineSize: 2.0
+engineOffset: 5
+trailLength: 8
+trailScl: 1
+missileAccelTime: 30
+lowAltitude: true
+fogRadius: 3
+health: 330
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+drawCell: false
+physics: false
+createWreck: false
+createScorch: false
+weapons: [
+    {
+        shootCone: 360
+        mirror: false
+        reload: 180
+        shootOnDeath: true
+        x: 0
+        y: 0  
+        bullet: {
+        despawnHit: true
+        despawnEffect: none
+        shootEffect: none
+        type: BombBulletType
+        splashDamageRadius: 50
+        splashDamage: 80
+        instantDisappear: true
+        killShooter: true
+        hittable: false
+        collidesAir: true
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragSpread: 0
+        fragVelocityMin: 1
+        fragVelocityMax: 1
+        fragLifeMin: 1
+        fragLifeMax: 1
+        fragBullet: {
+            type: ContinuousFlameBulletType
+            flareColor: ffefba
+            colors: [a86736aa, ffefba, ffffff]
+            damage: 20
+            lifetime: 120
+            width: 8
+            length: 8
+            flareWidth: 4
+            flareLength: 18
+            hitColor: ffefba
+        }
+        hitEffect: {
+          type: WrapEffect
+          effect: dynamicSpikes
+          color: ffefba
+          }
+        }
+    }
+]

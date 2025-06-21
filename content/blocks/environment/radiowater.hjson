@@ -1,0 +1,13 @@
+name: Radiowater
+type: Floor
+variants: 3
+isLiquid: true
+//drownTime: 230
+speedMultiplier: 0.8
+shallow: true
+cacheLayer: water
+liquidDrop: stained-water
+status: T1-radioactivity
+statusDuration: 180
+lightRadius: 40
+lightColor: 3c9eff55

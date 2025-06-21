@@ -1,0 +1,171 @@
+targetAir: true
+type: LiquidTurret
+size: 2
+health: 260
+range: 225
+rotateSpeed: 1.5
+reload: 110
+shootSound: laser
+outlineColor: 293236
+shootY: 5
+heatColor: ffce59
+heatRequirement: 6
+maxHeatEfficiency: 2
+minWarmup: 0.95
+shootWarmupSpeed: 0.05
+loopSound: none
+extinguish: false
+ammoTypes: {
+    icher: {
+      type: BasicBulletType
+      sprite: mine-bullet
+      backColor: ffce59
+      frontColor: ffe9b5
+      trailColor: ffce59
+      damage: 10
+      splashDamage: 10
+      splashDamageRadius: 35
+      shrinkInterp: linear
+      shrinkX: -1
+      shrinkY: -1
+      speed: 3
+      lifetime: 75
+      recoil: 0.0
+      spin: -1
+      width: 12
+      height: 12
+      trailLength: 10
+      trailWidth: 2.5
+      trailRotation: true
+      trailEffect: colorSpark
+      trailInterval: 1.5
+      smokeEffect: {
+        type: ParticleEffect
+        line: false
+        particles: 16
+        baseLength: 0
+        length: 20
+        lifetime: 30
+        sizeFrom: 4
+        sizeTo: 0
+        offsetX: -2
+        cone: 20
+        interp: circleOut
+        strokeFrom: 4
+        strokeTo: 0
+        colorFrom: ffe9b5
+        colorTo: ffce59aa
+      }
+    despawnHit: true
+    despawnEffect: none
+    fragLifeMin: 1
+    fragLifeMax: 1
+    fragRandomSpread: 0
+    fragSpread: 90
+    fragBullets: 4
+    fragBullet: {
+    type: ContinuousFlameBulletType
+    colors: [db7f37aa, ffce59, ffffff]
+    hitColor: ffce59
+    flareColor: ffce59
+    hitEffect: {
+      type: ParticleEffect
+      particles: 8
+      length: 10
+      lifetime: 35
+      interp: circleOut
+      sizeFrom: 6
+      sizeTo: 0
+      colorFrom: ffffff
+      colorTo: ffce59      
+    }
+    length: 30
+    width: 5
+    lifetime: 30
+    damage: 10
+    }
+    hitEffect: [
+      {
+      type: ParticleEffect
+      line: true
+      particles: 16
+      baseLength: 0
+      length: 40
+      lifetime: 40
+      lenFrom: 7
+      lenTo: 0
+      interp: circleOut
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: ffe9b5
+      colorTo: ffce59
+      }
+      {
+      type: ParticleEffect
+      particles: 16
+      baseLength: 30
+      length: 0
+      lifetime: 40
+      sizeFrom: 4.5
+      sizeTo: 0
+      interp: circleOut
+      colorFrom: ffe9b5
+      colorTo: ffce59
+      }
+      {
+      type: WaveEffect
+      lifetime: 40
+      strokeFrom: 3.5
+      strokeTo: 0
+      sizeFrom: 30
+      sizeTo: 30
+      interp: circleOut
+      colorFrom: ffe9b5
+      colorTo: ffce59
+      }
+    ]
+  }
+}
+recoil: 1.5
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -middle
+      progress: recoil
+      under: true
+      moveY: -1.5
+      heatColor: ffce59
+    }
+    {
+      type: RegionPart
+      suffix: -wing
+      progress: warmup
+      under: true
+      mirror: true
+      moveX: -0.5
+      moveY: -1.5
+      moveRot: -5
+      heatColor: ffce59
+    }
+  ]
+}
+category: turret
+
+
+requirements: [
+  tin/35
+  ferrum/30
+  scrap-metal/35
+]
+
+research: {
+parent: puncture
+requirements: [
+  tin/350
+  ferrum/300
+  scrap-metal/350
+]
+}

@@ -1,0 +1,21 @@
+type: DuctBridge
+name: Vaccum Shaft Overpass
+description: Acts as a bridge for crossing pipelines or terrain.
+health: 135
+size: 1
+requirements: [
+  tin/4
+  ferrum/2
+] 
+research: {
+parent: vaccum-shaft
+requirements: [
+  tin/2
+  ferrum/1
+]
+}
+category: distribution
+squareSprite: false
+range: 4
+speed: 4
+researchCostMultiplier: 0.5

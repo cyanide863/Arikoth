@@ -1,0 +1,72 @@
+name: Methanic Extractor
+description: Extracts cold methane from the atmosphere, the atmosphere cools down methane allowing it to be used as a coolant.
+type: GenericCrafter
+category: crafting
+health: 440
+size: 2
+fogRadius: 4
+hasItems: false
+hasPower: true
+hasLiquids: true
+liquidCapacity: 30
+ambientSound: hum
+ambientSoundVolume: 0.05
+craftTime: 60
+craftEffect: none
+liquidOutputDirections: [1]
+invertFlip: true
+rotateDraw: false
+rotate: true
+consumes: {
+power: 0.75
+}
+outputLiquid: methane/0.3
+
+drawer: {
+type: DrawMulti
+  drawers: [
+    {
+    type: DrawRegion
+    suffix: -lower
+    }
+    {
+      type: DrawBlurSpin
+      suffix: -rotor
+      rotateSpeed: 12
+      blurThresh: 0.7
+      rotation: 0
+    }
+    {
+    type: DrawDefault
+    }
+    {
+    type: DrawLiquidOutputs
+    }
+    {
+      type: DrawParticles
+      particleRad: 12
+      particleSize: 3
+      rotateScl: 2.5
+      particles: 12
+      particleLife: 120
+      alpha: 0.25
+      color: 7793c4
+    }
+  ]
+}
+
+requirements: [
+  tin/30
+  siliglass/25
+  ferrum/45
+]
+
+research: {
+  parent: siliglass-smelter
+  requirements: [
+  tin/30
+  siliglass/25
+  ferrum/45
+  ]
+}
+squareSprite: false

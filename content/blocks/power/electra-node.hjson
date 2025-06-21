@@ -1,0 +1,31 @@
+name: Electra Node
+description: Transmits power in four orthogonal directions, can also store some power.
+type: BeamNode
+category: power
+health: 800
+size: 1
+fogRadius: 1
+hasPower: true
+consumesPower: true
+outputsPower: true
+underBullets: true
+consumes: {
+    powerBuffered: 3000
+    }
+laserColor1: ffffff
+laserColor2: ffffff
+laserWidth: 0.5
+pulseMag: 0.025
+pulseScl: 8
+range: 10
+requirements: [
+  tin/8
+]
+research: {
+    parent: steam-turbine
+    objectives: [
+    ]
+requirements: [
+  tin/8
+]
+}

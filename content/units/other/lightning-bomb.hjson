@@ -1,0 +1,41 @@
+type: missile
+flying: true
+speed: 0
+maxRange: 0
+lifetime: 180
+hidden: false
+hitSize: 5
+outlineColor: 2d2f39
+engineColor: babccf
+trailColor: babccf
+engineSize: 0
+engineOffset: 0
+rotateSpeed: 0
+trailLength: 0
+missileAccelTime: 0
+lowAltitude: true
+fogRadius: 0
+health: 900000
+hidden: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+drawCell: false
+drawBody: false
+abilities: [
+    {
+        type: EnergyFieldAbility
+        reload: 5
+        damage: 1
+        range: 90
+        healPercent: 0
+        maxTargets: 30
+        hitUnits: true
+        color: f5d384
+        effectRadius: 10
+        sectors: 4
+    }
+]

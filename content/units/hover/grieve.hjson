@@ -1,0 +1,97 @@
+type: hover
+hovering: true
+hitSize: 9
+omniMovement: true
+faceTarget: true
+outlineColor: 1d2124
+speed: 3
+rotateSpeed: 3
+drag: 0.05
+accel: 0.02
+health: 340
+useEngineElevation: false
+engineOffset: 6
+engineSize: 4
+engineColor: ff6e70
+trailColor: ff6e70
+armor: 6
+itemCapacity: 0
+hitSize: 16
+canDrown: false
+parts: [
+  {
+    type: HoverPart
+    color: ff6e70
+    radius: 15
+    sides: 6
+    layerOffset: -0.0001
+    y: 0
+    phase: 60
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: 0
+    name: grieve-weapon
+    reload: 160
+    mirror: false
+    heatColor: ff6e70
+    shootSound: plasma-shot
+    shake: 5
+    bullet: {
+    type: ShrapnelBulletType
+    fromColor: ff6e70
+    toColor: f55154
+    hitColor: ff6e70
+    smokeEffect: shootSmokeTitan
+    hitEffect: {
+      type: ParticleEffect
+      particles: 8
+      length: 10
+      lifetime: 35
+      interp: circleOut
+      sizeFrom: 6
+      sizeTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154      
+    }
+    length: 90
+    serrations: 8
+    width: 12
+    damage: 120
+    recoil: 6
+    shootEffect: [
+      {
+      type: ParticleEffect
+      particles: 8
+      length: 60
+      cone: 10
+      lifetime: 35
+      interp: circleOut
+      sizeFrom: 5
+      sizeTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154
+      }
+      {
+      type: ParticleEffect
+      line: true
+      particles: 8
+      length: 60
+      cone: 10
+      lifetime: 35
+      interp: circleOut
+      strokeFrom: 8
+      strokeTo: 0
+      lenFrom: 12
+      lenTo: 0
+      colorFrom: ff6e70
+      colorTo: f55154
+      }
+      ]
+    }
+  }
+]
+research: 10j-01-tank-mounting-bay
+researchCostMultiplier: 1.5

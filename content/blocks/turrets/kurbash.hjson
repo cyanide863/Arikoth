@@ -1,0 +1,100 @@
+targetAir: true
+type: ItemTurret
+size: 3
+health: 2300
+range: 200
+rotateSpeed: 1.2
+shootY: 2
+reload: 90
+inaccuracy: 1
+recoil: 2
+shootSound: laser
+shake: 4
+outlineColor: 252729
+ammoTypes: {
+reso-shard: {
+type: BasicBulletType
+width: 20
+height: 26
+damage: 125
+splashDamage: 50
+splashDamageRadius: 32
+speed: 4
+lifetime: 50
+frontColor: fc4e52
+backColor: dd1f26
+status: melting
+statusDuration: 70
+hitShake: 8
+hitSound: spark
+fragBullets: 1
+fragBullet: {
+type: EmptyBulletType
+lifetime: 30
+bulletInterval: 10
+intervalBullet: {
+type: EmptyBulletType
+instantDisappear: true
+lightning: 6
+lightningDamage: 20
+lightningCone: 360
+lightningLengthRand: 5
+lightningLength: 12
+lightningColor: ff3333
+lightningType: {
+    type: BasicBulletType
+    damage: 0
+    lifetime: 0
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: {
+      type: ParticleEffect
+      particles: 1
+      sizeFrom: 8
+      sizeTo: 0
+      length: 0
+      spin: 0
+      lifetime: 30
+      region: arikoth-square                 
+      colorFrom: ffffff
+      colorTo: ff3333
+      }
+    }
+  }
+}
+trailChance: 0.6
+trailLength: 8
+trailWidth: 4
+trailColor: dd1f26
+}
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -barrel
+      mirror: false
+      progress: recoil
+      heatProgress: recoil
+      under: true
+      moveY: -2
+    }
+  ]
+}
+category: turret
+
+
+requirements: [
+  ferrum/140
+  magnetite/125
+  makeshift-concrete/192
+  scrap-metal/220
+]
+researchCost: [
+  ferrum/1400
+  magnetite/1250
+  makeshift-concrete/1920
+  scrap-metal/2200
+]

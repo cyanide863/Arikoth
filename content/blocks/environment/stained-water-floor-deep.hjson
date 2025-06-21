@@ -1,0 +1,9 @@
+name: Stained Water Deep
+type: Floor
+variants: 1
+isLiquid: true
+drownTime: 180
+speedMultiplier: 0.8
+shallow: false
+cacheLayer: water
+liquidDrop: stained-water

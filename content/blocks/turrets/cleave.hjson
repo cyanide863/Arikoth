@@ -1,0 +1,360 @@
+targetAir: true
+type: ItemTurret
+size: 3
+health: 2300
+range: 240
+rotateSpeed: 1.2
+reload: 120
+recoilAmount: 4
+shootSound: blaster 
+shake: 3
+outlineColor: 293236
+shootY: 5
+shoot: {
+    type: ShootAlternate
+    shots: 3
+    spread: 4
+    barrels: 3
+}
+ammoTypes: {
+    technetium: {
+type: BasicBulletType
+sprite: missile
+width: 12
+height: 16
+damage: 40
+speed: 6
+lifetime: 40
+frontColor: 75fffa
+backColor: 44cfcf
+status: shocked
+statusDuration: 70
+hitShake: 8
+hitSound: laser
+trailLength: 14
+trailWidth: 2
+trailColor: 75fffa
+weaveScale: 2
+weaveMag: 4
+weaveRandom: false
+shootEffect: {
+    type: ParticleEffect
+    offsetX: 0
+    line: true
+    lifetime: 30
+    particles: 12
+    cone: 15
+    length: 50
+    baseLength: 0
+    interp: circleOut
+    sizeFrom: 0
+    sizeTo: 15
+    lenFrom: 6
+    lenTo: 0
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: 75fffa
+    colorTo: 44cfcf
+}
+      smokeEffect: {
+        type: ParticleEffect
+        line: false
+        particles: 16
+        baseLength: 0
+        length: 45
+        lifetime: 45
+        sizeFrom: 4
+        sizeTo: 0
+        cone: 15
+        interp: circleOut
+        strokeFrom: 5
+        strokeTo: 0
+        colorFrom: 75fffa
+        colorTo: 44cfcf
+      }
+}
+    magnetite: {
+type: BasicBulletType
+sprite: missile
+width: 12
+height: 16
+damage: 0
+speed: 6
+lifetime: 40
+frontColor: 8b48bd
+backColor: 45225e
+status: melting
+statusDuration: 70
+homingPower: 0.02
+homingRange: 60
+splashDamage: 40
+splashDamageRadius: 24
+splashDamagePierce: false
+hitShake: 8
+hitSound: laser
+trailLength: 14
+trailWidth: 2
+trailColor: 8b48bd
+fragBullets: 3
+fragSpread: 0
+fragRandomSpread: 360
+fragLifeMin: 0.5
+fragLifeMax: 1.2
+fragBullet: {
+  type: BasicBulletType
+  sprite: missile
+  width: 8
+  height: 16
+  damage: 18
+  speed: 4
+  lifetime: 20
+  frontColor: 8b48bd
+  backColor: 45225e
+  trailLength: 10
+  trailWidth: 3
+  trailColor: 8b48bd
+  damage: 40
+  despawnEffect: none
+  drag: 0.05
+  hitEffect: none
+  despawnHit: true
+  fragBullets: 2
+  fragAngle: 180
+  fragSpread: 0
+  fragRandomSpread: 30
+  fragBullet: {
+  type: BasicBulletType
+  sprite: missile
+  damage: 20
+  width: 8
+  height: 12
+  drag: 0.05
+  damage: 15
+  speed: 4
+  lifetime: 10
+  frontColor: 8b48bd
+  backColor: 45225e
+  trailLength: 10
+  trailWidth: 2
+  trailColor: 8b48bd
+  despawnEffect: none
+  hitEffect: none
+  despawnHit: true
+}
+}
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        {
+        type: WaveEffect
+        lifetime: 20
+        sizeFrom: 16
+        sizeTo: 13
+        interp: circleOut
+        strokeFrom: 6
+        strokeTo: 0
+        colorFrom: be66ff
+        colorTo: 6f26a3
+        }
+        {
+        type: WaveEffect
+        lifetime: 15
+        sizeFrom: 10
+        sizeTo: 6
+        interp: circleOut
+        strokeFrom: 5
+        strokeTo: 0
+        colorFrom: be66ff
+        colorTo: 6f26a3
+        }
+        {
+        type: ParticleEffect
+        line: true
+        particles: 16
+        baseLength: 0
+        length: 40
+        lifetime: 40
+        lenFrom: 7
+        lenTo: 0
+        interp: circleOut
+        strokeFrom: 4
+        strokeTo: 0
+        colorFrom: be66ff
+        colorTo: 6f26a3
+        }
+      ]
+    }
+    shootEffect: {
+    type: ParticleEffect
+    offsetX: 0
+    line: true
+    lifetime: 30
+    particles: 12
+    cone: 15
+    length: 50
+    baseLength: 0
+    interp: circleOut
+    sizeFrom: 0
+    sizeTo: 15
+    lenFrom: 6
+    lenTo: 0
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: be66ff
+    colorTo: 6f26a3
+    }
+      smokeEffect: {
+        type: ParticleEffect
+        line: false
+        particles: 16
+        baseLength: 0
+        length: 45
+        lifetime: 45
+        sizeFrom: 4
+        sizeTo: 0
+        cone: 15
+        interp: circleOut
+        strokeFrom: 5
+        strokeTo: 0
+        colorFrom: be66ff
+        colorTo: 6f26a3
+      }
+    }
+    reso-shard: {
+      type: BasicBulletType
+      sprite: missile
+      backColor: e95b5b
+      frontColor: ffffff
+      trailColor: e95b5b
+      damage: 60
+      speed: 6
+      lifetime: 40
+      recoil: 0.0
+      width: 12
+      height: 12
+      trailLength: 10
+      trailWidth: 3
+      trailRotation: true
+      trailEffect: disperseTrail
+      trailInterval: 1.5
+      smokeEffect: shootSmokeDisperse
+      hitSound: laser
+      despawnHit: true
+      despawnEffect: none
+      fragBullets: 1
+      fragRandomSpread: 0
+      fragBullet: {
+        type: LaserBulletType
+        colors: [b53838aa, e95b5b, ffffff]
+        damage: 60
+        pierceCap: 10
+        length: 120
+        width: 24
+      }
+      hitEffect: {
+      type: MultiEffect
+      effects: [
+        {
+        type: ParticleEffect
+        line: true
+        particles: 8
+        baseLength: 0
+        length: 20
+        lifetime: 40
+        lenFrom: 7
+        lenTo: 0
+        baseRotation: 180
+        cone: 30
+        interp: circleOut
+        strokeFrom: 4
+        strokeTo: 0
+        colorFrom: ffffff
+        colorTo: e95b5b
+        }
+        {
+        type: ParticleEffect
+        line: true
+        particles: 8
+        baseLength: 0
+        length: 20
+        lifetime: 40
+        baseRotation: 180
+        cone: 30
+        interp: circleOut
+        sizeFrom: 4
+        sizeTo: 0
+        colorFrom: ffffff
+        colorTo: e95b5b
+        }
+      ]
+      shootEffect: [
+        {
+        type: ParticleEffect
+        line: true
+        particles: 8
+        baseLength: 0
+        length: 30
+        lifetime: 40
+        lenFrom: 7
+        lenTo: 0
+        cone: 30
+        interp: circleOut
+        strokeFrom: 4
+        strokeTo: 0
+        colorFrom: ffffff
+        colorTo: e95b5b
+        }
+        {
+        type: ParticleEffect
+        line: true
+        particles: 8
+        baseLength: 0
+        length: 45
+        lifetime: 40
+        cone: 30
+        interp: circleOut
+        sizeFrom: 4
+        sizeTo: 0
+        colorFrom: ffffff
+        colorTo: e95b5b
+        }
+      ]
+    }
+  }
+}
+recoil: 1.5
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -wing
+      progress: warmup
+      under: true
+      moveY: 1.5
+      moveRot: -10
+      moveX: 1.5
+      mirror: true
+      heatColor: e95b5b
+    }
+  ]
+}
+category: turret
+
+
+requirements: [
+  tin/200
+  ferrum/190
+  magnetite/192
+]
+research: {
+parent: photon
+requirements: [
+  tin/200
+  ferrum/1900
+  magnetite/1920
+]
+}

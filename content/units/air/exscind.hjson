@@ -1,0 +1,334 @@
+type: flying
+template: ErekirUnitType
+name: Vespidae
+description: Fires homing blasts at nearby enemies. Highly delicate.
+lightColor: ffefba
+outlineRadius: 4
+outlineColor: 1d2124
+lowAltitude: true
+flying: true
+drag: 0.03
+speed: 0.5
+rotateSpeed: 1.2
+accel: 0.09
+health: 22700
+armor: 20
+engineSize: 0
+itemCapacity: 0
+hitSize: 35
+strafePenalty: 0.6
+weapons: [
+  {
+    x: 12
+    y: 12
+    shootSound: shockBlast
+    shootY: 0
+    mirror: true
+    reload: 100
+    shootCone: 60
+    bullet: {
+      type: BasicBulletType
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareSparse
+      height: 18
+      width: 14
+      trailWidth: 3
+      trailLength: 12
+      backColor: ffefba
+      frontColor: ffffff
+      trailColor: ffefba
+      hitColor: ffefba
+      lifetime: 60
+      speed: 6
+      damage: 10
+      splashDamage: 90
+      splashDamageRadius: 32
+      impact: true
+      pierce: false
+      hitEffect: hitSquaresColor
+      despawnEffect: hitSquaresColor
+      lightColor: ffefba
+    }
+  }
+  {
+    x: 0
+    y: 16
+    shootSound: arta
+    shootY: 0
+    mirror: false
+    reload: 600
+    shootCone: 60
+    chargeSound: lasercharge2
+    shake: 18
+    shoot: {
+      firstShotDelay: 120
+    }
+    bullet: {
+      type: BasicBulletType
+      recoil: 8
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareSparse
+      height: 24
+      width: 24
+      shrinkY: 0
+      sprite: large-orb
+      despawnUnit: arikoth-lightning-bomb
+      chargeEffect: [
+        {
+          type: ParticleEffect
+          colorFrom: ffefba
+          colorTo: f5d384
+          particles: 12
+          length: 50
+          baseLength: -50
+          lifetime: 90
+          interp: exp10In
+        }
+        {
+          type: ParticleEffect
+          colorFrom: ffefba
+          colorTo: f5d384
+          particles: 1
+          length: 0
+          baseLength: 0
+          lifetime: 120
+          sizeFrom: 0
+          sizeTo: 10
+          interp: linear
+        }
+      ]
+      trailWidth: 8
+      trailLength: 16
+      backColor: ffefba
+      frontColor: ffffff
+      trailColor: ffefba
+      hitColor: ffefba
+      lifetime: 180
+      hitSound: nuke
+      speed: 1
+      damage: 300
+      splashDamage: 300
+      splashDamageRadius: 128
+      scaledSplashDamage: true
+      splashDamagePierce: true
+      pierce: false
+      hitShake: 30
+      hitEffect: [
+        scatheExplosion
+        scatheExplosionSmall
+        {
+          type: ParticleEffect
+          colorFrom: ffefbaaa
+          colorTo: f5d384aa
+          particles: 12
+          length: 40
+          sizeFrom: 9
+          sizeTo: 0
+          lifetime: 120
+          interp: pow10Out
+          sizeInterp: pow10In
+        }
+        {
+          type: ParticleEffect
+          colorFrom: ffefba
+          colorTo: f5d384
+          particles: 18
+          length: 40
+          sizeFrom: 4
+          lifetime: 50
+        }
+        {
+          type: ParticleEffect
+          colorFrom: ffefba
+          colorTo: f5d384
+          particles: 25
+          length: 120
+          lifetime: 35
+          line: true
+          lenFrom: 7
+          lenTo: 0
+          strokeFrom: 4
+          strokeTo: 0
+          interp: circleOut
+          sizeInterp: circleIn
+        }
+        smokeAoeCloud
+        {
+          type: WrapEffect
+          effect: dynamicSpikes
+          color: ffefba
+          rotation: 120
+        }
+        {
+          type: WrapEffect
+          effect: mineImpactWave
+          color: ffefba
+          rotation: 10
+        }
+        {
+          type: WrapEffect
+          effect: mineImpactWave
+          color: ffefba
+          rotation: 20
+        }
+        {
+          type: WrapEffect
+          effect: mineImpactWave
+          color: ffefba
+          rotation: 30
+        }
+        {
+          type: WrapEffect
+          effect: mineImpactWave
+          color: ffefba
+          rotation: 40
+        }
+        {
+          type: WrapEffect
+          effect: mineImpactWave
+          color: ffefba
+          rotation: 50
+        }
+      ]
+      despawnHit: true
+      lightColor: ffefba
+    }
+  }
+  {
+    x: 0
+    y: 16
+    shootSound: none
+    shootY: 0
+    mirror: false
+    reload: 600
+    shootCone: 60
+    chargeSound: none
+    shake: 5
+    shoot: {
+      shots: 20
+      shotDelay: 1
+    }
+    bullet: {
+      type: BasicBulletType
+      instantDisappear: true
+      sprite: large-orb
+      shootEffect: [
+        {
+          type: ParticleEffect
+          colorFrom: ffefba
+          colorTo: f5d384
+          particles: 6
+          length: 50
+          baseLength: -50
+          lifetime: 90
+          sizeFrom: 0
+          sizeTo: 2.5
+          interp: swingIn
+        }
+      ]
+    }
+  }
+  {
+    x: 0
+    y: 16
+    shootSound: none
+    shootY: 0
+    mirror: false
+    reload: 600
+    shootCone: 60
+    chargeSound: none
+    shake: 0
+    shoot: {
+      shots: 75
+      shotDelay: 1
+    }
+    bullet: {
+      type: BasicBulletType
+      instantDisappear: true
+      shootEffect: [
+        {
+          type: ParticleEffect
+          colorFrom: ffefba
+          colorTo: f5d384
+          particles: 2
+          length: 70
+          baseLength: -70
+          lifetime: 15
+          line: true
+          lenFrom: 4
+          lenTo: 8
+          strokeFrom: 2
+          strokeTo: 2
+          interp: swingIn
+        }
+      ]
+    }
+  }
+  {
+    name: exscind-weapon
+    x: 12
+    y: -12
+    shootSound: missile
+    shootY: 0
+    mirror: true
+    reload: 15
+    shootCone: 60
+    inaccuracy: 4
+    rotate: true
+    shoot: {
+      type: ShootAlternate
+    }
+    bullet: {
+      type: BasicBulletType
+      weaveMag: 3
+      weaveScale: 4
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareSparse
+      height: 8
+      width: 8
+      trailWidth: 3
+      trailLength: 12
+      backColor: ffefba
+      frontColor: ffffff
+      trailColor: ffefba
+      hitColor: ffefba
+      lifetime: 90
+      speed: 3
+      damage: 30
+      splashDamage: 20
+      splashDamageRadius: 16
+      pierce: false
+      hitEffect: hitSquaresColor
+      despawnEffect: hitSquaresColor
+      lightColor: ffefba
+    }
+  }
+]
+abilities: [
+  {
+    type: MoveEffectAbility
+    minVelocity: 0.1
+    x: 0
+    y: -25
+    interval: 0.00000000000000000000000000000001
+    rotateEffect: true
+    rotation: 0
+    parentizeEffects: false
+    effect: {
+    type: ParticleEffect 
+    colorFrom: ffefba
+    colorTo: f5d384
+    lifetime: 180
+    particles: 1
+    cone: 0
+    length: 0
+    baseLength: 0
+    lightScl: 1
+    lightOpacity: 0.5
+    spin: 0
+    sizeFrom: 6
+    sizeTo: 0 
+    }
+  }
+]
+researchCostMultiplier: 0

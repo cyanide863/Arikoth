@@ -1,0 +1,10 @@
+name: Pyrodust
+description: Flammable dust used in the production of pyrophenium.
+type: item
+cost: 1
+color: db9846
+flammability: 0.1
+explosiveness: 0
+radioactivity: 0
+charge: 0
+research: silica

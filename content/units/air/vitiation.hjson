@@ -1,0 +1,90 @@
+type: flying
+template: ErekirUnitType
+name: Vitiation
+description: A heavy cruiser, hails enemies with incendiary missile strikes.
+lightColor: ffefba
+outlineRadius: 4
+outlineColor: 1d2124
+lowAltitude: true
+flying: true
+drag: 0.03
+speed: 0.6
+rotateSpeed: 1.6
+accel: 0.09
+health: 14500
+armor: 16
+engineSize: 0
+itemCapacity: 0
+hitSize: 35
+strafePenalty: 0.6
+weapons: [
+  {
+    name: vitiation-weapon
+    x: 16
+    y: 6
+    shootSound: missileSmall
+    shootY: 6
+    mirror: true
+    reload: 200
+    layerOffset: -0.5
+    parts: [
+        {
+            type: RegionPart
+            suffix: -cover
+            moveY: -4
+            progress: warmup
+            mirror: false
+        }
+        {
+            type: RegionPart
+            suffix: -top
+            mirror: false
+        }
+    ]
+    shootCone: 60
+    shoot: {
+        type: ShootMulti
+        dest: [
+        {
+            type: ShootPattern
+            shots: 3
+            shotDelay: 5
+        }
+        ]
+        source: {
+          type: ShootAlternate
+          barrels: 3
+          spread: 5
+          shots: 3
+          }
+    }
+    bullet: {
+      type: BasicBulletType
+      spawnUnit: arikoth-vitiation-missile
+      recoil: 0.5
+      shootEffect: [
+        shootBigColor
+        {
+          type: ParticleEffect
+          colorFrom: ffefba
+          colorTo: f5d384
+          particles: 6
+          length: 70
+          cone: 10
+          baseRotation: 180
+          lifetime: 30
+          sizeFrom: 2
+          sizeTo: 0
+        }
+      ]
+      smokeEffect: shootSmokeSquareSparse
+      instantDisappear: true
+      hitEffect: none
+      despawnEffect: none
+      backColor: ffefba
+      frontColor: ffefba
+      lightColor: ffefba
+    }
+  }
+]
+researchCostMultiplier: 0

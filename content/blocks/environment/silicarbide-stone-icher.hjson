@@ -1,0 +1,6 @@
+name: Icheric Silicarbid stone
+type: floor
+variants: 3
+attributes: {
+    steam: 0.75
+}

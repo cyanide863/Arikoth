@@ -1,0 +1,15 @@
+Type: Item
+name: Tin
+description: A simple metal that often appears on arikoth, is used in every building.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 1
+cost: 1
+color: dbd28c
+research: {
+parent: core-satellite
+objectives: [
+]
+}

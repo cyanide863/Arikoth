@@ -1,0 +1,6 @@
+name: Scrap Metal Wall
+type: StaticWall
+variants: 3
+attributes: {
+    sand: 1
+}

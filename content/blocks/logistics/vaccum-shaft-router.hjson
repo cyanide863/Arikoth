@@ -1,0 +1,19 @@
+type: DuctRouter
+name: Vaccum Router
+description: Splits inputs from ducts into three directions equally.
+details: It is resistant to backflow. 
+research: vaccum-shaft
+itemCapacity: 3
+size: 1
+requirements: [
+  tin/6
+]
+research: {
+parent: vaccum-shaft
+requirements: [
+  tin/3
+]
+}
+speed: 2.5
+health: 100
+category: distribution

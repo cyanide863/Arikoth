@@ -1,0 +1,16 @@
+Type: Item
+name: Indium
+description: A soft metal used in electronics and amalgamate-making.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 2
+cost: 2
+color: e0ba65
+research: {
+parent: ferrum
+objectives: [
+ferrum
+]
+}

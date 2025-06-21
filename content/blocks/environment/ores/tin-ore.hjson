@@ -1,0 +1,4 @@
+name: Tin Ore
+type: OreBlock
+itemDrop: tin
+variants: 3

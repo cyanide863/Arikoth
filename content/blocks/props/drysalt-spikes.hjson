@@ -1,0 +1,8 @@
+name: Drysalt Spikes
+type: TallBlock
+variants: 2
+rotationRand: 40
+shadowLayer: 75.9
+shadowAlpha: 0.6
+layer: 76
+shadowOffset: -3

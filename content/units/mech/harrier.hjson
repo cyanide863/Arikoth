@@ -1,0 +1,40 @@
+type: mech
+name: Harrier
+description: Claws at enemies leeching health, it is abnormally large of a tier-1.
+speed: 0.5
+flying: false
+health: 890
+armor: 8
+hitSize: 12
+outlineColor: 1d2124
+mechLegColor: 1d2124
+  weapons: [
+        {
+        top: false
+        x: 5
+        name: harrier-claw
+        recoil: -3
+        shootCone: 45
+        reload: 10
+        rotate: false
+        mirror: true
+        alternate: true
+        shootSound: claw-swoosh
+        bullet: {
+          type: LaserBulletType
+          length: 60
+          width: 2
+          color: [ffffff00]
+          pierceCap: 5
+          damage: 30
+          lifesteal: 0.5
+          sideLength: 0
+        }
+    }
+]
+researchCostMultiplier: 1.5
+research: {
+  parent: hunter-hull-integrator
+  objectives: [
+  ]
+}

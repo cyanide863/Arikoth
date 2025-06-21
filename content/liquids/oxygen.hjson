@@ -1,0 +1,8 @@
+name: Oxygen
+description: Used as a fuel and as an oxidizing agent.
+color: ffbdd4
+viscosity: 0.5
+heatCapacity: 0
+temperature: 0.1
+explosiveness: 0.4
+gas: true

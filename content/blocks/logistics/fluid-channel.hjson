@@ -1,0 +1,13 @@
+type: Conduit
+name: Fluid Channel
+description: Transports liquids forward.
+category: liquid
+research: core-satellite
+requirements: [
+  tin/1
+]
+health: 60
+leaks: true
+junctionReplacement: fluid-channel-crossing
+underBullets: true
+researchCostMultiplier: 0.5

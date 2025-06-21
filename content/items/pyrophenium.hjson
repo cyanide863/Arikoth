@@ -1,0 +1,10 @@
+name: Pyrophenium
+description: A flammable compound used in synthesis, pyrophenium is somewhat duarble and is used in advanced technology.
+type: item
+cost: 2
+color: db9846
+flammability: 0.65
+explosiveness: 0
+radioactivity: 0
+charge: 0
+research: pyrodust

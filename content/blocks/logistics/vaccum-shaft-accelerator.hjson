@@ -1,0 +1,54 @@
+type: MassDriver
+health: 220
+size: 2
+range: 100
+rotateSpeed: 6
+shootY: 0
+translation: 2.5
+knockback: 1
+reload: 90
+shake: 0
+shootSound: blaster
+outlineColor: 1d2124
+shootEffect: {
+    type: WaveEffect
+    lifetime: 30
+    sizeFrom: 0
+    sizeTo: 12
+    sides: 6
+    interp: exp5Out
+}
+receiveEffect: {
+    type: WaveEffect
+    lifetime: 30
+    sizeFrom: 0
+    sizeTo: 12
+    sides: 6
+    interp: exp5Out
+}
+bulletSpeed: 4
+bulletLifetime: 60
+bullet: {
+    trailColor: ffffff
+    trailInterval: 7.5
+    trailRotation: true
+    trailLength: 24
+    trailEffect: none
+    backColor: ffffff
+    frontColor: ffffff
+    width: 8
+    height: 8
+    sprite: circle-bullet
+}
+requirements: [
+    ferrum/30
+    tin/35
+]
+category: distribution
+research: {
+    parent: vaccum-shaft
+    requirements: [
+        ferrum/30
+        tin/35
+    ]
+}

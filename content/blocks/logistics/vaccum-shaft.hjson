@@ -1,0 +1,18 @@
+type: Duct
+name: Vaccum Shaft
+description: Moves items forward via pressurized air and a vaccum for zero resistance. 
+research: core-satellite
+size: 1
+requirements: [
+  tin/1
+]
+research: {
+parent: core-satellite
+requirements: [
+  tin/1
+]
+}
+speed: 3.5
+bridgeReplacement: vaccum-shaft-overpass
+health: 100
+category: distribution

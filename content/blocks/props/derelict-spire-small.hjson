@@ -1,0 +1,8 @@
+name: Small Ruined Spire
+type: TallBlock
+variants: 1
+rotationRand: 0
+shadowLayer: 68.5
+layer: 68
+shadowOffset: 0
+shadowAlpha: 0.2

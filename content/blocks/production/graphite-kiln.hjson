@@ -1,0 +1,100 @@
+name: Graphite Kiln
+description: Smelts lignite down into carbon then crystallizes it into graphite.
+type: GenericCrafter
+category: crafting
+health: 880
+size: 3
+fogRadius: 2
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 24
+liquidCapacity: 60
+ambientSound: smelter
+ambientSoundVolume: 1.5
+updateEffect: generatespark
+craftTime: 120
+craftEffect: [
+{
+type: RadialEffect
+lengthOffset: 6.5
+effect: surgeCruciSmoke
+}
+{
+type: RadialEffect
+lengthOffset: 6.5
+effect: surgeCruciSmoke
+}
+{
+type: RadialEffect
+lengthOffset: 6.5
+effect: surgeCruciSmoke
+}
+]
+consumes: {
+  liquids: [
+  icher/0.18
+  ]
+  items: [
+    lignite/6
+  ]
+}
+outputItems: [
+  graphite-rod/4
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+    {
+    type: DrawRegion
+    suffix: -lower
+    }
+    {
+      type: DrawParticles
+      particleRad: 12
+      particleSize: 3.5
+      rotateScl: 3.5
+      particles: 80
+      particleLife: 120
+      alpha: 0.5
+      color: ff863b
+      color2: e83724
+      blending: additive
+    }
+    {
+      type: DrawSoftParticles
+      particleRad: 12
+      particleSize: 9
+      rotateScl: 2.5
+      particles: 37
+      particleLife: 120
+      alpha: 0.35
+      color: ff863b
+      color2: e83724
+    }
+    {
+    type: DrawDefault
+    }
+    {
+    type: DrawGlowRegion
+    suffix: -vents
+    }
+  ]
+}
+
+requirements: [
+  tin/165
+  ferrum/120
+  scrap-metal/120
+]
+
+research: {
+  parent: core-satellite
+  requirements: [
+    tin/165
+    ferrum/120
+    scrap-metal/120
+  ]
+}
+squareSprite: false

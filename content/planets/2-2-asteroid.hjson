@@ -1,0 +1,57 @@
+    generator: "AsteroidGenerator",
+    parent: "everneon",
+    iconColor: 1a236e,
+    orbitRadius: 7,
+    orbitOffset: 25
+    hasAtmosphere: false,
+    updateLighting: false,
+    drawOrbit: true,
+    accessible: false,
+    alwaysUnlocked: true,
+    defaultCore: "core-nucleus",
+    clearSectorOnLose: true,
+    allowSectorInvasion: false,
+	allowLaunchToNumbered: false,
+    radius: 1,
+    hiddenItems: [
+        "copper",
+        "lead",
+        "scrap",
+        "graphite",
+        "coal",
+        "titanium",
+        "thorium",
+        "silicon",
+        "plastanium",
+        "phase-fabric",
+        "surge-alloy",
+        "spore-pod",
+        "sand",
+        "blast-compound",
+        "pyratite",
+        "metaglass",
+        "beryllium",
+        "oxide",
+        "tungsten",
+        "carbide",
+        "fissile-matter",
+        "dormant-cyst"
+    ],
+mesh: {
+  type: NoiseMesh
+  divisions: 4
+  radius: 0.1
+  planet: 9
+  color1: 943b3b
+  color2: 697173
+  octaves: 4
+  persistence: 0.2
+  scale: 1.2
+  mag: 5
+  coct: 7
+  cper: 1.9
+  cscl: 0.7
+  cthresh: 0.09
+  }
+alwaysUnlocked: false
+accessible: false

@@ -1,0 +1,9 @@
+name: Azure Tree Large
+type: TallBlock
+variants: 2
+rotationRand: 90
+layer: 90
+shadowLayer: 89.5
+shadowOffset: -12
+lightRadius: 100
+lightColor: 3a6b8c55

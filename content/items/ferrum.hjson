@@ -1,0 +1,16 @@
+Type: Item
+name: Ferrum
+description: A useful metal used in many units and blocks, it can be magnetized into magnetite.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 1
+cost: 1
+color: 9c818d
+research: {
+parent: tin
+objectives: [
+tin
+]
+}

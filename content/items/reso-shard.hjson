@@ -1,0 +1,18 @@
+Type: Item
+name: Resonating Shard
+description: A crystalline lattice of silicon cations with neon anions present in the cavities.
+flammability: 0
+radioactivity: 0
+explosiveness: 0.2
+charge: 0.5
+hardness: 3
+cost: 2
+color: fc4e52
+frames: 8
+frameTime: 4
+research: {
+parent: siliglass
+objectives: [
+siliglass
+]
+}

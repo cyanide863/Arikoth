@@ -1,0 +1,92 @@
+type: tank
+name: Anax
+description: A small unit, doesnt get slowed by water and is used as a scout. Fires small shells at targeted opponents.
+hitSize: 8
+treadPullOffset: 0
+omniMovement: false
+faceTarget: false
+outlineColor: 1d2124
+speed: 1.4
+rotateSpeed: 6
+health: 320
+armor: 6
+itemCapacity: 0
+drownTimeMultiplier: 2.5
+hovering: true
+hitSize: 13
+treadRects: [
+  {
+    x: 14
+    y: -30
+    width: 16
+    height: 24
+  }
+  {
+    x: 14
+    y: 6
+    width: 16
+    height: 24
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: 1
+    name: anax-weapon
+    reload: 10
+    rotate: true
+    mirror: false
+    ejectEffect: casing1
+    shootSound: shootSnap
+    bullet: {
+      sprite: shell
+      height: 12
+      width: 12
+      trailWidth: 2
+      trailLength: 9
+      backColor: e0ba65
+      frontColor: ffffff
+      trailColor: e0ba65
+      hitColor: e0ba65
+      lifetime: 10
+      speed: 6
+      trailEffect: colorSpark
+      trailInterval: 3
+      trailRotation: true
+      damage: 20
+      despawnHit: true
+      hitEffect: [
+        {
+        type: particleEffect
+        particles: 18
+        length: 20
+        sizeFrom: 6
+        colorTo: e0ba65
+        lightColor: b78e34
+        lifetime: 30
+        interp: circleOut
+        }
+        {
+        type: particleEffect
+        particles: 18
+        length: 25
+        interp: circleOut
+        strokeFrom: 2
+        strokeTo: 0
+        lenFrom: 4
+        line: true
+        colorTo: e0ba65
+        lightColor: b78e34
+        lifetime: 15
+        }
+      ]
+    }
+  }
+]
+research: {
+  parent: 10j-01-tank-mounting-bay
+  //objectives: [ 
+  //  10j-01-tank-mounting-bay
+  //]
+}
+researchCostMultiplier: 1.5

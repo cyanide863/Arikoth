@@ -1,0 +1,55 @@
+type: ThermalGenerator
+name: Steam Turbine
+description: Produces power via steam rotation a turbine, can only be placed on vents.
+health: 880
+attribute: heat
+displayEfficiency: false
+minEfficiency: 0.999
+category: power
+powerProduction: 5
+generateEffect: turbinegenerate
+effectChance: 0.03
+size: 3
+hasItems: false
+itemCapacity: 0
+hasLiquids: false
+liquidCapacity: 0
+ambientSound: hum
+ambientSoundVolume: 0.08
+requirements: [
+  tin/40
+  ferrum/35
+  siliglass/50
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -lower
+    }
+    {
+      type: DrawBlurSpin
+      suffix: -rotator
+      blurThresh: 0.7
+      rotateSpeed: 8
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+research: { 
+parent: core-satellite
+requirements: [
+  tin/400
+  ferrum/350
+  siliglass/500
+]
+objectives: [
+ferrum,
+tin,
+silica,
+siliglass,
+]
+}

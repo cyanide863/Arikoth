@@ -1,0 +1,16 @@
+type: LiquidJunction
+name: Fluid Channel Crossing
+description: Used for crossing over two fluid channels.
+solid: false
+category: liquid
+squareSprite: false
+research: {
+parent: fluid-channel
+requirements: [
+  tin/4
+]
+}
+requirements: [
+  tin/8
+]
+researchCostMultiplier: 0.5

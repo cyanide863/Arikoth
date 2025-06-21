@@ -1,0 +1,63 @@
+name: Degassing Chamber
+description: Extractes and degasses detril to produce oxygen.
+type: GenericCrafter
+category: crafting
+health: 440
+size: 2
+fogRadius: 2
+hasItems: true
+hasPower: true
+hasLiquids: true
+liquidCapacity: 60
+ambientSound: steam
+ambientSoundVolume: 0.75
+craftTime: 60
+craftEffect: [
+{
+    type: WrapEffect
+    effect: vapor
+    color: 8d8086 
+}
+{
+    type: WrapEffect
+    effect: vapor
+    color: 8d8086
+}
+{
+    type: WrapEffect
+    effect: vapor
+    color: 8d8086 
+}
+]
+consumes: {
+  liquids: [
+  icher/0.18
+  detril/0.5
+  ]
+}
+outputLiquid: oxygen/0.05
+
+drawer: {
+type: DrawMulti
+  drawers: [
+    {
+    type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  tin/120
+  scrap-metal/165
+  graphite-rod/125
+]
+
+research: {
+  parent: graphite-kiln
+  requirements: [
+    tin/120
+    scrap-metal/165
+    graphite-rod/125
+  ]
+}
+squareSprite: false

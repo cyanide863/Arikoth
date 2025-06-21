@@ -1,0 +1,103 @@
+type: legs
+template: ErekirUnitType
+lightColor: ed6a37
+outlineColor: 292a2c
+outlineRadius: 3
+fogRadius: 8
+itemCapacity: 0
+speed: 0.7
+drag: 0.15
+hitSize: 12
+rotateSpeed: 2.8
+health: 890
+armor: 8
+legStraightness: 0
+stepShake: 0
+legCount: 6
+legLength: 9
+lockLegBase: true
+legContinuousMove: true
+legExtension: -1
+legBaseOffset: 4
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.9
+legForwardScl: 1.1
+legGroupSize: 3
+rippleScale: 0.2
+legMoveSpace: 2
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.25
+groundLayer: 74
+weapons: [
+  {
+    name: electron-weapon
+    shootSound: blaster
+    mirror: false
+    cooldownTime: 30
+    heatColor: ab3400
+    shootY: 3.5
+    x: 0
+    y: 0
+    reload: 60
+    shake: 1
+    showStatSprite: false
+    bullet: {
+      type: BasicBulletType
+      shootEffect: [
+        shootSmallColor,
+        colorSpark,
+      ]
+      sprite: circle-bullet
+      recoil: 2
+      height: 12
+      width: 8
+      trailWidth: 2
+      trailLength: 9
+      backColor: ed6a37
+      frontColor: ffffff
+      trailColor: ed6a37
+      hitColor: ed6a37
+      lifetime: 10
+      speed: 6
+      trailEffect: colorSpark
+      trailInterval: 3
+      trailRotation: true
+      damage: 25
+      splashDamage: 20
+      splashDamageRadius: 25
+      pierce: true
+      pierceCap: 2
+      despawnHit: true
+      hitEffect: [
+      {
+        type: particleEffect
+        particles: 18
+        length: 70
+        sizeFrom: 6
+        cone: 20
+        colorTo: ed6a37
+        lightColor: ed6a37
+        lifetime: 30
+        interp: circleOut
+      }
+      {
+        type: particleEffect
+        particles: 18
+        length: 90
+        interp: circleOut
+        strokeFrom: 4
+        strokeTo: 0
+        lenFrom: 7
+        cone: 10
+        line: true
+        colorTo: ed6a37
+        lightColor: ed6a37
+        lifetime: 15
+      }
+      ]
+    }
+  }
+]

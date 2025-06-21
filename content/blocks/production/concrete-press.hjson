@@ -1,0 +1,88 @@
+name: Graphite Kiln
+description: Smelts lignite down into carbon then crystallizes it into graphite.
+type: GenericCrafter
+category: crafting
+health: 440
+size: 2
+fogRadius: 2
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 24
+liquidCapacity: 60
+ambientSound: smelter
+ambientSoundVolume: 1.5
+updateEffect: generatespark
+craftTime: 120
+craftEffect: [mineSmall, shockwave]
+consumes: {
+  items: [
+    ferrum/2
+    silica/2
+  ]
+}
+outputItems: [
+  makeshift-concrete/2
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+    {
+    type: DrawDefault
+    }
+    {
+    type: DrawRegion
+    suffix: -gear
+    spinSprite: true
+    rotateSpeed: -1
+    x: -6
+    }
+    {
+    type: DrawRegion
+    suffix: -gear
+    spinSprite: true
+    rotateSpeed: 1
+    x: 6
+    }
+    {
+    type: DrawRegion
+    suffix: -gear
+    spinSprite: true
+    rotateSpeed: -1
+    y: -6
+    }
+    {
+    type: DrawRegion
+    suffix: -gear
+    spinSprite: true
+    rotateSpeed: -1
+    y: 6
+    }
+    {
+    type: DrawDefault
+    }
+    {
+    type: DrawRegion
+    suffix: -spinner
+    spinSprite: true
+    rotateSpeed: -2
+    }
+  ]
+}
+
+requirements: [
+  tin/20
+  ferrum/60
+  scrap-metal/30
+]
+
+research: {
+  parent: core-satellite
+  requirements: [
+  tin/200
+  ferrum/600
+  scrap-metal/300
+  ]
+}
+squareSprite: false

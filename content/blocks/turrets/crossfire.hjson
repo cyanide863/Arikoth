@@ -1,0 +1,173 @@
+targetAir: true
+type: ItemTurret
+size: 3
+health: 2300
+range: 200
+rotateSpeed: 14
+reload: 90
+inaccuracy: 1
+recoil: 2
+shootSound: cannon
+shake: 4
+outlineColor: 252729
+ammoTypes: {
+ferrum: {
+type: BasicBulletType
+width: 20
+height: 26
+damage: 75
+splashDamage: 50
+splashDamageRadius: 16
+speed: 8
+lifetime: 25
+frontColor: 9c818d
+backColor: 735562
+status: melting
+statusDuration: 70
+hitShake: 8
+knockback: 12
+hitSound: explosion
+trailChance: 0.6
+trailLength: 8
+trailWidth: 4
+trailColor: 735562
+fragBullets: 6
+fragLifeMin: 0.1
+fragBullet: {
+  type: BasicBulletType
+  width: 8
+  height: 8
+  damage: 10
+  splashDamage: 10
+  splashDamageRadius: 16
+  speed: 1
+  lifetime: 30
+  frontColor: 9c818d
+  backColor: 735562
+  status: melting
+  statusDuration: 70
+  hitShake: 2
+  trailChance: 0.6
+  trailLength: 2
+  trailWidth: 1
+  trailColor: 735562
+  }
+}
+magnetite: {
+type: BasicBulletType
+width: 20
+height: 26
+damage: 75
+splashDamage: 50
+splashDamageRadius: 16
+speed: 4
+lifetime: 50
+frontColor: ffffff
+backColor: 7764b9
+status: shocked
+statusDuration: 70
+hitShake: 8
+hitSound: explosion
+trailChance: 0.6
+trailLength: 8
+trailWidth: 4
+trailColor: 7764b9
+hitEffect: [
+  {
+    type: ParticleEffect
+    colorFrom: 7764b9
+    colorTo: 6452a1aa
+    length: 50
+    sizeFrom: 10
+    sizeTo: 0
+    interp: pow10Out
+    sizeInterp: pow10In
+    lifetime: 120
+    particles: 12
+  }
+  {
+    type: ParticleEffect
+    colorFrom: ffffff
+    colorTo: 7764b9
+    length: 50
+    sizeFrom: 10
+    sizeTo: 0
+    interp: pow10Out
+    sizeInterp: pow10In
+    lifetime: 120
+    particles: 12
+  }
+]
+lightning: 4
+lightningColor: ffffff
+lightningDamage: 30
+lightningLength: 6
+lightningLengthRand: 2
+fragBullets: 12
+fragLifeMin: 0
+trailEffect: disperseTrail
+trailRotation: true
+fragBullet: {
+  type: ArtilleryBulletType
+  width: 0
+  height: 0
+  damage: 10
+  splashDamage: 10
+  splashDamageRadius: 16
+  speed: 2
+  lifetime: 30
+  frontColor: ffffff
+  backColor: ffffff
+  trailEffect: none
+  status: shocked
+  statusDuration: 70
+  hitShake: 2
+  trailChance: 0.6
+  trailLength: 2
+  trailWidth: 1
+  trailColor: ffffff
+  despawnHit: true
+  hitSound: spark
+  hitEffect: none
+  despawnEffect: none
+  lightning: 3
+  lightningColor: 7764b9
+  lightningDamage: 10
+  lightningLength: 3
+  lightningLengthRand: 2
+  }
+}
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -barrel
+      mirror: false
+      progress: recoil
+      heatProgress: recoil
+      under: true
+      moveY: -2
+    }
+  ]
+}
+category: turret
+
+
+requirements: [
+  ferrum/140
+  magnetite/125
+  makeshift-concrete/192
+  scrap-metal/220
+]
+research: {
+parent: puncture
+requirements: [
+  ferrum/1400
+  magnetite/1250
+  makeshift-concrete/1920
+  scrap-metal/2200
+]
+}

@@ -1,0 +1,10 @@
+name: Crimson Rift
+type: SteamVent
+attributes: {
+  heat: 0.11111111
+}
+effect: ventSteam
+variants: 3
+effectColor: 783b3c
+blendGroup: crimson-rock
+parent: crimson-rock

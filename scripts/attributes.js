@@ -1,2 +1,2 @@
-Attribute.add("shell");
-Attribute.add("shells");
+Attribute.add("scraps");
+Attribute.add("silica");

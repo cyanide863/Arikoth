@@ -1,0 +1,6 @@
+name: Azuric Tree
+type: TreeBlock
+variants: 2
+emitLight: true
+lightRadius: 70
+lightColor: 3a6b8c55

@@ -1,0 +1,246 @@
+name: Pyrophenium Compactor
+description: Compacts pyrodust into pyrophenium, requires methane and power to operate.
+type: GenericCrafter
+category: crafting
+health: 1100
+size: 4
+fogRadius: 5
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 36
+liquidCapacity: 60
+ambientSound: grinding
+ambientSoundVolume: 0.1
+updateEffect: generatespark
+craftTime: 300
+craftEffect: {
+type: MultiEffect
+effects: [
+mineBig,
+{
+type: RadialEffect
+lengthOffset: 11.5
+rotationOffset: 45
+effect: [
+{
+type: ParticleEffect
+sizeFrom: 3
+sizeTo: 0
+lifetime: 30
+length: 30
+baseLength: 2
+colorFrom: f0a74e
+colorTo: 909090
+lightOpacity: 0
+layer: 100
+cone: 10
+useRotation: false
+baseRotation: 90
+startDelay: 0
+}
+{
+type: ParticleEffect
+sizeFrom: 3
+sizeTo: 0
+lifetime: 30
+length: 30
+baseLength: 2
+colorFrom: f0a74e
+colorTo: 909090
+lightOpacity: 0
+layer: 100
+cone: 10
+useRotation: false
+baseRotation: 90
+startDelay: 1
+}
+{
+type: ParticleEffect
+sizeFrom: 3
+sizeTo: 0
+lifetime: 30
+length: 30
+baseLength: 2
+colorFrom: f0a74e
+colorTo: 909090
+lightOpacity: 0
+layer: 100
+cone: 10
+useRotation: false
+baseRotation: 90
+startDelay: 2
+}
+{
+type: ParticleEffect
+sizeFrom: 3
+sizeTo: 0
+lifetime: 30
+length: 30
+baseLength: 2
+colorFrom: f0a74e
+colorTo: 909090
+lightOpacity: 0
+layer: 100
+cone: 10
+useRotation: false
+baseRotation: 90
+startDelay: 3
+}
+{
+type: ParticleEffect
+sizeFrom: 3
+sizeTo: 0
+lifetime: 30
+length: 30
+baseLength: 2
+colorFrom: f0a74e
+colorTo: 909090
+lightOpacity: 0
+layer: 100
+cone: 10
+useRotation: false
+baseRotation: 90
+startDelay: 4
+}
+{
+type: ParticleEffect
+sizeFrom: 3
+sizeTo: 0
+lifetime: 30
+length: 30
+baseLength: 2
+colorFrom: f0a74e
+colorTo: 909090
+lightOpacity: 0
+layer: 100
+cone: 10
+useRotation: false
+baseRotation: 90
+startDelay: 5
+}
+]
+}
+]
+}
+consumes: {
+  power: 2.5
+  liquids: [
+    methane/0.6
+  ]
+  items: [
+    pyrodust/18
+  ]
+}
+outputItems: [
+  pyrophenium/12
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+    {
+    type: DrawRegion
+    suffix: -lower
+    }
+    {
+      type: DrawSoftParticles
+      particleRad: 12
+      particleSize: 6
+      rotateScl: 3.5
+      particles: 60
+      particleLife: 120
+      alpha: 0.5
+      color: 7793c4
+      color2: 50668c
+      blending: additive
+    }
+  {
+  type: DrawLiquidTile
+  drawLiquid: methane
+  padding: 2
+  alpha: 0.8
+  }
+  {
+  type: DrawFrames
+  frames: 4
+  sine: false
+  interval: 2
+  }
+  {
+  type: DrawRegion
+  suffix: -rotator
+  spinSprite: true
+  rotateSpeed: 1
+  rotation: 22.5
+  x: -4
+  y: 4
+  }
+  {
+  type: DrawRegion
+  suffix: -rotator
+  spinSprite: true
+  rotateSpeed: -1
+  x: 4
+  y: -4
+  }
+  {
+  type: DrawRegion
+  suffix: -rotator
+  spinSprite: true
+  rotateSpeed: 1
+  x: 4
+  y: 4
+  }
+  {
+  type: DrawRegion
+  suffix: -rotator
+  spinSprite: true
+  rotateSpeed: -1
+  x: -5
+  y: -5
+  }
+  {
+  type: DrawPistons
+  suffix: -piston
+  lenOffset: -10
+  sinMag: 18
+  sinScl: 20
+  angleOffset: 0
+  sinOffset: 0
+  sides: 4
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: methane
+  padding: 2
+  alpha: 0.35
+  }
+    {
+    type: DrawDefault
+    }
+  {
+  type: DrawGlowRegion
+  color: db9846ff
+  glowScale: 30
+  }
+  ]
+}
+
+requirements: [
+  tin/220
+  siliglass/125
+  makeshift-concrete/140
+  palladium/340
+]
+
+research: {
+  parent: core-satellite
+  requirements: [
+  tin/2200
+  siliglass/1250
+  makeshift-concrete/1400
+  palladium/3400
+  ]
+}
+squareSprite: false

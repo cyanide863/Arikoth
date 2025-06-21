@@ -1,0 +1,146 @@
+type: tank
+name: Odonata
+description: A larger recon unit, doesnt get slowed by water and is used as a scout. Fires fragmenting shell at targeted opponents.
+hitSize: 8
+treadPullOffset: 0
+omniMovement: false
+faceTarget: false
+outlineColor: 1d2124
+speed: 1.5
+rotateSpeed: 6.2
+health: 1400
+armor: 8
+itemCapacity: 0
+drownTimeMultiplier: 2.5
+hovering: true
+hitSize: 17
+treadRects: [
+  {
+    x: 20
+    y: -44
+    width: 22
+    height: 32
+  }
+  {
+    x: 20
+    y: 12
+    width: 22
+    height: 32
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: -1.5
+    name: odonata-weapon
+    reload: 40
+    rotate: true
+    mirror: false
+    ejectEffect: none
+    shootSound: microZap
+bullet: {
+      fragLifeMin: 0.5
+      fragLifeMax: 1
+      fragVelocityMin: 1
+      fragVelocityMax: 1
+      fragRandomSpread: 40
+      fragBullets: 4
+      fragBullet: {
+        sprite: shell
+        weaveMag: 1
+        weaveScale: 4
+        height: 12
+        width: 8
+        drag: -0.05
+        trailWidth: 2
+        trailLength: 12
+        backColor: e0ba65
+        frontColor: ffffff
+        trailColor: e0ba65
+        hitColor: e0ba65
+        lifetime: 30
+        speed: 1
+        splashDamage: 20
+        splashDamageRadius: 6
+        type: ArtilleryBulletType
+        pierce: true
+        pierceCap: 2
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: none
+      }
+      sprite: shell
+      height: 12
+      width: 12
+      trailWidth: 2
+      trailLength: 9
+      backColor: e0ba65
+      frontColor: ffffff
+      trailColor: e0ba65
+      hitColor: e0ba65
+      lifetime: 25
+      speed: 6
+      trailEffect: {
+        type: particleEffect
+        particles: 3
+        length: 5
+        baseLength: 8
+        sizeFrom: 6
+        colorTo: e0ba65
+        lightColor: b78e34
+        lifetime: 30
+        interp: circleOut
+      }
+      trailInterval: 3
+      trailRotation: true
+      damage: 120
+      despawnHit: true
+      hitEffect: [
+        {
+        type: particleEffect
+        particles: 18
+        length: 30
+        sizeFrom: 6
+        colorTo: e0ba65
+        lightColor: b78e34
+        lifetime: 30
+        interp: circleOut
+        }
+        {
+        type: particleEffect
+        particles: 18
+        length: 30
+        interp: circleOut
+        strokeFrom: 2
+        strokeTo: 0
+        lenFrom: 4
+        line: true
+        colorTo: e0ba65
+        lightColor: b78e34
+        lifetime: 30
+        }
+        {
+        type: particleEffect
+        particles: 18
+        length: 45
+        interp: circleOut
+        strokeFrom: 2
+        strokeTo: 0
+        lenFrom: 4
+        line: true
+        colorTo: e0ba65
+        lightColor: b78e34
+        lifetime: 30
+        cone: 30
+        }
+      ]
+    }
+  }
+]
+research: {
+  parent: 10j-01-tank-mounting-bay
+  //objectives: [ 
+  //  10j-01-tank-mounting-bay
+  //]
+}
+researchCostMultiplier: 1.5

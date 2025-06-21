@@ -1,7 +1,0 @@
-type: floor
-variants: 4
-liquidDrop: liquid01
-liquidMultiplier: 0.5
-shallow: true
-speedMultiplier: 0.9
-cacheLayer: water

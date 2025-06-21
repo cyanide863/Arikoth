@@ -1,0 +1,24 @@
+name: Icher
+description: A semi-biotic electro potent gas, used in much of the drilling infrasturcture and heating.
+color: ffce59
+viscosity: 0.5
+heatCapacity: 0.8
+temperature: 0.2
+explosiveness: 0.2
+gas: true
+particleSpacing: 2
+vaporEffect: [
+vapor,
+{
+    type: ParticleEffect
+    particles: 5
+    colorFrom: ffce59
+    colorTo: db7f3700
+    sizeFrom: 2
+    sizeTo: 6
+    lifetime: 120
+    length: 40
+    interp: pow10Out
+    sizeInterp: pow3
+}
+]

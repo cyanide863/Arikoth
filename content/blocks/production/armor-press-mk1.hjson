@@ -1,0 +1,81 @@
+name: MK1 Armor Press
+description: Presses down on siliglass and ferrum compressing them into MK1-armor plates.
+type: GenericCrafter
+category: crafting
+health: 880
+size: 3
+fogRadius: 2
+hasItems: true
+hasPower: false
+hasLiquids: false
+itemCapacity: 10
+ambientSound: grinding
+ambientSoundVolume: 0.08
+updateEffect: mineSmall
+craftTime: 120
+craftEffect: mineBig
+consumes: {
+  liquids: [
+    methane/0.45
+  ]
+  items: [
+    siliglass/2
+    ferrum/4
+  ]
+}
+outputItems: [
+  armor-plate-mk1/4
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+    {
+    type: DrawRegion
+    suffix: -lower
+    }
+  {
+  type: DrawRegion
+  suffix: -gear
+  rotateSpeed: 1
+  rotation: 22.5
+  x: -4
+  y: 4
+  }
+  {
+  type: DrawRegion
+  suffix: -gear
+  rotateSpeed: -1
+  x: 4
+  y: -4
+  }
+  {
+  type: DrawPistons
+  suffix: -piston
+  sinMag: 5
+  sinScl: 11.925
+  angleOffset: 45
+  sides: 2
+  sinOffset: 50
+  }
+    {
+    type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  tin/165
+  ferrum/120
+  scrap-metal/120
+]
+
+research: {
+  parent: core-satellite
+  requirements: [
+    tin/165
+    ferrum/120
+    scrap-metal/120
+  ]
+}
+squareSprite: false

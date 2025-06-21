@@ -1,0 +1,68 @@
+name: Jolt Drill
+description: Drills resources from underneath it in bursts of 9 items. Requires icher to operate.
+squareSprite: false
+type: BurstDrill
+health: 600
+arrowColor: c7a4f5
+arrows: 1
+arrowSpacing: 0
+shake: 4
+drillEffect: [
+mineBig,
+mineImpact,
+{
+type: WrapEffect
+effect: mineImpactWave
+color: ffce59
+rotation: 10
+}
+{
+type: WrapEffect
+effect: mineImpactWave
+color: ffce59
+rotation: 15
+}
+{
+type: WrapEffect
+effect: dynamicSpikes
+color: ffce59
+rotation: 25
+}
+{
+    type: ParticleEffect
+    particles: 5
+    colorFrom: ffce59
+    colorTo: db7f3700
+    sizeFrom: 2
+    sizeTo: 6
+    lifetime: 120
+    length: 10
+    interp: pow10Out
+    sizeInterp: pow3
+}
+]
+category: production
+size: 3
+drillTime: 300
+speedCurve: exp5In
+invertedTime: 150
+hardnessDrillMultiplier: 50
+itemCapacity: 18
+tier: 1
+// blockedItem: item01
+consumes: {
+liquids: [
+    icher/0.9
+  ]
+}
+requirements: [
+  tin/35
+  scrap-metal/40
+]
+research: {
+	parent: icher-condenser
+	requirements: [
+    tin/35
+    scrap-metal/40
+	]
+}

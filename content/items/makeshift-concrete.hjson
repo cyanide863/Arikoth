@@ -1,0 +1,16 @@
+Type: Item
+name: Dense Ceramic
+description: A ceramic made of silica and ferrum, it is extensively durable and can withsand tons of pressure.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 1
+cost: 1.25
+color: 808080
+research: {
+parent: tin
+objectives: [
+tin
+]
+}

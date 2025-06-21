@@ -1,0 +1,75 @@
+type: naval
+flying: false
+hitSize: 9
+omniMovement: false
+health: 200
+armor: 4
+speed: 0.5
+rotateSpeed: 4
+range: 80
+itemCapacity: 0
+outlineColor: 1d2124
+weapons: [
+ {
+    name: flex-weapon
+    rotate: true
+    rotateSpeed: 2
+    x: 0
+    y: -1
+    top: true
+    mirror: true
+    shootSound: small-laser-1
+    reload: 50
+    layerOffset: 0.001
+    ignoreRotation: true
+    targetAir: true
+    recoil: 1
+    shoot: {
+    type: ShootPattern
+    shots: 1
+    }
+    bullet: {
+    type: LaserBulletType
+    colors: [97bec790, d5ecf2, d5ecf2]
+    width: 12
+    length: 80
+    damage: 20
+    lifetime: 15
+    pierce: true
+    pierceBuilding: false
+    pierceCap: 1
+    chargeEffect: lightningCharge
+    shootEffect: {
+    type: ParticleEffect
+    line: true
+    particles: 8
+    baseLength: 0
+    length: 14
+    lifetime: 30
+    lenFrom: 6
+    lenTo: 0
+    cone: 75
+    interp: circleOut
+    strokeFrom: 4
+    strokeTo: 0
+    colorFrom: bdf8ff
+    colorTo: 8ceaff
+    }
+    smokeEffect: shootSmallSmoke
+    hitColor: 85c278
+    }
+  }
+]
+
+researchCost: [
+  magnetite/750
+]
+research: {
+    parent: darken-mod-ship-constructor1
+    objectives: [
+        {
+            type: OnSector
+            preset: 00-desolate-craters
+        }
+    ]
+}

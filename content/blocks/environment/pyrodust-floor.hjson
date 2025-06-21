@@ -1,0 +1,4 @@
+name: Pyrodust Floor
+type: floor
+variants: 3
+itemDrop: pyrodust

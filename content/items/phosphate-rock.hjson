@@ -1,0 +1,10 @@
+name: Phosphate Rock
+description: A useful mineral, useless bt default but can be refined into phosphorus.
+type: item
+cost: 1
+color: b33b3b
+flammability: 0.2
+explosiveness: 0
+radioactivity: 0
+charge: 0
+research: pyrodust

@@ -1,0 +1,64 @@
+name: Siliglass Smelter
+description: Smelts silica into a glass-like crystalline matrix.
+type: GenericCrafter
+category: crafting
+health: 440
+size: 2
+fogRadius: 2
+hasItems: true
+hasPower: false
+hasLiquids: false
+itemCapacity: 10
+ambientSound: smelter
+ambientSoundVolume: 0.05
+updateEffect: generatespark
+craftTime: 60
+craftEffect: mineSmall
+consumes: {
+  items: [
+    silica/2
+  ]
+}
+outputItems: [
+  siliglass/2
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+    {
+    type: DrawRegion
+    suffix: -lower
+    }
+    {
+      type: DrawSoftParticles
+      particleRad: 8
+      particleSize: 9
+      rotateScl: 2.5
+      particles: 37
+      particleLife: 120
+      alpha: 0.1
+      color: d5ecf2
+      color2: 97bec7
+    }
+    {
+    type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  tin/165
+  ferrum/120
+  scrap-metal/120
+]
+
+research: {
+  parent: core-satellite
+  requirements: [
+    tin/165
+    ferrum/120
+    scrap-metal/120
+  ]
+}
+squareSprite: false

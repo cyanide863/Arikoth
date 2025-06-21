@@ -1,0 +1,16 @@
+Type: Item
+name: Palladium
+description: Light and malleable metal commonly found on Darken, is used for higher end machinery.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 1
+cost: 1
+color: a9b6cf
+research: {
+parent: tin
+objectives: [
+tin
+]
+}

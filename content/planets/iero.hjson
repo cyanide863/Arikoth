@@ -1,0 +1,101 @@
+generator: "PlanetGenerator",
+localizedName: "[#9effd0]Tauix Ierous"
+parent: "everneon",
+solarSystem: "1-0-Ultramarina"
+iconColor: 9effd0,
+orbitRadius: 12,
+orbitOffset: 32
+hasAtmosphere: true,
+updateLighting: false,
+atmosphereRadIn: 0.01,
+atmosphereRadOut: 0.3,
+atmosphereColor: 9effd0,
+drawOrbit: true,
+accessible: true,
+alwaysUnlocked: true,
+icon: liquid-consume
+defaultCore: "core-nucleus",
+defaultEnv: 5
+sectorSeed: 125,
+startSector: 10,
+sectorSize: 3.5,
+    launchMusic: distantHorizon
+clearSectorOnLose: true,
+allowSectorInvasion: false,
+allowLaunchToNumbered: false,
+radius: 1,
+cloudMesh: [
+{
+  type: HexSkyMesh
+  planet: Iero
+  seed: 2
+  speed: 3
+  radius: 0.08
+  divisions: 5
+  color: 7bcc83
+  octaves: 2
+  persistence: 1
+  scl: 2
+  thresh: 0.25
+}
+{
+  type: HexSkyMesh
+  planet: Iero
+  seed: 2
+  speed: 3
+  radius: 0.06
+  divisions: 4
+  color: 52a07090
+  octaves: 2
+  persistence: 1
+  scl: 2
+  thresh: 0.35
+}
+{
+  type: HexSkyMesh
+  planet: Iero
+  seed: 2
+  speed: 3
+  radius: 0.05
+  divisions: 5
+  color: 32765980
+  octaves: 2
+  persistence: 1
+  scl: 2
+  thresh: 0.45
+}
+]
+    "mesh": [
+{
+    type: NoiseMesh
+    divisions: 5
+    radius: 1.019
+    color1: 4e836a
+    color2: 487e64
+    octaves: 4.2
+    persistence: 0.9
+    scale: 0.7
+    mag: 0.2
+    coct: 4
+    cper: 1
+    cscl: 1.8
+    cthresh: 1
+}
+ {
+bloom: false
+type: NoiseMesh
+divisions: 6
+radius: .667
+color1: 3e5160
+color2: 828c8b
+octaves: 3
+persistence: 1.1
+scale: 1.1
+mag: 3.9
+coct: 1.5
+cper: 1.1
+cscl: 0.7
+cthresh: .4
+bloom: false
+}
+    ] 

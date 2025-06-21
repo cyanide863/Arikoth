@@ -1,0 +1,4 @@
+name: Pyrodust Wall
+type: StaticWall
+variants: 2
+itemDrop: pyrodust
