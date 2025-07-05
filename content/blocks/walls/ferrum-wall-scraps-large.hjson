@@ -1,9 +1,0 @@
-name: Large Ferrum Wall
-variants: 2
-type: Wall
-category: defense
-health: 1800
-size: 2
-requirements: [
-  ferrum/16
-]

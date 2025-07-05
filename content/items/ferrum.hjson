@@ -7,10 +7,10 @@ explosiveness: 0
 charge: 0
 hardness: 1
 cost: 1
-color: 9c818d
+color: eea57f
 research: {
-parent: tin
+parent: core-satellite
 objectives: [
-tin
+core-satellite
 ]
 }

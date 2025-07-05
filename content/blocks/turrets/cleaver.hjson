@@ -1,0 +1,144 @@
+type: ItemTurret
+name: Cleaver
+description: Fires three laser.
+size: 3
+health: 1200
+category: turret
+research: {
+  parent: wreak
+  requirements: [
+  vanadium/1200
+  anterite/900
+  reso-shard/800
+  ]
+}
+shootSound: heavyLaser
+heatRequirement: 10
+maxHeatEfficiency: 2
+requirements: [
+  vanadium/120
+  anterite/90
+  reso-shard/80
+]
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 1.2
+}
+coolantMultiplier: 1.5
+outlineColor: 1d2124
+targetAir: true
+targetGround: true
+reload: 30
+range: 210
+shootY: 0
+inaccuracy: 8
+shoot: {
+type: ShootAlternate
+barrels: 3
+spread: 6
+shots: 3
+}
+ammoTypes: {
+  reso-shard: {
+    frontColor: ffffff
+    backColor: f0595c
+    trailColor: f0595c
+    hitColor: f0595c
+    weaveMag: 2
+    weaveScale: 4
+    type: FlakBulletType
+    width: 12
+    height: 18
+    speed: 6
+    lifetime: 35
+    damage: 20
+    reloadMultiplier: 1
+    pierceArmor: false
+    trailLength: 18
+    trailEffect: disperseTrail
+    trailInterval: 6
+    trailChance: 0.08
+    trailRotation: true
+    trailWidth: 2.5
+    despawnHit: true
+    despawnEffect: none
+    fragBullets: 1
+    fragRandomSpread: 0
+    fragSpread: 0
+    explodeRange: 50
+    explodeDelay: 0
+    flakInterval: 1
+    homingPower: 0.08
+    homingRange: 90
+    collides: true
+    collidesGround: true
+    homingDelay: 8
+    fragBullet: {
+    type: LaserBulletType
+    colors: [c4393c90, f0595c, ffffff]
+    length: 80
+    damage: 20
+    pierceCap: 2
+    }
+    hitEffect: [
+    {
+    type: ParticleEffect
+    strokeFrom: 6
+    strokeTo: 0
+    lenFrom: 15
+    lenTo: 0
+    length: 35
+    lifetime: 40
+    cone: 30
+    colorTo: f0595c
+    particles: 5
+    interp: fastSlow
+    line: true
+    }
+    {
+    type: ParticleEffect
+    strokeFrom: 6
+    strokeTo: 0
+    lenFrom: 15
+    lenTo: 0
+    length: 35
+    lifetime: 40
+    cone: 30
+    colorTo: f0595c
+    particles: 5
+    interp: fastSlow
+    line: true
+    }
+    ]
+  }
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+      type: RegionPart
+      layerOffset: -0.3
+      turretHeatLayer: 49.9
+      suffix: -spine
+      mirror: false
+      progress: warmup
+      heatProgress: warmup
+      outline: false
+      under: true
+      heatColor: f0595c
+    }
+    {
+    type: RegionPart
+    suffix: -wing
+    mirror: true
+    progress: warmup
+    moveX: 2.8
+    moveY: -0.5
+    moveRot: -5
+    heatProgress: warmup
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+name: Shallow Stained Water
+type: Floor
+variants: 3
+isLiquid: true
+speedMultiplier: 0.7
+liquidDrop: stained-water
+liquidMultiplier: 1
+shallow: true
+cacheLayer: water

@@ -1,0 +1,16 @@
+Type: Item
+name: Vanadium
+description: A metal used in reinforcing buildings and in alloying.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 1
+cost: 1
+color: 696c99
+research: {
+parent: raw-vanadium
+objectives: [
+raw-vanadium
+]
+}

@@ -1,0 +1,36 @@
+type: UnitAssembler
+name: Assault Forge
+description: Creates assault units using payloads. Requires power.
+size: 3
+areaSize: 8
+dronesCreated: 4
+category: units
+droneType: solace
+consumes: {
+power: 2.5
+liquids: [
+icher/0.3
+]
+}
+research: {
+  parent: core-satellite
+  objectives: [
+  ]
+}
+requirements: [
+  ferrum/190
+  vanadium/120
+  vespirium/110
+]
+plans: [
+  {
+    type: AssemblerUnitPlan
+    unit: flicker
+    requirements: [
+      arikoth-flicker-hull/1
+      arikoth-ferrum-wall/4
+      arikoth-power-cell-small/2
+    ]
+    time: 1200
+  }
+]

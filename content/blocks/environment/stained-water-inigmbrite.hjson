@@ -1,0 +1,9 @@
+name: Stained Water Inigmbrite
+type: Floor
+variants: 4
+isLiquid: true
+speedMultiplier: 0.8
+liquidDrop: stained-water
+liquidMultiplier: 0.8
+shallow: true
+cacheLayer: water

@@ -19,8 +19,7 @@ unitCapModifier: 15
 unitType: keeper
 requirements: [
   ferrum/1200
-  tin/890
-  scrap-metal/320
+  vanadium/890
 ]
 research: {
   root: true

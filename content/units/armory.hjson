@@ -1,0 +1,133 @@
+type: tank
+name: Armory
+description: Standard attacker, is armed with a shotgun.
+faceTarget: false
+omniMovement: false
+rotMoveFirst: true
+outlineColor: 1d2124
+speed: 0.9
+rotateSpeed: 6
+health: 760
+armor: 10
+itemCapacity: 0
+hitSize: 13
+treadPullOffset: -7
+treadFrames: 12
+treadRects: [
+  {
+  x: 10
+  y: -26
+  width: 17
+  height: 48
+  }
+]
+weapons: [
+  {
+    name: armory-gun
+    x: 0
+    y: -2
+    reload: 30
+    rotate: true
+    mirror: false
+    shootSound: blaster
+    shoot: {
+    shots: 3
+    spread: 5
+    type: ShootSpread
+    }
+    bullet: {
+      type: BasicBulletType
+      backColor: 9fbae8
+      frontColor: ffffff
+      trailColor: 9fbae8
+      lightColor: 9fbae8
+      damage: 30
+      unitDamageMultiplier: 0.75
+      speed: 6
+      lifetime: 20
+      recoil: 0.0
+      width: 8
+      height: 10
+      weaveMag: 3
+      weaveScale: 3
+      trailLength: 12
+      trailWidth: 2
+      trailRotation: true
+      trailEffect: none
+      trailInterval: 1.5
+      lightRadius: 55
+      homingPower: 0.03
+      shootEffect: [
+        {
+          type: ParticleEffect
+          colorFrom: ffffff
+          colorTo: 9fbae8
+          length: 60
+          particles: 4
+          sizeFrom: 5
+          sizeTo: 0
+          interp: circleOut
+          cone: 10
+          lifetime: 30
+          followParent: false
+        }
+        {
+          type: ParticleEffect
+          colorFrom: ffffff
+          colorTo: 9fbae8
+          length: 60
+          particles: 3
+          sizeFrom: 3
+          sizeTo: 0
+          interp: circleOut
+          cone: 10
+          lifetime: 30
+          followParent: false
+        }
+        {
+          type: ParticleEffect
+          colorFrom: ffffff
+          colorTo: 9fbae8
+          length: 60
+          particles: 2
+          sizeFrom: 2
+          sizeTo: 0
+          interp: circleOut
+          cone: 10
+          lifetime: 30
+          followParent: false
+        }
+        {
+          type: ParticleEffect
+          colorFrom: 313b4566
+          colorTo: 313b4500
+          length: 60
+          particles: 2
+          sizeFrom: 2
+          sizeTo: 5
+          sizeInterp: pow2Out
+          interp: pow2Out
+          layer: 99
+          cone: 10
+          followParent: false
+          lifetime: 90
+        }
+        {
+          type: ParticleEffect
+          colorFrom: 313b4566
+          colorTo: 313b4500
+          length: 60
+          particles: 2
+          sizeFrom: 2
+          sizeTo: 5
+          sizeInterp: pow2Out
+          interp: pow2Out
+          layer: 111
+          cone: 10
+          followParent: false
+          lifetime: 90
+        }
+      ]
+    }
+  }
+]

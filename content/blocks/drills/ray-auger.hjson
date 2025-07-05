@@ -1,0 +1,42 @@
+type: BeamDrill
+size: 2
+category: production
+placeableLiquid: false
+drillTime: 200
+tier: 1
+itemCapacity: 10
+liquidCapacity: 20
+optionalBoostIntensity: 1.5
+consumes: {
+    power: 0.25
+	liquid: {
+		liquid: icher
+		amount: 0.3
+        optional: false
+	}
+    liquids: {
+		liquids: [
+        resonating-fuel/0.3
+        ]
+		booster: true
+        optional: true
+    }
+}
+sparkColor: f0595c
+heatColor: f0595c
+boostHeatColor: ffe9b5
+sparks: 9
+sparkLife: 30
+sparkSpread: 40
+ambientSound: hum
+ambientSoundVolume: 0.08
+squareSprite: false
+requirements: [
+ferrum/120
+vanadium/100
+]
+researchCost: [
+ferrum/1200
+vanadium/1000
+]
+research: jolt-drill

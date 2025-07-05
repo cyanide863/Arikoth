@@ -1,0 +1,104 @@
+name: Steam Kettle
+description: Boils water into steam, requires heat to function.
+type: HeatCrafter
+heatRequirement: 3
+maxHeatEfficiency: 4
+category: crafting
+health: 600
+size: 2
+squareSprite: false
+fogRadius: 1
+hasItems: false
+itemCapacity: 0
+hasPower: false
+hasLiquids: true
+ambientSound: boiler-hum
+ambientSoundVolume: 0.05
+liquidCapacity: 30
+craftTime: 60
+craftEffect: {
+type: RadialEffect
+effect: 6
+rotationOffset: 0
+lengthOffset: 0.2
+rotationSpacing: 60
+effect: [
+{
+  type: ParticleEffect
+  layer: 111
+  sizeFrom: 2
+  sizeTo: 9
+  length: 80
+  lifetime: 300
+  colorFrom: ffffff20
+  colorTo: 90909000
+  particles: 1
+  cone: 10
+  baseRotation: 32
+  useRotation: false
+  interp: pow2Out
+  sizeInterp: pow2Out
+}
+{
+  type: ParticleEffect
+  layer: 111
+  line: true
+  strokeFrom: 2
+  strokeTo: 9
+  lenFrom: 0
+  lenTo: 15
+  length: 80
+  lifetime: 300
+  colorFrom: ffffff20
+  colorTo: 90909000
+  particles: 1
+  cone: 10
+  baseRotation: 32
+  useRotation: false
+  interp: pow2Out
+  sizeInterp: pow2Out
+}
+]
+}
+consumes: {
+  liquids: [
+    stained-water/0.5
+  ]
+}
+outputLiquid: steam/0.6
+
+requirements: [
+  ferrum/35
+  vanadium/20
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -lower
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: stained-water
+  padding: 1.5
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: steam
+  padding: 1.5
+  }
+  {
+  type: DrawDefault
+  }
+ ]
+}
+
+research: {
+parent: slag-separator
+requirements: [
+  ferrum/350
+  vanadium/200
+]
+}

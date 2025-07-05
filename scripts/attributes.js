@@ -1,2 +1,1 @@
-Attribute.add("scraps");
-Attribute.add("silica");
+Attribute.add("icher");

@@ -1,0 +1,15 @@
+Type: Item
+name: Ammonium Nitrate
+description: An explosive salt used in refineries and the engineering of exploives.
+flammability: 0.8
+radioactivity: 0
+explosiveness: 1.2
+charge: 0
+hardness: 1
+cost: 1
+color: aaaaaa
+research: {
+parent: raw-vanadium
+objectives: [
+]
+}

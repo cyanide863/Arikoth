@@ -1,0 +1,264 @@
+type: legs
+name: Pathogen
+description: Launches corrosive orbs at enemy units, can step over most terrain.
+hitSize: 8
+faceTarget: true
+outlineColor: 1d2124
+speed: 0.7
+rotateSpeed: 4.5
+health: 5460
+armor: 12
+itemCapacity: 0
+hitSize: 26
+legMoveSpace: 1
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.96
+legForwardScl: 1.1
+legPhysicsLayer: false
+legGroupSize: 4
+legCount: 6
+legExtension: -3
+legContinuousMove: true
+lockLegBase: true
+rippleScale: 1.8
+legSplashDamage: 30
+legSplashDamageRadius: 16
+legBaseOffset: 8
+legLength: 25
+legBaseOffset: 12
+allowLegStep: true
+hovering: true
+immunities: [acidic-corrosion]
+weapons: [
+{
+name: disease-cannon
+x: 10
+y: -10
+mirror: true
+shootY: 5
+shake: 0
+recoil: 0
+cooldownTime: 50
+layerOffset: 0.01
+rotate: true
+reload: 90
+shootSound: artillery
+ejectEffect: casing2
+inaccuracy: 6
+velocityRnd: -0.2
+shoot: {
+shots: 3
+}
+bullet: {
+type: ArtilleryBulletType
+width: 12
+height: 16
+splashDamage: 60
+splashDamageRadius: 16
+speed: 4
+lifetime: 120
+frontColor: ffffff
+backColor: e7f089
+status: acidic-corrosion
+statusDuration: 60
+hitSound: explosion
+sprite: shell
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        {
+        type: ParticleEffect
+        line: true
+        particles: 6
+        baseLength: 0
+        length: 30
+        lifetime: 35
+        lenFrom: 7
+        lenTo: 0
+        interp: circleOut
+        strokeFrom: 4
+        strokeTo: 0
+        colorFrom: e7f089
+        colorTo: a1bd4d
+        }
+      ]
+    }
+   fragBullets: 3
+   fragBullet: {
+   type: BasicBulletType
+   frontColor: ffffff
+   backColor: e7f089
+   trailColor: e7f089
+   hitSound: explosion
+   height: 12
+   width: 8
+   trailLength: 12
+   trailWidth: 2
+   sprite: shell
+   speed: 3
+   lifetime: 10
+   damage: 10
+   shrinkY: -1
+   shrinkInterp: slope
+   trailInterp: slope
+   despawnHit: true
+   despawnEffect: none
+   hitEffect: [
+   {
+    type: ParticleEffect
+    length: 30
+    particles: 6
+    sizeFrom: 8
+    colorFrom: e7f089
+    colorTo: a1bd4d
+    region: particle
+    lifetime: 35
+    interp: linear
+   }
+   {
+    type: WaveEffect
+    sizeTo: 12
+    colorFrom: e7f089
+    colorTo: a1bd4d
+    lifetime: 60
+    interp: linear
+   }
+   ]
+   }
+   smokeEffect: none
+   despawnHit: true
+   despawnEffect: none
+   trailRotation: true
+   trailInterval: 1.3
+   trailChance: 0.05
+   trailEffect: {
+        type: ParticleEffect
+        length: 30
+        particles: 6
+        sizeFrom: 8
+        colorFrom: e7f089
+        colorTo: a1bd4d
+        region: particle
+        lifetime: 35
+        interp: linear
+   }
+   trailChance: 0
+   trailLength: 6
+   trailWidth: 2
+   trailColor: e7f089
+    }
+  }
+{
+name: pathogen-weapon
+x: -8
+y: 8
+mirror: true
+shootY: 5
+shake: 0
+recoil: 0
+cooldownTime: 50
+layerOffset: 0.01
+rotate: true
+reload: 120
+shootSound: release
+ejectEffect: none
+bullet: {
+width: 12
+height: 16
+splashDamage: 50
+splashDamageRadius: 32
+speed: 6
+lifetime: 30
+frontColor: ffffff
+backColor: e7f089
+status: acidic-corrosion
+statusDuration: 60
+hitSound: splash
+sprite: large-orb
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        {
+        type: ParticleEffect
+        line: true
+        particles: 6
+        baseLength: 0
+        length: 30
+        lifetime: 35
+        lenFrom: 7
+        lenTo: 0
+        interp: circleOut
+        strokeFrom: 4
+        strokeTo: 0
+        colorFrom: e7f089
+        colorTo: a1bd4d
+        }
+      ]
+    }
+   fragBullets: 1
+   fragBullet: {
+   type: BasicBulletType
+   frontColor: ffffff
+   backColor: e7f089
+   sprite: large-bomb
+   speed: 0
+   lifetime: 30
+   intervalBullets: 1
+   bulletInterval: 5
+   intervalBullet: {
+   type: ExplosionBulletType
+   splashDamage: 10
+   splashDamageRadius: 32
+   killShooter: false
+   hitEffect: none
+   despawnEffect: {
+       type: ParticleEffect
+       particles: 4
+       baseLength: 0
+       length: 20
+       lifetime: 90
+       startDelay: 0
+       sizeFrom: 1.2
+       sizeTo: 5
+       interp: pow2Out
+       sizeInterp: pow2Out
+       colorFrom: e7f089
+       colorTo: a1bd4d00
+       }
+     }
+   }
+   smokeEffect: none
+   despawnHit: true
+   despawnEffect: none
+   trailRotation: true
+   trailInterval: 1.3
+   trailChance: 0.05
+   trailEffect: {
+    type: ParticleEffect
+    particles: 4
+    baseLength: 0
+    length: 20
+    lifetime: 90
+    startDelay: 0
+    sizeFrom: 1.2
+    sizeTo: 5
+    interp: pow2Out
+    sizeInterp: pow2Out
+    colorFrom: e7f089
+    colorTo: a1bd4d00
+   }
+   trailChance: 0
+   trailLength: 6
+   trailWidth: 2
+   trailColor: e7f089
+    }
+  }
+]
+research: {
+  parent: 10j-01-tank-mounting-bay
+//  objectives: [ 
+//    10j-01-tank-mounting-bay
+//  ]
+}
+researchCostMultiplier: 1.5

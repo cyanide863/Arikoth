@@ -1,10 +1,11 @@
-name: Crimson Rift
+name: Crimson Sand Vent
 type: SteamVent
+variants: 2
 attributes: {
-  heat: 0.11111111
+   steam: 1
+   heat: 0.11111111
 }
+blendGroup: crimson-slate
+parent: crimson-slate
 effect: ventSteam
-variants: 3
-effectColor: 783b3c
-blendGroup: crimson-rock
-parent: crimson-rock
+effectColor: 943b3b

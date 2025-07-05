@@ -1,7 +1,10 @@
 name: Stained Water
-description: Water, has other impurities mixed into it. Often used as a coolant.
-color: 90a6a0
+description: Water, has other impurities mixed into it. Often used as a basic coolant.
+color: 91c9b2
 viscosity: 0.5
 heatCapacity: 0.5
 temperature: 0.5
-explosiveness: 0.5
+explosiveness: 0
+research: {
+parent: icher
+}

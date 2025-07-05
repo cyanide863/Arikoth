@@ -1,0 +1,16 @@
+name: Vanadium Carbide Wall
+description: Defends structures from enemy projectiles.
+type: Wall
+category: defense
+health:  1200
+armor: 8
+size: 1
+requirements: [
+  vanadium-carbide/8
+]
+research: {
+  parent: vespirium-wall
+  requirements: [
+    vanadium-carbide/320
+  ]
+}

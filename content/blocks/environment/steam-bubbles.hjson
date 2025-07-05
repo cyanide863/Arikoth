@@ -1,0 +1,21 @@
+type: GenericCrafter
+destructible: false
+hasPower: false
+hasShadow: false
+health: 10000000000
+targetable: false
+underBullets: true
+placeableLiquid: true
+forceDark: true
+drawer: []
+drawTeamOverlay: false
+updateEffectSpread: 12
+updateEffect: {
+type: WaveEffect
+sizeFrom: 0
+sizeTo: 4
+layer: 30
+lifetime: 20
+colorFrom: ffffffaa
+colorTo: ffffffaa
+}

@@ -1,0 +1,16 @@
+Type: Item
+name: Vanadium Carbide
+description: Hard compound made of vanadium and carbon, naturally occuring in some meteorites. It is a semiconductor.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 2
+cost: 3
+color: 92abd5
+research: {
+parent: vanadium
+objectives: [
+vanadium,
+]
+}

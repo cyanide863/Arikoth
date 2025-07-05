@@ -1,0 +1,266 @@
+name: Vespirium Kiln
+description: Smelts down vanadium and ferrum into vespirium, requires power and neon to operate.
+type: GenericCrafter
+category: crafting
+health: 1200
+size: 3
+squareSprite: false
+fogRadius: 1
+hasItems: true
+itemCapacity: 16
+hasPower: false
+hasLiquids: true
+ambientSound: smelter
+ambientSoundVolume: 0.05
+liquidCapacity: 30
+craftTime: 60
+consumes: {
+  power: 0.5
+  liquids: [
+    neon/0.3
+  ]
+  items: [
+    vanadium/2
+    ferrum/2
+  ]
+}
+outputItems: [
+vespirium/4
+]
+
+requirements: [
+  ferrum/120
+  vanadium/160
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -lower
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: neon
+  padding: 1.5
+  }
+  {
+  type: DrawCrucibleFlame
+  }
+  {
+  type: DrawDefault
+  }
+  {
+  type: DrawGlowRegion
+  color: e0ba65
+  }
+ ]
+}
+
+research: {
+parent: slag-separator
+requirements: [
+  ferrum/1200
+  vanadium/1600
+]
+}
+
+craftEffect: [
+  {
+    type: RadialEffect
+    rotationSpacing: 90
+    rotationOffset: 45
+    amount: 4
+    lengthOffset: 4
+    effect: [
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 0
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 1
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 2
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 3
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 4
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 5
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 6
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 7
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 8
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 9
+    }
+    {
+    particles: 1
+    line: true
+    length: 15
+    lifetime: 45
+    cone: 20
+    lenFrom: 0
+    lenTo: 4
+    strokeFrom: 0.7
+    strokeTo: 0
+    colorFrom: ffffff
+    colorTo: e0ba65
+    interp: pow2
+    sizeInterp: pow3In
+    layer: 110
+    startDelay: 10
+    }
+    ]
+  }
+]

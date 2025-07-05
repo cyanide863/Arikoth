@@ -1,0 +1,11 @@
+name: Steam
+description: Pressurized gaseous water, used in power generation and pnematic processes.
+color: f3f7fc
+viscosity: 0.2
+heatCapacity: 0
+temperature: 0.7
+explosiveness: 0
+gas: true
+research: {
+parent: stained-water
+}

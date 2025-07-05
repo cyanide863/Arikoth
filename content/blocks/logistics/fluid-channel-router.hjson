@@ -9,7 +9,8 @@ liquidCapacity: 30
 category: liquid
 squareSprite: false
 research: fluid-channel
+liquidPadding: 1
 requirements: [
-  tin/10
+  ferrum/10
 ]
 researchCostMultiplier: 0.5

@@ -1,0 +1,8 @@
+type: Wall
+size: 1
+customShadow: true
+placeablePlayer: false
+requirements: [
+  ferrum/25
+  vespirium/15
+]

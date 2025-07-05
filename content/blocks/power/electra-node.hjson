@@ -8,24 +8,24 @@ fogRadius: 1
 hasPower: true
 consumesPower: true
 outputsPower: true
-underBullets: true
+underBullets: false
 consumes: {
-    powerBuffered: 3000
-    }
+    powerBuffered: 300
+}
 laserColor1: ffffff
 laserColor2: ffffff
 laserWidth: 0.5
-pulseMag: 0.025
-pulseScl: 8
-range: 10
+pulseMag: 0.05
+pulseScl: 10
+range: 12
 requirements: [
-  tin/8
+  ferrum/8
 ]
 research: {
     parent: steam-turbine
     objectives: [
     ]
 requirements: [
-  tin/8
+  ferrum/8
 ]
 }

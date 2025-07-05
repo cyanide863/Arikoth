@@ -1,0 +1,74 @@
+name: Carbide Foundry
+description: Fuses vanadium and icher at high tempratures producing carbide.
+type: HeatCrafter
+category: crafting
+health: 1200
+size: 3
+squareSprite: false
+fogRadius: 1
+hasItems: true
+itemCapacity: 16
+hasPower: false
+hasLiquids: true
+ambientSound: blast-furnace
+ambientSoundVolume: 0.06
+liquidCapacity: 32
+craftTime: 120
+heatRequirement: 15
+maxHeatEfficiency: 2
+consumes: {
+  power: 0.5
+  liquids: [
+    icher/0.6
+  ]
+  items: [
+    vanadium/8
+  ]
+}
+outputItems: [
+vanadium-carbide/8
+]
+
+requirements: [
+  ferrum/220
+  vanadium/220
+  vespirium/190
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -lower
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: icher
+  padding: 1.5
+  }
+  {
+  type: DrawCrucibleFlame
+  flameColor: 9fbae8
+  }
+  {
+  type: DrawDefault
+  }
+  {
+  type: DrawHeatInput
+  suffix: -heat
+  color: 9fbae8
+  }
+ ]
+}
+
+research: {
+parent: vespirium-kiln
+requirements: [
+  ferrum/2200
+  vanadium/2200
+  vespirium/1900
+]
+}
+
+craftEffect: none

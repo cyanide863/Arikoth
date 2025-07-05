@@ -1,0 +1,95 @@
+type: ItemTurret
+name: Castigate
+predictTarget: false
+description: Launches three long ranged warheads at enemy units.
+size: 4
+rotateSpeed: 1
+health: 1200
+category: turret
+research: {
+  parent: core-satellite
+  requirements: [
+  ferrum/60
+  vanadium/50
+  ]
+}
+shootSound: missileSmall
+requirements: [
+  ferrum/120
+  vanadium/100
+]
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 1.5
+}
+outlineColor: 1d2124
+targetAir: true
+targetGround: true
+reload: 300
+range: 640
+velocityRnd: 0
+inaccuracy: 0
+ammoPerShot: 8
+consumeAmmoOnce: false
+shoot: {
+  shots: 3
+  shotDelay: 20
+}
+ammoTypes: {
+  nitride: {
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: none
+    instantDisappear: true
+    spawnUnit: c-missile
+    shootEffect: [
+    {
+    type: ParticleEffect
+    sizeFrom: 5
+    sizeTo: 0
+    length: 60
+    cone: 30
+    baseRotation: 180
+    lifetime: 30
+    colorFrom: f7f7f7
+    colorTo: abababaa
+    particles: 18
+    interp: circleOut
+    }
+    ]
+  }
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+    colorTo: ffffff
+    color: ffffff00
+    mixColorTo: ababab
+    mixColor: ffffff00
+    outline: true
+    under: true
+    suffix: -missile
+    progress: reload
+    }
+    {
+    type: RegionPart
+    suffix: -segment
+    progress: warmup
+    mirror: true
+    moveY: 0.5
+    moveRot: -5
+    }
+    {
+    type: RegionPart
+    suffix: -front
+    progress: warmup
+    mirror: true
+    moveY: -2.5
+    moveX: 2.5
+    }
+  ]
+}

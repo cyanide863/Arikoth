@@ -1,0 +1,270 @@
+type: ItemTurret
+name: Tarnish
+description: '''
+Fires two types of blasts at enemy targets.
+default: ammonium nitrate, used as shotgun blasts (check the frag bullets for bullet stats).
+special: infernite used as long ranged explosive missiles.
+'''
+size: 3
+health: 1200
+category: turret
+research: {
+  parent: puncture
+  requirements: [
+  ferrum/1800
+  vanadium/1200
+  ammonium-nitrate/1600
+  vespirium/400
+  ]
+}
+shootSound: none
+requirements: [
+  ferrum/180
+  vanadium/120
+  ammonium-nitrate/160
+  vespirium/40
+]
+ammoUseEffect: casing2
+outlineColor: 1d2124
+targetAir: false
+targetGround: true
+reload: 10
+range: 90
+velocityRnd: 0
+inaccuracy: 0
+shootY: -1
+ammoTypes: {
+  ammonium-nitrate: {
+    type: EmptyBulletType
+    instantDisappear: true
+    despawnSound: shootSnap
+    fragBullets: 3
+    fragRandomSpread: 9
+    fragVelocityMax: 1
+    fragVelocityMin: 1
+    fragLifeMin: 0.8
+    despawnEffect: none
+    hitEffect: none
+    fragSpread: 0
+    fragBullet: {
+    frontColor: ffffff
+    backColor: aaaaaa
+    trailColor: aaaaaa
+    hitColor: aaaaaa
+    type: BasicBulletType
+    collidesAir: false
+    width: 8
+    height: 12
+    speed: 6
+    lifetime: 15
+    damage: 30
+    splashDamage: 30
+    splashDamageRadius: 16
+    trailLength: 12
+    trailWidth: 2.5
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: [
+    {
+    type: ParticleEffect
+    sizeFrom: 5
+    sizeTo: 0
+    length: 30
+    lifetime: 40
+    interp: circleOut
+    colorFrom: ffffff
+    colorTo: aaaaaa
+    }
+    {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 10
+    lifetime: 40
+    strokeFrom: 2
+    strokeTo: 0
+    interp: circleOut
+    colorFrom: ffffff
+    colorTo: aaaaaa
+    }
+    ]
+    }
+  }
+  infernite: {
+    type: EmptyBulletType
+    instantDisappear: true
+    despawnSound: missileSmall
+    rangeChange: 180
+    inaccuracy: 0
+    reloadMultiplier: 0.18
+    fragBullets: 3
+    fragRandomSpread: 0
+    fragVelocityMax: 1
+    fragVelocityMin: 1
+    despawnEffect: none
+    hitEffect: none
+    fragSpread: 15
+    fragBullet: {
+    frontColor: ffffff
+    backColor: fa8b5f
+    trailColor: fa8b5f
+    hitColor: fa8b5f
+    type: BasicBulletType
+    collidesAir: false
+    homingDelay: 5
+    homingRange: 120
+    homingPower: 0.04
+    height: 18
+    width: 14
+    speed: 3
+    lifetime: 90
+    weaveMag: 3
+    weaveScale: 3
+    weaveRandom: false
+    makeFire: true
+    incendChance: 1
+    incendAmount: 10
+    incendSpread: 12
+    splashDamage: 70
+    splashDamageRadius: 32
+    trailLength: 18
+    trailWidth: 4
+    despawnHit: true
+    despawnEffect: none
+    hitSound: explosion
+    despawnSound: bang
+    trailInterval: 8
+    trailRotation: true
+    trailEffect: [
+    {
+    type: ParticleEffect
+    particles: 12
+    cone: 30
+    sizeFrom: 4
+    sizeTo: 0
+    length: 30
+    baseRotation: 180
+    lifetime: 30
+    interp: fastSlow
+    colorFrom: fa8b5f
+    colorTo: db7046
+    }
+    {
+    type: ParticleEffect
+    particles: 12
+    cone: 30
+    lenFrom: 7
+    lenTo: 0
+    strokeFrom: 4
+    strokeTo: 0
+    length: 30
+    line: true
+    baseRotation: 180
+    lifetime: 30
+    interp: fastSlow
+    colorFrom: fa8b5f
+    colorTo: db7046
+    }
+    ]
+    hitEffect: [
+    {
+    type: ParticleEffect
+    particles: 12
+    sizeFrom: 4
+    sizeTo: 0
+    length: 30
+    lifetime: 40
+    interp: circleOut
+    sizeInterp: pow10In
+    colorFrom: fa8b5f
+    colorTo: db7046
+    }
+    {
+    type: ParticleEffect
+    particles: 12
+    sizeFrom: 5
+    sizeTo: 0
+    length: 30
+    lifetime: 50
+    interp: circleOut
+    sizeInterp: pow10In
+    colorFrom: fa8b5f
+    colorTo: db704600
+    }
+    {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 10
+    lifetime: 40
+    strokeFrom: 4
+    strokeTo: 0
+    interp: circleOut
+    colorFrom: fa8b5f
+    colorTo: db7046
+    }
+    {
+    type: WaveEffect
+    sizeFrom: 10
+    sizeTo: 30
+    lifetime: 40
+    strokeFrom: 4
+    strokeTo: 0
+    interp: circleOut
+    colorFrom: fa8b5f
+    colorTo: db7046
+    }
+    ]
+    }
+  }
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -barrel
+    progress: warmup
+    moveY: -0.25
+    moves: [
+        {
+        type: PartMove
+        progress: recoil
+        y: -1.5
+        }
+      ]
+    }
+    {
+    type: RegionPart
+    suffix: -wing1
+    mirror: true
+    progress: warmup
+    moveRot: 5
+    moveX: 1.5
+    moveY: -1.5
+    moves: [
+        {
+        type: PartMove
+        progress: recoil
+        rot: -2.5
+        }
+      ]
+    }
+    {
+    type: RegionPart
+    suffix: -wing2
+    mirror: true
+    progress: warmup
+    moveRot: 5
+    moveX: -0.5
+    moveY: -0.5
+    moves: [
+        {
+        type: PartMove
+        progress: recoil
+        rot: -1
+        moveY: -1
+        }
+      ]
+    }
+  ]
+}

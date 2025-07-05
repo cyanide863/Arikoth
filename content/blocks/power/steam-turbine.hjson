@@ -1,25 +1,26 @@
-type: ThermalGenerator
+type: ConsumeGenerator
 name: Steam Turbine
-description: Produces power via steam rotation a turbine, can only be placed on vents.
+description: Produces power via steam rotavanadiumg a turbine.
 health: 880
-attribute: heat
-displayEfficiency: false
-minEfficiency: 0.999
 category: power
-powerProduction: 5
+powerProduction: 1.5
 generateEffect: turbinegenerate
 effectChance: 0.03
 size: 3
 hasItems: false
 itemCapacity: 0
-hasLiquids: false
-liquidCapacity: 0
+hasLiquids: true
+liquidCapacity: 60
 ambientSound: hum
 ambientSoundVolume: 0.08
+consumes: {
+liquids: [
+steam/0.9
+]
+}
 requirements: [
-  tin/40
+  vanadium/40
   ferrum/35
-  siliglass/50
 ]
 drawer: {
   type: DrawMulti
@@ -42,14 +43,11 @@ drawer: {
 research: { 
 parent: core-satellite
 requirements: [
-  tin/400
+  vanadium/400
   ferrum/350
-  siliglass/500
 ]
 objectives: [
 ferrum,
-tin,
-silica,
-siliglass,
+vanadium,
 ]
 }

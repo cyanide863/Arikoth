@@ -1,0 +1,135 @@
+type: legs
+name: Akra
+description: A sniper unit, fires a medium ranged bolt at enemy units, can step over most terrain.
+hitSize: 8
+treadPullOffset: 0
+faceTarget: true
+outlineColor: 1d2124
+speed: 0.8
+rotateSpeed: 5
+health: 2200
+armor: 10
+itemCapacity: 0
+hitSize: 13
+legMoveSpace: 1
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.96
+legForwardScl: 1.1
+legPhysicsLayer: false
+legGroupSize: 2
+legCount: 4
+legExtension: -3
+legContinuousMove: true
+lockLegBase: true
+rippleScale: 0.2
+legBaseOffset: 8
+legLength: 16
+legBaseOffset: 8
+allowLegStep: true
+hovering: true
+weapons: [
+{
+name: phrynus-weapon
+layerOffset: -0.01
+x: 12
+y: 0
+mirror: true
+shootY: 12
+shake: 2
+recoil: 2
+cooldownTime: 50
+top: false
+rotate: true
+rotationLimit: 30
+reload: 30
+shootSound: shootBig
+ejectEffect: none
+shoot: {
+shots: 2
+spread: 6
+shotDelay: 6
+type: ShootSpread
+}
+bullet: {
+type: ShrapnelBulletType
+width: 10
+length: 60
+serrations: 3
+fromColor: ffffff
+toColor: afb1f0
+damage: 50
+pierceArmor: true
+pierceCap: 2
+lifetime: 40
+smokeEffect: shootBigSmoke
+shootEffect: [
+  shootBigColor,
+  {
+  type: ParticleEffect
+  particles: 1
+  length: 10
+  randLength: false
+  lifetime: 20
+  region: arikoth-arrow1
+  cone: 0
+  lightColor: afb1f0
+  colorFrom: afb1f0
+  colorTo: 4e509c
+  sizeFrom: 8
+  sizeTo: 0
+  }
+  {
+  type: ParticleEffect
+  particles: 1
+  length: 10
+  baseLength: 10
+  randLength: false
+  lifetime: 20
+  region: arikoth-arrow1
+  cone: 0
+  lightColor: afb1f0
+  colorFrom: afb1f0
+  colorTo: 4e509c
+  sizeFrom: 6
+  sizeTo: 0
+  }
+  {
+  type: ParticleEffect
+  particles: 1
+  length: 10
+  baseLength: 20
+  randLength: false
+  lifetime: 20
+  region: arikoth-arrow1
+  cone: 0
+  lightColor: afb1f0
+  colorFrom: afb1f0
+  colorTo: 4e509c
+  sizeFrom: 4
+  sizeTo: 0
+  }
+]
+}
+}
+]
+research: {
+  parent: 10j-01-tank-mounting-bay
+//  objectives: [ 
+//    10j-01-tank-mounting-bay
+//  ]
+}
+researchCostMultiplier: 1.5
+abilities: [
+{
+type: ShieldArcAbility
+color: afb1f0
+region: arikoth-phrynus-shield
+drawArc: true
+radius: 13.5
+angle: 120
+cooldown: 120
+max: 160
+regen: 0.1
+}
+]

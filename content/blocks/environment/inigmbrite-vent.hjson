@@ -1,0 +1,11 @@
+name: Inigmbrite Vent
+type: SteamVent
+variants: 2
+attributes: {
+   steam: 1
+   heat: 0.11111111
+}
+blendGroup: inigmbrite
+parent: inigmbrite
+effect: ventSteam
+effectColor: 707070

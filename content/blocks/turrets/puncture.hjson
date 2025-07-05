@@ -1,287 +1,203 @@
-name: Puncture
-description: Fires weaving projectiles at enemies.
-targetAir: true
 type: ItemTurret
-size: 2
-health: 2300
-range: 210
-rotateSpeed: 14
-reload: 80
-recoil: 1.2
-shootSound: blaster
-shake: 0
+name: Puncture
+description: Fires bursts of small bullets at nearby enemies.
+size: 3
+health: 1200
+category: turret
+research: {
+  parent: core-satellite
+  requirements: [
+  ferrum/60
+  vanadium/50
+  ]
+}
+shootSound: gunshot
+requirements: [
+  ferrum/120
+  vanadium/100
+]
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 0.1
+}
 outlineColor: 1d2124
-shootY: 5
+targetAir: true
+targetGround: true
+reload: 100
+range: 200
+velocityRnd: 0.1
+inaccuracy: 5
 shoot: {
-    type: ShootAlternate
-    shots: 4
-    shotDelay: 10
-    barrels: 2
-    spread: 7
+  shots: 3
+  shotDelay: 6
 }
 ammoTypes: {
-    tin: {
-      type: BasicBulletType
-      sprite: missile-large
-      backColor: dbd28c
-      frontColor: ffffff
-      trailColor: dbd28c
-      lightColor: dbd28c
-      damage: 20
-      speed: 4
-      lifetime: 70
-      recoil: 0.0
-      width: 8
-      height: 10
-      weaveScale: 3
-      weaveMag: 3
-      weaveRandom: false
-      trailLength: 10
-      trailWidth: 2.5
-      trailRotation: true
-      trailInterval: 1.5
-      lightRadius: 55
-      homingPower: 0.03
-      trailEffect: [
-      {
-      type: ParticleEffect
-      particles: 3
-      length: 8
-      lifetime: 15
-      region: arikoth-square
-      lightColor: dbd28c
-      colorFrom: ffffff
-      colorTo: dbd28c
-      spin: 0.1
-      sizeFrom: 2
-      lightScl: 3.5
-      sizeTo: 0
-      }
-      disperseTrail
-      ]
-      smokeEffect: shootSmallSmoke
-      despawnHit: true
-      despawnEffect: none
-      hitEffect: {
-      type: ParticleEffect
-      particles: 8
-      length: 12
-      lifetime: 15
-      region: arikoth-square
-      lightColor: dbd28c
-      colorFrom: ffffff
-      colorTo: dbd28c
-      spin: 0.1
-      sizeFrom: 3
-      sizeTo: 0
-    }
+  ferrum: {
+    frontColor: ffffff
+    backColor: eea57f
+    trailColor: eea57f
+    hitColor: eea57f
+    type: BasicBulletType
+    buildingDamageMultiplier: 0.3
+    width: 12
+    height: 16
+    speed: 4
+    lifetime: 50
+    damage: 40
+    trailLength: 12
+    trailWidth: 2.5
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: [sparkShoot, hitBulletColor]
   }
-    magnetite: {
-      type: BasicBulletType
-      sprite: missile-large
-      backColor: 5c4c93
-      frontColor: ffffff
-      trailColor: 5c4c93
-      lightColor: 5c4c93
-      damage: 30
-      speed: 4
-      lifetime: 70
-      recoil: 0.0
-      width: 8
-      height: 10
-      weaveScale: 3
-      weaveMag: 3
-      weaveRandom: false
-      trailLength: 10
-      trailWidth: 2.5
-      trailRotation: true
-      trailInterval: 1.5
-      lightRadius: 55
-      homingPower: 0.03
-      trailEffect: [
-      {
-      type: ParticleEffect
-      particles: 3
-      length: 8
-      lifetime: 15
-      region: arikoth-square
-      lightColor: 5c4c93
-      colorFrom: ffffff
-      colorTo: 5c4c93
-      spin: 0.1
-      sizeFrom: 2
-      lightScl: 3.5
-      sizeTo: 0
-      }
-      disperseTrail
-      ]
-      smokeEffect: shootSmallSmoke
-      despawnHit: true
-      despawnEffect: none
-      hitEffect: [
-      {
-      type: ParticleEffect
-      particles: 8
-      length: 12
-      lifetime: 15
-      region: arikoth-square
-      lightColor: 5c4c93
-      colorFrom: ffffff
-      colorTo: 5c4c93
-      spin: 0.1
-      sizeFrom: 3
-      sizeTo: 0
-      }
-      {
-      type: ParticleEffect
-      particles: 7
-      length: 20
-      lifetime: 35
-      line: true
-      lightColor: 5c4c93
-      colorFrom: ffffff
-      colorTo: 5c4c93
-      lenFrom: 7
-      strokeFrom: 4
-      lightScl: 2
-      interp: circleOut
-      }
-    ]
-  }   
-    phosphorus: {
-      type: BasicBulletType
-      sprite: missile-large
-      backColor: ffb855
-      frontColor: ffffff
-      trailColor: db661c
-      lightColor: ffb855
-      damage: 30
-      splashDamage: 50
-      splashDamageRadius: 16
-      speed: 3
-      status: melting
-      statusDuration: 180
-      lifetime: 70
-      recoil: 0.0
-      width: 8
-      height: 10
-      weaveRandom: false
-      trailLength: 0
-      trailWidth: 0
-      trailRotation: true
-      trailInterval: 1.5
-      lightRadius: 55
-      homingPower: 0.03
-      trailEffect: [
-      {
-      type: ParticleEffect
-      particles: 6
-      length: 10
-      interp: circleOut
-      lifetime: 15
-      lightColor: ffb855
-      colorFrom: ffffff
-      colorTo: ffb855
-      sizeFrom: 2.5
-      sizeTo: 0
-      }
-      {
-      type: ParticleEffect
-      particles: 6
-      length: 10
-      interp: circleOut
-      lifetime: 15
-      lightColor: ffb855
-      colorFrom: ffb855
-      colorTo: db661c
-      sizeFrom: 2.5
-      sizeTo: 0
-      }
-      {
-      type: ParticleEffect
-      particles: 8
-      length: 10
-      interp: circleOut
-      lifetime: 15
-      line: true
-      lightColor: ffb855
-      colorFrom: ffffff
-      colorTo: ffb855
-      lenFrom: 7
-      lenTo: 0
-      strokeFrom: 4
-      strokeTo: 0
-      cone: 20
-      }
-      {
-      type: ParticleEffect
-      particles: 1
-      length: 0
-      interp: circleOut
-      lifetime: 15
-      line: true
-      lightColor: ffb855
-      colorFrom: ffffff
-      colorTo: ffb855
-      lenFrom: 12
-      lenTo: 0
-      strokeFrom: 5
-      strokeTo: 0
-      cone: 0
-      }
-      ]
-      smokeEffect: shootSmallSmoke
-      despawnHit: true
-      despawnEffect: none
-      hitEffect: {
-      type: ParticleEffect
-      particles: 8
-      length: 30
-      interp: circleOut
-      lifetime: 15
-      line: true
-      lightColor: ffb855
-      colorFrom: ffffff
-      colorTo: ffb855
-      lenFrom: 7
-      lenTo: 0
-      strokeFrom: 4
-      strokeTo: 0
+  vanadium: {
+    frontColor: ffffff
+    backColor: 969dff
+    trailColor: 969dff
+    hitColor: 969dff
+    type: BasicBulletType
+    buildingDamageMultiplier: 0.3
+    width: 12
+    height: 16
+    speed: 6
+    lifetime: 38.333
+    rangeChange: 30
+    inaccuracy: 2
+    damage: 20
+    reloadMultiplier: 3
+    pierceCap: 2
+    pierceArmor: true
+    trailLength: 12
+    trailWidth: 2.5
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: [sparkShoot, hitSquaresColor]
+  }
+  vespirium: {
+    frontColor: ffffff
+    backColor: e0ba65
+    trailColor: e0ba65
+    hitColor: e0ba65
+    type: BasicBulletType
+    buildingDamageMultiplier: 0.3
+    width: 12
+    height: 16
+    speed: 6
+    lifetime: 33.333
+    inaccuracy: 8
+    damage: 60
+    reloadMultiplier: 0.8
+    homingPower: 0.05
+    homingRange: 90
+    trailLength: 12
+    trailWidth: 2.5
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: [
+    sparkShoot,
+    hitSquaresColor,
+    {
+    type: ParticleEffect
+    sizeFrom: 3
+    sizeTo: 0
+    length: 30
+    lifetime: 30
+    colorTo: e0ba65
+    particles: 5
+    interp: circleOut
     }
+   ]
+  }
+  vanadium-carbide: {
+    frontColor: ffffff
+    backColor: 9fbae8
+    trailColor: 9fbae8
+    hitColor: 9fbae8
+    type: BasicBulletType
+    buildingDamageMultiplier: 0.3
+    width: 12
+    height: 16
+    speed: 3
+    lifetime: 66.666
+    inaccuracy: 6
+    damage: 70
+    reloadMultiplier: 0.5
+    pierceCap: 1
+    pierceArmor: false
+    trailLength: 18
+    trailEffect: disperseTrail
+    trailInterval: 6
+    trailChance: 0.08
+    trailRotation: true
+    trailWidth: 2.5
+    despawnHit: true
+    despawnEffect: none
+    fragBullets: 5
+    fragRandomSpread: 0
+    fragSpread: 18
+    fragVelocityMax: 1
+    fragVelocityMin: 1
+    fragBullet: {
+        frontColor: ffffff
+        backColor: 9fbae8
+        trailColor: 9fbae8
+        hitColor: 9fbae8
+        type: BasicBulletType
+        buildingDamageMultiplier: 0.3
+        width: 8
+        height: 12
+        speed: 2
+        lifetime: 30
+        damage: 20
+        pierceCap: 4
+        pierceArmor: false
+        trailLength: 6
+        trailEffect: disperseTrail
+        trailInterval: 6
+        trailChance: 0.08
+        trailRotation: true
+        trailWidth: 2
+        despawnHit: true
+        despawnEffect: none
+    }
+    hitEffect: [
+    sparkShoot,
+    hitSquaresColor,
+    {
+    type: ParticleEffect
+    sizeFrom: 5
+    sizeTo: 0
+    length: 10
+    lifetime: 30
+    colorTo: 9fbae8
+    particles: 5
+    interp: circleOut
+    }
+    {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 30
+    strokeFrom: 4
+    strokeTo: 0
+    sides: 6
+    lifetime: 30
+    colorTo: 9fbae8
+    interp: circleOut
+    }
+    ]
   }
 }
-recoils: 2
 drawer: {
   type: DrawTurret
   basePrefix: molten-
   parts: [
     {
-      type: RegionPart
-      suffix: -barrel-r
-      progress: recoil
-      recoilIndex: 1
-      under: true
-      moveY: -1.5
-    }
-    {
-      type: RegionPart
-      suffix: -barrel-l
-      progress: recoil
-      recoilIndex: 0
-      under: true
-      moveY: -1.5
+    type: RegionPart
+    suffix: -middle
+    progress: recoil
+    moveY: -2.5
     }
   ]
-}
-category: turret
-
-requirements: [
-  tin/35
-]
-
-research: {
-parent: core-satellite
-requirements: [
-  tin/35
-]
 }

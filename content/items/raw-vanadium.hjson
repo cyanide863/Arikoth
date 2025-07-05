@@ -1,0 +1,16 @@
+Type: Item
+name: Vanadic rock
+description: Raw impure vanadium.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 1
+cost: 1
+color: 696c99
+research: {
+parent: ferrum
+objectives: [
+ferrum
+]
+}

@@ -1,0 +1,13 @@
+type: PayloadConveyor
+name: Freight Rail
+description: Transports payload such forth.
+category: units
+research: assault-forge
+requirements: [
+  ferrum/15
+  vespirium/8
+]
+canOverdrive: false
+payloadLimit: 1
+size: 2
+researchCostMultiplier: 0.5

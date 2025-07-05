@@ -1,0 +1,26 @@
+type: HeatConductor
+name: Thermal Conduit
+descriptio: Transfers heat to other Thermal conductors or Thermal consumers. 
+size: 2
+category: crafting
+research: icher-heater
+requirements: [
+  ferrum/30
+  vanadium/20
+]
+regionRotated1: 1
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatOutput
+    }
+    {
+      type: DrawHeatInput
+      suffix: -heat
+    }
+  ]
+}

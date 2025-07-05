@@ -1,0 +1,18 @@
+type: DirectionalUnloader
+name: Vaccum Unloader
+description: Unloads items in a desired direction, cant unload from cores is only restricted to vaults, containers, etc.
+research: vaccum-shaft-router
+itemCapacity: 8
+size: 1
+requirements: [
+  vanadium/6
+]
+research: {
+parent: vaccum-shaft-router
+requirements: [
+  vanadium/3
+]
+}
+speed: 5
+health: 100
+category: distribution

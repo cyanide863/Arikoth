@@ -1,0 +1,16 @@
+name: Acidic Corrosion
+damage: 0.8
+effect: [
+  {
+    type: ParticleEffect
+    particles: 8
+    lifetime: 40
+    baseLength: 5
+    length: 5
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: e7f089
+    colorTo: a1bd4d
+    interp: circleOut
+  }
+]

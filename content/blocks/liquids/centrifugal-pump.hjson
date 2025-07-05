@@ -6,10 +6,10 @@ category: liquid
 squareSprite: false
 research: core-satellite
 requirements: [
-  tin/30
-  graphite-rod/25
+  ferrum/30
 ]
-pumpAmount: 0.3
+pumpAmount: 0.25
+liquidCapacity: 80
 researchCostMultiplier: 0.5
 drawer: {
   type: DrawMulti
@@ -17,19 +17,6 @@ drawer: {
   	{
       type: DrawRegion
       suffix: -lower
-    }
-	{
-      type: DrawRegion
-      suffix: -spinner
-      rotateSpeed: 6
-      spinSprite: true
-    }
-	{
-      type: DrawRegion
-      suffix: -spinner
-      rotateSpeed: 6
-      spinSprite: true
-      rotation: 45
     }
     {
       type: DrawLiquidTile
@@ -39,13 +26,26 @@ drawer: {
       padTop: 1.5
       padRight: 1.5
     }
-	{
+    {
       type: DrawLiquidTile
-      drawLiquid: water
+      drawLiquid: slag
       padLeft: 1.5
       padBottom: 1.5
       padTop: 1.5
       padRight: 1.5
+    }
+	  {
+      type: DrawRegion
+      suffix: -spinner
+      rotateSpeed: 6
+      spinSprite: true
+    }
+	  {
+      type: DrawRegion
+      suffix: -spinner
+      rotateSpeed: 6
+      spinSprite: true
+      rotation: 45
     }
     {
       type: DrawDefault

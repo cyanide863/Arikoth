@@ -45,7 +45,8 @@ abilities: [
     range: 90
     reload: 60
     healPercent: 5
-    damage: 40
+    damage: 0
+    targetUnits: false
     status: none
     sectors: 14
     rotateSpeed: 2.5

@@ -1,0 +1,252 @@
+type: hover
+name: Bolt
+description: A larger hover unit, fires a shock sphere at enemies.
+outlineColor: 1d2124
+speed: 0.7
+drag: 0.05
+accel: 0.05
+rotateSpeed: 5
+health: 1860
+armor: 8
+itemCapacity: 0
+hitSize: 18
+hovering: true
+drowns: false
+useEngineElevation: false
+engineColor: defcff
+engineOffset: 10
+engineSize: 4.5
+canDrown: false
+parts: [
+  {
+  type: HoverPart
+  sides: 6
+  radius: 7
+  phase: 40
+  color: defcff
+  layerOffset: -0.001
+  mirror: true
+  x: 7
+  }
+  {
+  type: HoverPart
+  sides: 6
+  radius: 7
+  phase: 40
+  color: defcff
+  layerOffset: -0.001
+  mirror: false
+  y: -10
+  }
+  {
+  type: FlarePart
+  radius: 25
+  color1: defcff
+  stroke: 2
+  y: -10
+  sides: 4
+  }
+]
+weapons: [
+  {
+    name: flicker-weapon
+    x: 0
+    y: 0
+    recoil: 0
+    reload: 180
+    rotate: false
+    mirror: false
+    shootSound: laser
+    heatColor: defcff
+    shootStatus: unmoving
+    shootStatusDuration: 60
+    shoot: {
+    firstShotDelay: 30
+    }
+    bullet: {
+      type: BasicBulletType
+      parts: [
+      {
+      type: HoverPart
+      sides: 360
+      radius: 12
+      phase: 120
+      color: defcff
+      }
+      ]
+      sprite: large-orb
+      backColor: defcff
+      frontColor: ffffff
+      trailColor: defcff
+      lightColor: defcff
+      chargeEffect: [
+        {
+        type: WaveEffect
+        lifetime: 31
+        sizeFrom: 13
+        sizeTo: 0
+        interp: circleIn
+        strokeFrom: 0
+        strokeTo: 5
+        colorFrom: defcff
+        colorTo: 8bb3b7
+        }
+        {
+        type: ParticleEffect
+        line: true
+        particles: 12
+        baseLength: 31
+        length: -30
+        lifetime: 30
+        lenFrom: 0
+        lenTo: 5
+        interp: circleIn
+        strokeFrom: 1
+        strokeTo: 2
+        colorFrom: defcff
+        colorTo: 8bb3b7
+        }
+      ]
+      damage: 160
+      splashDamage: 160
+      splashDamageRadius: 20
+      unitDamageMultiplier: 0.75
+      speed: 3
+      lifetime: 40
+      recoil: 4.5
+      width: 20
+      height: 20
+      shrinkY: 0
+      trailLength: 12
+      trailWidth: 3
+      trailRotation: true
+      trailEffect: none
+      trailInterval: 1.5
+      lightRadius: 55
+      intervalBullets: 1
+      bulletInterval: 5
+      intervalBullet: {
+      despawnSound: spark
+      type: LightningBulletType
+      lightningColor: defcff
+      damage: 20
+      lightningLength: 5
+      lightningLengthRand: 3
+      }
+      despawnHit: true
+      despawnEffect: none
+      hitShake: 4
+      hitSound: ShockBlast
+      hitEffect: [
+        {
+        type: WaveEffect
+        lifetime: 20
+        sizeFrom: 20
+        sizeTo: 17
+        interp: circleOut
+        strokeFrom: 8
+        strokeTo: 0
+        colorFrom: defcff
+        colorTo: 8bb3b7
+        }
+        {
+        type: WaveEffect
+        lifetime: 15
+        sizeFrom: 14
+        sizeTo: 11
+        interp: circleOut
+        strokeFrom: 7
+        strokeTo: 0
+        colorFrom: defcff
+        colorTo: 8bb3b7
+        }
+        {
+        type: ParticleEffect
+        line: true
+        particles: 16
+        baseLength: 0
+        length: 40
+        lifetime: 40
+        lenFrom: 7
+        lenTo: 0
+        interp: circleOut
+        strokeFrom: 4
+        strokeTo: 0
+        colorFrom: defcff
+        colorTo: 8bb3b7
+        }
+      ]
+      shootEffect: [
+        {
+          type: ParticleEffect
+          colorFrom: defcff
+          colorTo: 8bb3b7
+          length: 60
+          particles: 4
+          sizeFrom: 5
+          sizeTo: 0
+          interp: circleOut
+          cone: 10
+          lifetime: 30
+          followParent: false
+        }
+        {
+          type: ParticleEffect
+          colorFrom: defcff
+          colorTo: 8bb3b7
+          length: 60
+          particles: 3
+          sizeFrom: 3
+          sizeTo: 0
+          interp: circleOut
+          cone: 10
+          lifetime: 30
+          followParent: false
+        }
+        {
+          type: ParticleEffect
+          colorFrom: defcff
+          colorTo: 8bb3b7
+          length: 60
+          particles: 2
+          sizeFrom: 2
+          sizeTo: 0
+          interp: circleOut
+          cone: 10
+          lifetime: 30
+          followParent: false
+        }
+        {
+          type: ParticleEffect
+          colorFrom: 313b4566
+          colorTo: 313b4500
+          length: 60
+          particles: 2
+          sizeFrom: 2
+          sizeTo: 5
+          sizeInterp: pow2Out
+          interp: pow2Out
+          layer: 99
+          cone: 10
+          followParent: false
+          lifetime: 90
+        }
+        {
+          type: ParticleEffect
+          colorFrom: 313b4566
+          colorTo: 313b4500
+          length: 60
+          particles: 2
+          sizeFrom: 2
+          sizeTo: 5
+          sizeInterp: pow2Out
+          interp: pow2Out
+          layer: 111
+          cone: 10
+          followParent: false
+          lifetime: 90
+        }
+      ]
+    }
+  }
+]

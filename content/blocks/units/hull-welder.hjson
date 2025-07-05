@@ -1,0 +1,31 @@
+type: Constructor
+name: Freight Fabricator
+description: 
+''' 
+  Crafts Basic Hulls for unit assembly. 
+  Conducts power to blocks it touches.
+
+  Recipes: 
+    [accent]Hulls[]
+    - Flicker
+    - Akra
+'''
+size: 3
+category: units
+requirements: [
+  ferrum/90
+  vanadium/60
+] 
+hasPower: true
+consumes: {
+  power: 1.5
+}
+buildSpeed: 1
+filter: [
+flicker-hull
+]
+research: assault-forge
+squareSprite: false
+conductivePower: true
+researchCostMultiplier: 1.5
+maxBlockSize: 3

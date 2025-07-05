@@ -1,0 +1,10 @@
+name: Crimson Sand Vent
+type: SteamVent
+variants: 2
+attributes: {
+   steam: 1
+}
+blendGroup: crimson-sand
+parent: crimson-sand
+effect: ventSteam
+effectColor: 943b3b

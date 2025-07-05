@@ -1,7 +1,0 @@
-name: Eroded Sand
-type: floor
-variants: 4
-attributes: {
-    steam: 0.75
-}
-blendGroup: eroded-sand

@@ -1,0 +1,12 @@
+name: Cryogenic Neon
+description: Liquid Neon, very effective as a coolant and freezing ammo
+gas: false
+color: c4567a
+explosiveness: 0.0
+flammability: 0.0
+temperature: -0.2
+viscosity: 0.5
+heatCapacity: 1.2
+research: {
+parent: neon
+}

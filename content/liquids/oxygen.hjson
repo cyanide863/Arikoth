@@ -1,8 +1,13 @@
 name: Oxygen
-description: Used as a fuel and as an oxidizing agent.
+description: Often used as ammo for torches and as an oxidization unit.
 color: ffbdd4
 viscosity: 0.5
-heatCapacity: 0
-temperature: 0.1
+heatCapacity: 0.8
+temperature: 0.2
 explosiveness: 0.4
+flammability: 0.25
 gas: true
+particleSpacing: 2
+research: {
+parent: stained-water
+}

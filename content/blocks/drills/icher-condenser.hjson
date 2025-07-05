@@ -1,5 +1,5 @@
 type: AttributeCrafter
-attribute: steam
+attribute: icher
 type: AttributeCrafter
 size: 2
 displayEfficiencyScale: 1
@@ -25,14 +25,12 @@ research: {
   parent: core-satellite
   requirements: [
   ferrum/15
-  tin/25
   ]
     objectives: [
     ]
 }
 requirements: [
 ferrum/15
-tin/25
 ]
 drawer: {
   type: DrawMulti

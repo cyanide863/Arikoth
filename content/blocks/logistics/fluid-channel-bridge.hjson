@@ -1,0 +1,19 @@
+type: DirectionLiquidBridge
+name: Fluid Channel Overpass
+description: Used for crossing over terrain and infrastructure.
+range: 4
+solid: true
+category: liquid
+squareSprite: false
+research: {
+parent: fluid-channel
+requirements: [
+  vanadium/4
+  ferrum/6
+]
+}
+requirements: [
+  vanadium/8
+  ferrum/16
+]
+researchCostMultiplier: 0.5

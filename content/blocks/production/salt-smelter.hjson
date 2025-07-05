@@ -1,0 +1,154 @@
+name: Salt Melter
+description: Melts down ammonium nitrate into, molten salt.
+type: HeatCrafter
+heatRequirement: 6
+maxHeatEfficiency: 4
+category: crafting
+health: 600
+size: 2
+squareSprite: false
+fogRadius: 1
+hasItems: true
+itemCapacity: 12
+hasPower: false
+hasLiquids: true
+ambientSound: smelter
+ambientSoundVolume: 0.05
+liquidCapacity: 30
+craftTime: 60
+craftEffect: {
+type: RadialEffect
+effect: 4
+rotationOffset: 0
+lengthOffset: 2
+rotationSpacing: 90
+effect: [
+{
+      particles: 1
+      length: 20
+      lifetime: 40
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: ff8a5e
+      colorTo: dd5f30
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 110
+}
+{
+      particles: 1
+      length: 20
+      lifetime: 40
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: ff8a5e
+      colorTo: dd5f30
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 110
+      startDelay: 1
+}
+{
+      particles: 1
+      length: 20
+      lifetime: 40
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: ff8a5e
+      colorTo: dd5f30
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 110
+      startDelay: 2
+}
+{
+      particles: 1
+      length: 20
+      lifetime: 40
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: ff8a5e
+      colorTo: dd5f30
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 110
+      startDelay: 3
+}
+{
+      particles: 1
+      length: 20
+      lifetime: 40
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: ff8a5e
+      colorTo: dd5f30
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 110
+      startDelay: 4
+}
+{
+      particles: 1
+      length: 20
+      lifetime: 40
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: ff8a5e
+      colorTo: dd5f30
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 110
+      startDelay: 5
+}
+]
+}
+consumes: {
+items: [
+ammonium-nitrate/4
+]
+}
+outputLiquid: molten-salt/0.3
+
+requirements: [
+  ferrum/30
+  vespirium/30
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawDefault
+  }
+  {
+  type: DrawFlame
+  flameColor: ff8a5e
+  }
+ ]
+}
+
+research: {
+parent: slag-separator
+requirements: [
+  ferrum/600
+  vespirium/600
+]
+}

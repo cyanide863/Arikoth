@@ -1,158 +1,127 @@
-type: legs
-template: ErekirUnitType
-lightColor: ed6a37
-outlineColor: 292a2c
-outlineRadius: 3
-fogRadius: 8
-itemCapacity: 0
-speed: 0.6
-drag: 0.15
-hitSize: 16
-rotateSpeed: 2.8
-health: 1670
-armor: 10
-legStraightness: 0
-stepShake: 0
-legCount: 6
-legLength: 12
-lockLegBase: true
-legContinuousMove: true
-legExtension: -1
-legBaseOffset: 5.5
-legMaxLength: 1.1
-legMinLength: 0.2
-legLengthScl: 0.9
-legForwardScl: 1.1
-legGroupSize: 3
-rippleScale: 0.2
-legMoveSpace: 2
-allowLegStep: true
-hovering: true
-legPhysicsLayer: false
-shadowElevation: 0.28
-groundLayer: 75
+outlineColor: 1d2124
+type: mech
+speed: 0.35
+hitSize: 14
+health: 450
+faceTarget: true
+armor: 6
+rotateSpeed: 2.5
+mechFrontSway: 0.3
+mechSideSway: 0.3
+mechStepParticles: true
+mechStepShake: 0.5
+hovering: false
+immunities: []
+targetAir: true
 weapons: [
-    {
-      "name": "molten-weapon",
-      "x": 0,
-      "y": 7,
-      "mirror": false,
-      "top": true,
-      "recoil": 0,
-      "rotate": false,
-      "shootY": 0,
-      shootCone: 180
-      "rotateSpeed": 3,
-      "shootSound": "torch",
-      "alwaysContinuous": true,
-      "continuous": true,
-      "bullet": {
-        "type": "ContinuousFlameBulletType",
-        "colors": [
-          "b61d1daa",
-          "d4522190",
-          "db7f37",
-          "ffce59",
-          "FFFFFFFF"
-        ],
-        "damage": 15,
-        "flareWidth": 3.5,
-        "flareLength": 25,
-        "flareColor": "ffce59",
-        "width": 3.5,
-        "hitEffect": {
-          "type": "ParticleEffect",
-          "line": true,
-          "particles": 7,
-          "lifetime": 12,
-          "length": 40,
-          "cone": -360,
-          "strokeFrom": 2.5,
-          "strokeTo": 0,
-          "lenFrom": 8,
-          "lenTo": 0,
-          "colorFrom": "ffce59",
-          "colorTo": "db7f37"
-        },
-        "divisions": 20,
-        "length": 45,
-        "drawSize": 350,
-        "lifetime": 70,
-        "status": "melting",
-        "pierceCap": 0,
-        "statusDuration": 150
-      }
-    }
-  {
-    name: electron-weapon
-    shootSound: blaster
-    mirror: false
-    cooldownTime: 30
-    heatColor: ab3400
-    shootY: 3.5
-    x: 0
-    y: 0
-    reload: 30
-    shake: 1
-    showStatSprite: false
-    shoot: {
-        type: ShootHelix
-        scl: 4
-        mag: 1
-    }
-    bullet: {
-      type: BasicBulletType
-      shootEffect: [
-        shootSmallColor,
-        colorSpark,
-      ]
-      sprite: circle-bullet
-      height: 12
-      width: 8
-      trailWidth: 2
-      trailLength: 9
-      backColor: ed6a37
-      frontColor: ffffff
-      trailColor: ed6a37
-      hitColor: ed6a37
-      lifetime: 15
-      speed: 6
-      trailEffect: colorSpark
-      trailInterval: 3
-      trailRotation: true
-      damage: 10
-      splashDamage: 10
-      splashDamageRadius: 25
-      pierce: true
-      pierceCap: 2
-      despawnHit: true
-      hitEffect: [
-      {
-        type: particleEffect
-        particles: 18
-        length: 10
-        sizeFrom: 3
-        cone: 20
-        colorTo: ed6a37
-        lightColor: ed6a37
-        lifetime: 30
-        interp: circleOut
-      }
-      {
-        type: particleEffect
-        particles: 18
-        length: 10
-        interp: circleOut
-        strokeFrom: 4
-        strokeTo: 0
-        lenFrom: 7
-        cone: 10
+{
+name: sniper1-gun
+x: 0
+y: 0
+mirror: false
+shootY: 5
+shoot: {
+type: ShootPattern
+shots: 2
+shotDelay: 20
+}
+shake: 3
+recoil: 0
+cooldownTime: 50
+top: false
+rotate: false
+reload: 120
+shootSound: bang
+ejectEffect: none
+bullet: {
+recoil: 1
+width: 12
+height: 16
+damage: 50
+speed: 6
+lifetime: 50
+knockback: 3
+frontColor: fa8b5f
+backColor: db7046
+status: melting
+statusDuration: 70
+hitShake: 6
+hitSound: spark
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        {
+        type: ParticleEffect
         line: true
-        colorTo: ed6a37
-        lightColor: ed6a37
-        lifetime: 15
-      }
+        particles: 20
+        baseLength: 0
+        length: 60
+        lifetime: 35
+        lenFrom: 7
+        lenTo: 0
+        cone: 50
+        interp: circleOut
+        strokeFrom: 6
+        strokeTo: 0
+        colorFrom: fa8b5f
+        colorTo: db7046
+        }
+        {
+        type: ParticleEffect
+        line: false
+        particles: 20
+        baseLength: 0
+        length: 25
+        lifetime: 55
+        sizeFrom: 4
+        sizeTo: 0
+		    cone: 90
+        interp: circleOut
+        strokeFrom: 6
+        strokeTo: 0
+        colorFrom: fa8b5f
+        colorTo: db7046
+        }
       ]
     }
+	smokeEffect: {
+        type: ParticleEffect
+        line: false
+        particles: 16
+        baseLength: 0
+        length: 35
+        lifetime: 35
+        sizeFrom: 4
+        sizeTo: 0
+        offsetX: -2
+        cone: 25
+        interp: circleOut
+        strokeFrom: 6
+        strokeTo: 0
+        colorFrom: fa8b5f
+        colorTo: db7046
+      }
+    despawnHit: true
+    despawnEffect: none
+
+trailRotation: true
+trailInterval: 1.3
+trailEffect: {
+  type: ParticleEffect
+  particles: 1
+  length: 0
+  lifetime: 20
+  region: arikoth-arrow1
+  lightColor: fa8b5f
+  colorFrom: fa8b5f
+  colorTo: db7046
+  sizeFrom: 9
+  sizeTo: 0
   }
+trailChance: 0
+trailLength: 14
+trailWidth: 2.5
+trailColor: fa8b5f
+}
+}
 ]

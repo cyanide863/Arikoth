@@ -1,0 +1,91 @@
+name: Aerogel Synthesizer
+description: Produces resonating fuel by mixing water and resonating crystals.
+type: HeatProducer
+heatOutput: 10
+category: crafting
+health: 1200
+size: 3
+squareSprite: false
+fogRadius: 1
+hasItems: true
+itemCapacity: 20
+hasPower: true
+hasLiquids: true
+ambientSound: chemical-mixer
+ambientSoundVolume: 0.06
+liquidCapacity: 60
+craftTime: 60
+consumes: {
+  power: 2
+  liquids: [
+    water/0.6
+  ]
+  items: [
+    reso-shard/2
+  ]
+}
+outputLiquid: resonating-fuel/0.3
+
+requirements: [
+vanadium/220
+vanadium-carbide/165
+anterite/120
+reso-shard/120
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -lower
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: water
+  padding: 4
+  alpha: 1
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: resonating-fuel
+  padding: 4
+  alpha: 1
+  }
+  {
+    type: DrawPlasma
+    suffix: -plasma
+    plasmas: 2
+    plasma1: ffffff
+    plasma2: f0595c
+  }
+  {
+  type: DrawDefault
+  }
+  {
+  type: DrawGlowRegion
+  color: f0595c
+  }
+  {
+  type: DrawRegion
+  layer: 31
+  suffix: -end
+  buildingRotate: true
+  }
+  {
+  type: DrawHeatOutput
+  }
+ ]
+}
+
+research: {
+parent: neon-extractor
+requirements: [
+vanadium/2200
+vanadium-carbide/1650
+anterite/1200
+reso-shard/1200
+]
+}
+
+craftEffect: none

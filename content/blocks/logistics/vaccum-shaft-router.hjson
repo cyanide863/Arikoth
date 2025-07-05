@@ -6,12 +6,12 @@ research: vaccum-shaft
 itemCapacity: 3
 size: 1
 requirements: [
-  tin/6
+  ferrum/6
 ]
 research: {
 parent: vaccum-shaft
 requirements: [
-  tin/3
+  ferrum/3
 ]
 }
 speed: 2.5

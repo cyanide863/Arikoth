@@ -1,0 +1,235 @@
+type: legs
+name: Knight
+description: A heavy spider mech armed with dual shock cannons.
+faceTarget: true
+outlineColor: 1d2124
+speed: 0.35
+rotateSpeed: 1.6
+health: 10900
+armor: 18
+itemCapacity: 0
+hitSize: 30
+outlineRadius: 4
+faceTarget: true
+legMoveSpace: 1
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.96
+legForwardScl: 1.1
+legPhysicsLayer: false
+legGroupSize: 2
+legCount: 4
+legExtension: -3
+legContinuousMove: true
+lockLegBase: true
+rippleScale: 0.8
+legLength: 28
+legBaseOffset: 15
+allowLegStep: true
+hovering: true
+weapons: [
+  {
+    name: charinid-weapon
+    x: 20
+    y: -2
+    layerOffset: -0.001
+    reload: 250
+    rotate: true
+    rotationLimit: 50
+    rotateSpeed: 1
+    mirror: true
+    shootY: 23
+    shootSound: railgun
+    inaccuracy: 0
+    shake: 12
+    recoil: 5
+    bullet: {
+type: BasicBulletType
+sprite: arikoth-big-plasma1
+frontColor: ffffff
+backColor: afb1f0
+trailColor: afb1f0
+spin: 8
+weaveMag: 1
+weaveScale: 12
+damage: 280
+splashDamage: 280
+splashDamageRadius: 64
+fragBullets: 1
+fragBullet: {
+type: EmptyBulletType
+lifetime: 120
+intervalBullets: 1
+bulletInterval: 1
+intervalLifeMin: 0
+intervalVelocityMin: 0
+intervalRandomSpread: 360
+intervalBullet: {
+type: BasicBulletType
+height: 0
+width: 0
+collides: false
+lightning: 2
+lightningColor: afb1f0
+lightningLength: 6
+lightningLengthRand: 6
+lightningDamage: 30
+lifetime: 16
+speed: 4
+}
+}
+speed: 6
+lifetime: 30
+height: 30
+width: 30
+shrinkY: 0
+shrinkX: 0
+trailWidth: 5
+trailLength: 18
+despawnHit: true
+despawnEffect: none
+hitEffect: [
+  {
+  type: ParticleEffect
+  particles: 18
+  length: 64
+  baseLength: 3
+  interp: pow10Out
+  sizeInterp: pow10In
+  lifetime: 160
+  lightColor: afb1f0
+  colorFrom: ffffff
+  colorTo: afb1f0aa
+  sizeFrom: 8
+  sizeTo: 0
+  }
+  {
+  type: ParticleEffect
+  particles: 8
+  length: 64
+  baseLength: 3
+  interp: pow10Out
+  sizeInterp: pow10In
+  lifetime: 160
+  lightColor: afb1f0
+  colorFrom: ffffff
+  colorTo: afb1f0aa
+  sizeFrom: 16
+  sizeTo: 0
+  }
+  {
+  type: WaveEffect
+  lifetime: 160
+  lightColor: afb1f0
+  colorFrom: ffffff
+  colorTo: afb1f0
+  sizeFrom: 64
+  sizeTo: 64
+  strokeFrom: 6
+  strokeTo: 0
+  }
+  {
+  type: WaveEffect
+  lifetime: 160
+  lightColor: afb1f0
+  colorFrom: ffffff
+  colorTo: afb1f0
+  sizeFrom: 0
+  sizeTo: 64
+  strokeFrom: 6
+  strokeTo: 0
+  }
+  {
+  type: WaveEffect
+  lifetime: 130
+  lightColor: afb1f0
+  colorFrom: ffffff
+  colorTo: afb1f0
+  sizeFrom: 0
+  sizeTo: 64
+  strokeFrom: 6
+  strokeTo: 0
+  startDelay: 30
+  }
+  {
+  type: WaveEffect
+  lifetime: 100
+  lightColor: afb1f0
+  colorFrom: ffffff
+  colorTo: afb1f0
+  sizeFrom: 0
+  sizeTo: 64
+  strokeFrom: 6
+  strokeTo: 0
+  startDelay: 60
+  }
+]
+shootEffect: [
+  shootBigColor,
+  {
+  type: ParticleEffect
+  particles: 12
+  length: 30
+  lifetime: 40
+  cone: 50
+  lightColor: afb1f0
+  colorFrom: afb1f0
+  colorTo: 4e509c
+  sizeFrom: 4
+  sizeTo: 0
+  }
+  {
+  type: ParticleEffect
+  particles: 1
+  length: 10
+  randLength: false
+  lifetime: 20
+  region: arikoth-halo
+  cone: 0
+  lightColor: afb1f0
+  colorFrom: afb1f0
+  colorTo: 4e509c00
+  sizeFrom: 36
+  sizeTo: 24
+  }
+  {
+  type: ParticleEffect
+  particles: 1
+  length: 10
+  baseLength: 30
+  randLength: false
+  lifetime: 20
+  region: arikoth-halo
+  cone: 0
+  lightColor: afb1f0
+  colorFrom: afb1f0
+  colorTo: 4e509c00
+  sizeFrom: 24
+  sizeTo: 12
+  }
+  {
+  type: ParticleEffect
+  particles: 1
+  length: 10
+  baseLength: 60
+  randLength: false
+  lifetime: 20
+  region: arikoth-halo
+  cone: 0
+  lightColor: afb1f0
+  colorFrom: afb1f0
+  colorTo: 4e509c00
+  sizeFrom: 12
+  sizeTo: 0
+  }
+]
+  }
+}
+]
+research: {
+  parent: 10j-01-tank-mounting-bay
+//  objectives: [ 
+//    10j-01-tank-mounting-bay
+//  ]
+}
+researchCostMultiplier: 1.5

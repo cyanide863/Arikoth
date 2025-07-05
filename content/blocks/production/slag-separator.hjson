@@ -1,0 +1,59 @@
+name: Vanadium Smelter
+description: Mixes slag and vanadic rocks to form pure vanadium.
+type: GenericCrafter
+category: crafting
+health: 600
+size: 2
+squareSprite: false
+fogRadius: 1
+hasItems: true
+itemCapacity: 10
+hasPower: false
+hasLiquids: true
+ambientSound: smelter
+ambientSoundVolume: 0.05
+liquidCapacity: 30
+craftTime: 60
+consumes: {
+  liquids: [
+    slag/0.5
+  ]
+  items: [
+    raw-vanadium/1
+  ]
+}
+outputItems: [
+vanadium/1
+]
+
+requirements: [
+  ferrum/35
+]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -lower
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: slag
+  padding: 1.5
+  }
+  {
+  type: DrawCrucibleFlame
+  }
+  {
+  type: DrawDefault
+  }
+ ]
+}
+
+research: {
+parent: core-satellite
+requirements: [
+  ferrum/20
+]
+}

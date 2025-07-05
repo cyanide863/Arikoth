@@ -1,9 +1,0 @@
-sector: 17
-planet: arikoth-arikoth
-localizedName: Desolate Craters
-difficulty: 2
-captureWave: 11
-alwaysUnlocked: true
-research: {
-parent: core-satellite
-}

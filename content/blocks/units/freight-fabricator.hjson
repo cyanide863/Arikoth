@@ -1,0 +1,42 @@
+type: Constructor
+name: Freight Fabricator
+description: 
+''' 
+  Crafts simple modules used for unit assembly. Requires power. 
+  Conducts power to blocks it touches.
+
+  Recipes: 
+    - Ferrum Wall
+    - Vespirium Wall
+    - Vanadium Carbide Wall
+    - Niobium Wall
+    [accent]Modules[]
+    - Small Power cell
+    [accent]Hulls[]
+    - None
+'''
+size: 2
+category: units
+requirements: [
+  ferrum/50
+] 
+hasPower: true
+consumes: {
+  power: 0.75
+}
+buildSpeed: 1
+filter: [
+ferrum-wall,
+vespirium-wall,
+vanadium-carbide-wall,
+niobium-wall,
+//--components--
+power-cell-small,
+//--hulls--
+flicker-hull
+]
+research: assault-forge
+squareSprite: false
+conductivePower: true
+researchCostMultiplier: 1.5
+maxBlockSize: 1

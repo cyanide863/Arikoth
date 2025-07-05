@@ -1,8 +1,0 @@
-name: Detril
-description: Toxic gaseous liquid, consists of oxygen, helium and nitrogen.
-color: 241e21
-viscosity: 0.8
-heatCapacity: 0
-temperature: 0.6
-explosiveness: 0
-gas: true

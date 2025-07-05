@@ -1,0 +1,8 @@
+type: Wall
+size: 2
+customShadow: true
+placeablePlayer: false
+requirements: [
+  ferrum/50
+  vanadium/20
+]

@@ -1,9 +1,0 @@
-name: Marsh Sludge Deep
-type: Floor
-variants: 1
-isLiquid: true
-drownTime: 230
-speedMultiplier: 0.6
-shallow: false
-cacheLayer: tar
-liquidDrop: detril

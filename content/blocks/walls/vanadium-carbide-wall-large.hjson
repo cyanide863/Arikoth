@@ -1,0 +1,16 @@
+name: Large Vanadium Carbide Wall
+description: Defends structures from enemy projectiles.
+type: Wall
+category: defense
+health:  4800
+armor: 8
+size: 2
+requirements: [
+  vanadium-carbide/32
+]
+research: {
+  parent: vanadium-carbide-wall
+  requirements: [
+    vanadium-carbide/1280
+  ]
+}

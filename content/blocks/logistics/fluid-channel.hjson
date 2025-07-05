@@ -4,10 +4,12 @@ description: Transports liquids forward.
 category: liquid
 research: core-satellite
 requirements: [
-  tin/1
+  ferrum/1
 ]
 health: 60
 leaks: true
 junctionReplacement: fluid-channel-crossing
+bridgeReplacement: fluid-channel-bridge
+rotBridgeReplacement: fluid-channel-bridge
 underBullets: true
 researchCostMultiplier: 0.5

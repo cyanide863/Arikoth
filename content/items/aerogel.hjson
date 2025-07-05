@@ -1,0 +1,17 @@
+Type: Item
+name: Aerogel
+description: Extremely lightweight and insulative, used in coatings and advanced technology.
+flammability: 0
+radioactivity: 0
+explosiveness: 0
+charge: 0
+hardness: 1
+cost: 1
+color: dfede1
+research: {
+parent: reso-shard
+objectives: [
+neon,
+water
+]
+}

@@ -1,0 +1,15 @@
+name: Vespirium Wall
+description: Defends structures from enemy projectiles.
+type: Wall
+category: defense
+health: 700
+size: 1
+requirements: [
+  vespirium/8
+]
+research: {
+  parent: ferrum-wall
+  requirements: [
+    vespirium/160
+  ]
+}

@@ -1,0 +1,20 @@
+name: Large Niobium Wall
+description: Defends structures from enemy projectiles, periodically releases sparks when attacked.
+details: Is heavily armored but not too durable.
+type: Wall
+category: defense
+health: 3200
+armor: 8
+lightningChance: 0.75
+lightningDamage: 20
+lightningLength: 16
+size: 2
+requirements: [
+  niobium/32
+]
+research: {
+  parent: ferrum-wall
+  requirements: [
+    niobium/1280
+  ]
+}

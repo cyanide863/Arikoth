@@ -1,0 +1,19 @@
+name: Fatal Resonance
+damage: 2
+speedMultiplier: 0.5
+reloadMultiplier: 0.5
+effect: [
+  {
+    type: ParticleEffect
+    particles: 8
+    lifetime: 40
+    baseLength: -30
+    length: 30
+    strokeFrom: 4
+    lenFrom: 7
+    colorFrom: ffffff
+    colorTo: e24747
+    interp: circleOut
+    line: true
+  }
+]

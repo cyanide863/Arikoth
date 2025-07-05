@@ -1,0 +1,154 @@
+type: ItemTurret
+name: Greed
+description: A large turret, that rapidly fires large shells at enemy units.
+size: 4
+health: 1400
+category: turret
+research: {
+  parent: assailant
+  requirements: [
+  anterite/2000
+  vanadium/3200
+  vanadium-carbide/2200
+  reso-shard/2000
+  niobium/2500
+  ]
+}
+shootSound: shootBig
+requirements: [
+  anterite/200
+  vanadium/320
+  vanadium-carbide/220
+  reso-shard/200
+  niobium/250
+]
+coolant: {
+  type: ConsumeCoolant
+  allowGas: true
+  allowLiquid: true
+  amount: 1.8
+}
+coolantMultiplier: 1.5
+outlineColor: 1d2124
+targetAir: true
+targetGround: true
+reload: 20
+range: 300
+velocityRnd: 0.1
+inaccuracy: 3
+shoot: {
+barrels: 4
+spread: 3
+type: ShootAlternate
+}
+ammoTypes: {
+  niobium: {
+    buildingDamageMultiplier: 0.3
+    frontColor: ffffff
+    backColor: 94d7e2
+    trailColor: 94d7e2
+    hitColor: 94d7e2
+    type: BasicBulletType
+    width: 12
+    height: 18
+    speed: 6
+    lifetime: 50
+    damage: 60
+    trailLength: 12
+    trailWidth: 2.5
+    despawnHit: true
+    despawnEffect: none
+    shootEffect: shootBigColor
+    smokeEffect: shootSmokeDisperse
+    hitEffect: [
+    {
+    type: ParticleEffect
+    sizeFrom: 5
+    sizeTo: 0
+    length: 30
+    lifetime: 40
+    interp: circleOut
+    colorFrom: ffffff
+    colorTo: 94d7e2
+    }
+    {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 10
+    lifetime: 40
+    strokeFrom: 2
+    strokeTo: 0
+    interp: circleOut
+    colorFrom: ffffff
+    colorTo: 94d7e2
+    }
+    ]
+  }
+}
+recoils: 4
+drawer: {
+  type: DrawTurret
+  basePrefix: molten-
+  parts: [
+    {
+    type: RegionPart
+    heatProgress: warmup
+    heatColor: 94d7e2
+    suffix: -barrel1
+    progress: recoil
+    moveY: -3
+    recoilIndex: 0
+    under: true
+    }
+    {
+    type: RegionPart
+    heatProgress: warmup
+    heatColor: 94d7e2
+    suffix: -barrel2
+    progress: recoil
+    moveY: -3
+    recoilIndex: 1
+    }
+    {
+    type: RegionPart
+    heatProgress: warmup
+    heatColor: 94d7e2
+    suffix: -barrel3
+    progress: recoil
+    moveY: -3
+    recoilIndex: 2
+    }
+    {
+    type: RegionPart
+    heatProgress: warmup
+    heatColor: 94d7e2
+    suffix: -barrel4
+    progress: recoil
+    moveY: -3
+    recoilIndex: 3
+    under: true
+    }
+    {
+    type: RegionPart
+    heatProgress: warmup
+    heatColor: 94d7e2
+    suffix: -wing
+    mirror: true
+    progress: warmup
+    moveY: 1
+    under: true
+    moveRot: -10
+    moveX: -0.5
+    }
+    {
+    suffix: -glow
+    color: ffffff00
+    colorTo: 94d7e2
+    mixColor: ffffff00
+    mixColorTo: 94d7e2
+    blending: additive
+    progress: warmup
+    outline: false
+    }
+  ]
+}

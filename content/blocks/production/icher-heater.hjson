@@ -19,8 +19,8 @@ drawer:  [
 consumes: {
   liquid: icher/0.15
 }
-ambientSoundVolume: 0.05
-ambientSound: steam
+ambientSoundVolume: 0.025
+ambientSound: glow
 category: crafting
 research: {
   parent: core-satellite
@@ -28,7 +28,6 @@ research: {
   ]
 }
 requirements: [
-  tin/20
+  vanadium/20
   ferrum/35
-  scrap-metal/15
 ]
