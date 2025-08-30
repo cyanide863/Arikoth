@@ -88,7 +88,7 @@ public class ArikothTechTree {
                 });
             });
             node(awakening, ()-> {
-                node(sagar, ()-> {
+                node(sagar, Seq.with(new Objectives.SectorComplete(awakening)), ()-> {
                 });
             });
         });
