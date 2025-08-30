@@ -1,6 +1,0 @@
-name: Scrap Metal Wall Damaged
-type: StaticWall
-variants: 3
-attributes: {
-    sand: 1
-}

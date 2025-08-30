@@ -1,5 +1,0 @@
-name: Resonating Shards
-type: OreBlock
-itemDrop: reso-shard
-variants: 3
-wallOre: true

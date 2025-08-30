@@ -1,104 +1,27 @@
+#the mod name as displayed in-game
+displayName: "Arikoth"
+
+#the internal name of your mod
 name: "arikoth"
-displayName: "[#dab487[]]Arrikoth[white[]]"
-author: "[#3f3b6b]Hyperium[]"
-description: "Welcome to Arikoth, a massive desert planet. Arrikoth has a single massive ocean and 3 small continents is in its beta version"
-version: "0.0.15"
-minGameVersion: "149"
-repo: "https://github.com/cyanide863/Arikoth"
-hidden: false
-subtitle: Work in progress
-contentOrder: [
-//planets
-1-0-Ultramarina,
-everneon,
-arikoth,
-kelthir,
-iero,
-xeniris,
-1-2-asteroid,
-1-3-asteroid,
-1-4-asteroid,
-1-5-asteroid,
-1-6-asteroid,
-1-7-asteroid,
-1-8-asteroid,
-1-9-asteroid,
-2-0-asteroid,
-//env
-stained-water,
-stained-water-deep,
-stained-water-inigmbrite,
-stained-water-komatiite,
-stained-water-aerna-sand,
-stained-water-drysalt,
-stained-water-blue-sinter,
-stained-water-green-sinter,
-komatiite,
-komatiite-circles,
-komatiite-rough,
-komatiite-wall,
-komatiite-meld,
-inigmbrite,
-inigmbrite-rock,
-inigmbrite-wall,
-inigmbrite-meld,
-tachylyte,
-tachylyte-wall,
-tachylyte-meld,
-scoria,
-scoria-wall,
-scoira-meld,
-phyllite,
-phyllite-wall,
-phyllite-meld,
-aerna-sand,
-aerna-sand-wall,
-aerna-sand-meld,
-sandstone,
-sandstone-slate,
-sandstone-wall,
-sandstone-meld,
-drysalt,
-drysalt-wall,
-drysalt-meld,
-red-sinter,
-red-sinter-wall,
-orange-sinter,
-orange-sinter-wall,
-yellow-sinter,
-green-sinter,
-blue-sinter,
-//ores
-vanadium-ore,
-ferrum-ore,
-//items
-ferrum,
-raw-vanadium,
-vanadium,
-vespirium,
-reso-shard,
-ammonium-nitrate,
-niobium,
-nitride,
-//liquids
-icher,
-detril,
-oxygen,
-//logistics
-vaccum-shaft,
-vaccum-shaft-router,
-vaccum-shaft-accelerator,
-liquid-channel,
-liquid-channel-router,
-liquid-channel-crossing,
-//drills
-icher-condenser,
-jolt-drill,
-collision-drill,
-scrap-crusher,
-//factory
-graphite-kiln,
-]
-dependencies: [
-    "font-icon-lib"
+
+#your name
+author: "Hyperium"
+
+#the fully qualified main class of the mod
+main: "arikoth.Arikoth"
+
+#the mod description as seen in the mod dialog
+description: "Arikoth mod, wip."
+
+#the mod version
+version: 0.0.1
+
+#the minimum game build required to run this mod
+minGameVersion: 150
+
+#this is a java mod
+java: true
+
+dependencies : [
+"font-icon-lib"
 ]
