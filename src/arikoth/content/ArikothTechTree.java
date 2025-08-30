@@ -63,6 +63,15 @@ public class ArikothTechTree {
                 });
             });
 
+            node(helioPanel, ()-> {
+                node(teslaNode, ()-> {
+                    node(advancedTeslaNode, ()-> {
+                    });
+                });
+                node(strontiumGen, ()-> {
+                });
+            });
+
             node(mercurySynthesizer, Seq.with(new Objectives.Produce(silicon)), ()-> {
 
                 node(amalgamFoundry, Seq.with(
