@@ -20,7 +20,7 @@ public class VanillaStatusEffects{
 
     public static void load(){
 
-        fluxed = new StatusEffect("fluxed"){{
+        fluxed = new StatusEffect("arikoth-fluxed"){{
             color = Color.valueOf("ffc455");
             damage = 0.2f;
             speedMultiplier = 0.8f;

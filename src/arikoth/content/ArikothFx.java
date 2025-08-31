@@ -62,6 +62,25 @@ public class ArikothFx {
                     }
                 }
             }),
+
+    spikyBoomLarge = new Effect(90f, 160f, e -> {
+        color(e.color);
+        stroke(e.fout() * 2f);
+        float circleRad = 6f + e.finpow() * 70f;
+        Lines.circle(e.x, e.y, circleRad);
+
+        rand.setSeed(e.id);
+        for(int i = 0; i < 12; i++){
+            float angle = rand.random(360f);
+            float lenRand = rand.random(0.5f, 1f);
+            Tmp.v1.trns(angle, circleRad);
+
+            for(int s : Mathf.signs){
+                Drawf.tri(e.x + Tmp.v1.x, e.y + Tmp.v1.y, e.foutpow() * 12, e.fout() * 24f * lenRand + 6f, angle + 90f + s * 90f);
+            }
+        }
+    }),
+
             spikeShoot = new Effect(35f, 96f, e -> {
                 color(e.color);
                 stroke(e.fout() * 0f);

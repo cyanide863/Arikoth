@@ -3,8 +3,7 @@ package arikoth;
 import arc.*;
 import arc.math.*;
 import arc.util.*;
-import arikoth.content.otherPlanets.SerpuloBlocks;
-import arikoth.content.otherPlanets.VanillaStatusEffects;
+import arikoth.content.otherPlanets.*;
 import arikoth.graphics.ArikothShaderf;
 import arikoth.graphics.ArikothShaders;
 import arikoth.graphics.EnvRenderer;
@@ -39,7 +38,10 @@ public class Arikoth extends Mod{
         ArikothTechTree.load();
 
         VanillaStatusEffects.load();
+        SerpuloItems.load();
         SerpuloBlocks.load();
+        TechTreeContent.load();
+        GhereonTech.load();
 
         EnvRenderer.init();
     }
